@@ -33,5 +33,7 @@ test("each typical mistake gets its message", () => {
   });
   expect(reason(task, { x: 2, y: 3 }, props)).toBe("Du hast x und y vertauscht: P(2 | 3) liegt woanders.");
   expect(reason(task, { x: 4, y: 3 }, props)).toBe("Du hast ab 1 gezählt. Die Zählung beginnt bei 0.");
+  expect(reason(task, { x: 3, y: 6 }, props)).toBe("x stimmt.");
+  expect(reason(task, { x: 6, y: 2 }, props)).toBe("y stimmt.");
   expect(reason(task, { x: 6, y: 6 }, props)).toBeUndefined();
 });

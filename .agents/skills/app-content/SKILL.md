@@ -49,7 +49,7 @@ Kapitel 1 beginnt mit der Sammel-Wiederholung `wiederholung`; ein Kapitel endet 
 
 Das Wort der Karte gilt (Name des Bausteins). Anrede "du", kurze Sätze, kein "man" in Arbeitsaufträgen. Schreibweisen: Dezimalkomma
 (`3,5`), Einheiten mit geschütztem Leerzeichen (`3 cm`, Einheit nie kursiv), Winkel `45°` (geschütztes Leerzeichen vor `°` nicht), Minus `−`,
-Mal `·`, geteilt `:`, Brüche gesetzt. Punkte werden `P(3 | 2)` geschrieben: erst x, dann y (Eingabe akzeptiert `3|2`, `3 2`, `(3|2)`).
+Mal `·`, geteilt `:`, Brüche gesetzt. Das Wort „Ursprung“ (nicht „Nullpunkt“). Punkte werden `P(3 | 2)` geschrieben: erst x, dann y (Eingabe akzeptiert `3|2`, `3 2`, `(3|2)`).
 "Zahlenstrahl" für die Achsen (nicht "Zahlengerade"). Neue Wörter werden bei der ersten Verwendung am Beispiel erklärt.
 Winkel heißen mit griechischen Buchstaben (α, β) und Eckpunkten; "Strecke AB" mit Überstrich in Formeln.
 
@@ -88,4 +88,7 @@ nicht gelesen. Nachschlagen ist keine Quelle: nichts aus Schulbüchern oder Wiki
 
 ## Rules learned from mistakes
 
-None yet.
+- Wörter vor ihrer Erklärung vermeiden (Lernenden-Check: „Nullpunkt“, „Achse“ vor Erklärung): einen Begriff je Seite einführen, dann nur ihn benutzen („Ursprung“, nicht „Nullpunkt").
+- Gitter: „Schritte“ zählen, nicht „Felder“ (Punkte liegen auf Kreuzungen, nicht in Feldern).
+- Die Einstiegsaufgabe liest etwas aus dem Bild ab; der Aufgabentext verrät die Lösung nicht.
+- Fehlertexte nennen den Fehlertyp; Zufallsaufgaben mit Singular-Problemen (1 Schritte) vermeiden (Wertebereich ≥2).

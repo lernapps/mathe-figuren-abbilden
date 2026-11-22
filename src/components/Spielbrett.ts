@@ -5,6 +5,8 @@
 export interface Props {
   /** The task, with {x} and {y}. */
   task: string;
+  /** What to do on the board. */
+  hint?: string;
   /** The app's message for each typical mistake, in the order of about.mistakes, with {x}, {y}, {a} and {b} (the point set). */
   mistakes?: readonly string[];
 }
@@ -61,6 +63,8 @@ export function mistakes(task: Task): (Answer | undefined)[] {
   return [
     { x: task.y, y: task.x },
     task.x + 1 <= MAX_X && task.y + 1 <= MAX_Y ? { x: task.x + 1, y: task.y + 1 } : undefined,
+    undefined,
+    undefined,
   ];
 }
 
@@ -73,7 +77,14 @@ export const fill = (text: string, task: Task, answer?: Answer) =>
 
 export function reason(task: Task, answer: Answer, props: Props, _lang?: string): string | undefined {
   const index = mistakes(task).findIndex((m) => m !== undefined && m.x === answer.x && m.y === answer.y);
-  const message = index < 0 ? undefined : props.mistakes?.[index];
+  const message =
+    index >= 0
+      ? props.mistakes?.[index]
+      : answer.x === task.x
+        ? props.mistakes?.[2]
+        : answer.y === task.y
+          ? props.mistakes?.[3]
+          : undefined;
   return message === undefined ? undefined : fill(message, task, answer);
 }
 
@@ -97,5 +108,7 @@ export const about = {
   mistakes: [
     "x und y vertauscht: erst nach oben, dann nach rechts gegangen.",
     "Ab 1 statt ab 0 gezählt: der Marker steht je einen Schritt zu weit rechts und oben.",
+    "x richtig, y falsch.",
+    "y richtig, x falsch.",
   ],
 };

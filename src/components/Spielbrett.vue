@@ -8,6 +8,8 @@ import { MAX_X, MAX_Y, fill, generate } from "./Spielbrett.ts";
 const props = defineProps<{
   /** The task, with {x} and {y}. */
   task: string;
+  /** What to do on the board. */
+  hint: string;
   /** The app's message for each typical mistake, in the order of about.mistakes. */
   mistakes: string[];
   /** The label of the board for screen readers. */
@@ -28,6 +30,8 @@ const emit = defineEmits<{ answer: [{ x: number; y: number }] }>();
 const current = computed(() => generate(props.seed, props));
 const x = ref<number | undefined>(undefined);
 const y = ref<number | undefined>(undefined);
+const typedX = ref("");
+const typedY = ref("");
 const STEP = 40;
 const PAD = 30;
 
@@ -37,10 +41,23 @@ function set(nx: number, ny: number): void {
   emit("answer", { x: x.value, y: y.value });
 }
 
+function sync(): void {
+  typedX.value = String(x.value);
+  typedY.value = String(y.value);
+}
+
 function onField(which: "x" | "y", event: Event): void {
-  const value = Number((event.target as HTMLInputElement).value);
-  if (Number.isNaN(value)) return;
-  set(which === "x" ? value : (x.value ?? 0), which === "y" ? value : (y.value ?? 0));
+  const raw = (event.target as HTMLInputElement).value;
+  if (which === "x") typedX.value = raw;
+  else typedY.value = raw;
+  const a = Number(typedX.value);
+  const b = Number(typedY.value);
+  // a point is set only once both fields hold a number inside the board
+  if (typedX.value === "" || typedY.value === "" || Number.isNaN(a) || Number.isNaN(b)) return;
+  if (a < 0 || a > MAX_X || b < 0 || b > MAX_Y) return;
+  x.value = a;
+  y.value = b;
+  emit("answer", { x: a, y: b });
 }
 
 function onClick(event: MouseEvent): void {
@@ -50,6 +67,7 @@ function onClick(event: MouseEvent): void {
   const px = (event.clientX - rect.left) * scale;
   const py = (event.clientY - rect.top) * scale;
   set((px - PAD) / STEP, (PAD + MAX_Y * STEP - py) / STEP);
+  sync();
 }
 
 function onKey(event: KeyboardEvent): void {
@@ -62,7 +80,9 @@ function onKey(event: KeyboardEvent): void {
   const move = moves[event.key];
   if (move === undefined) return;
   event.preventDefault();
-  set((x.value ?? 0) + move[0], (y.value ?? 0) + move[1]);
+  if (x.value === undefined || y.value === undefined) set(0, 0);
+  else set(x.value + move[0], y.value + move[1]);
+  sync();
 }
 
 const width = PAD * 2 + MAX_X * STEP;
@@ -77,6 +97,7 @@ const text = computed(() =>
 <template>
   <div class="spielbrett">
     <p>{{ fill(task, current) }}</p>
+    <p>{{ hint }}</p>
     <svg
       :viewBox="`0 0 ${width} ${height}`"
       class="spielbrett-svg"
@@ -133,11 +154,11 @@ const text = computed(() =>
     <div class="spielbrett-fields">
       <label>
         {{ xLabel }}
-        <input type="number" inputmode="numeric" min="0" :max="MAX_X" :value="x" @input="onField('x', $event)" />
+        <input type="number" inputmode="numeric" min="0" :max="MAX_X" :value="typedX" @input="onField('x', $event)" />
       </label>
       <label>
         {{ yLabel }}
-        <input type="number" inputmode="numeric" min="0" :max="MAX_Y" :value="y" @input="onField('y', $event)" />
+        <input type="number" inputmode="numeric" min="0" :max="MAX_Y" :value="typedY" @input="onField('y', $event)" />
       </label>
     </div>
     <p aria-live="polite">{{ text }}</p>
@@ -163,17 +184,13 @@ const text = computed(() =>
 }
 .spielbrett-axes text {
   fill: var(--page-text);
-  font-size: 13px;
+  font-size: 14px;
   font-family: sans-serif;
 }
 .spielbrett-marker {
   fill: var(--page-accent);
   stroke: var(--page-text);
-}
-.spielbrett-cross {
-  stroke: var(--page-on-accent);
-  stroke-width: 2;
-  fill: none;
+  stroke-width: 3;
 }
 .spielbrett-checked .spielbrett-marker {
   opacity: 0.75;
