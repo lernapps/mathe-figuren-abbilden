@@ -36,6 +36,7 @@ lernapps/apps#397 (Strang `mathematik/geometrie`).
 - Strang `geometrie` (Karte: „Raum und Form“, 27 Kompetenzen); die 9 Bausteine des Issues sind die Auswahl.
 - Sammel-Wiederholung (`recap`) am Anfang von Kapitel 1: `natuerliche-zahlen` (Voraussetzung von `koordinatensystem`, liegt in Strang `arithmetik`).
 - Kapitelschnitt wie im Issue: 3 Kapitel (Punkte/Linien/Koordinaten · Figuren/Vierecke/Winkel · Symmetrie und Abbilden). (guess: Seitenzahl je Baustein, siehe Plan)
+- Kein `scope` in `src/app.yaml`: keine `open-task`, kein Material des Creators (Entscheidung nach structure.md; nachträglich eingetragen, der Task war vorher abgehakt).
 - Gemeinsame Darstellung „Koordinatensystem als Spielbrett“, Schatzkarte als roter Faden (Issue).
 
 ## Notes
@@ -249,13 +250,13 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
 - [x] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Musterseite kapitel punkte-linien/koordinaten: Kapitelgerüst, app.yaml, Content-Guide Figures, Komponente Spielbrett (Tastatur, Textalternative), Schatzkarten-Szene, ≥3 Aufgaben mit Rückmeldung
+- [x] Musterseite kapitel punkte-linien/koordinaten: Kapitelgerüst, app.yaml, Content-Guide Figures, Komponente Spielbrett (Tastatur, Textalternative), Schatzkarten-Szene, ≥3 Aufgaben mit Rückmeldung
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
