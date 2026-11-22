@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -80,14 +80,16 @@ und Zuordnung für Begriffe; Übungskomponenten für Zeichnen/Ziehen (Punkt setz
 - Bewegungen: im Koordinatensystem; Fehler: Spiegeln an y-Achse mit falschem Vorzeichen, Verschiebungspfeil umgekehrt.
 
 **Scope:** Drin: ebene Geometrie 5–6, alle 9 Bausteine. Draußen: Winkelsätze, Thales, Kongruenz (#430), Körper (#432), Fläche/Umfang (#398).
-Koordinatensystem: erster Quadrant und vier Quadranten mit ganzen Zahlen (Entscheidung im Plan). Sprache: nur Deutsch (guess; Regeln nennen nichts anderes).
+Koordinatensystem: nur erster Quadrant (Orchestrator; vier Quadranten mit #768/#395); Bildpunkte der Bewegungen bleiben im ersten Quadranten. Zahlenstrahl, nicht Zahlengerade. Sprache: nur Deutsch (guess).
 Schreibweisen nach `regeln.md` Abschnitt 2 (Komma, −, ·, geschützte Leerzeichen).
 
 **Seiten je Kapitel (eine Kompetenz je Seite, nach `requires` geordnet):**
 - Kapitel 1 `punkte-linien`: Sammel-Wiederholung `recap: arithmetik/natuerliche-zahlen` · `geometrische-grundbegriffe` · `parallel-senkrecht-abstand` · `koordinatensystem`
 - Kapitel 2 `figuren-winkel`: `grundfiguren-eben` · `winkel-messen` · `vierecke-grundfiguren` · `konstruktionen`
-- Kapitel 3 `abbilden`: `symmetrie` · `bewegungen-figuren` (guess: eine Seite; bei Bedarf in Spiegeln/Verschieben/Drehen teilen, wenn der Plan es verlangt)
+- Kapitel 3 `abbilden`: `symmetrie` (1 Seite: Achsen-, Punkt-, Drehsymmetrie) · `bewegungen-figuren` (1–2 Seiten: spiegeln · verschieben · drehen). Entscheidung Orchestrator (Recherche-Antwort): nicht beide Bausteine auf einer Seite.
 Baustein → Seite: je Baustein genau eine Seite, dort mind. drei Aufgaben.
+
+**Regeln (Stand afc2bdd):** Brüche gesetzt (MathML), Nachschlagen ist keine Quelle, Schicht 1 / Tiefe 1 (hängt nur von #385 ab). Selbsteinschätzung: Skill `lernapps-explainer-self-assessment` folgen, Abweichung im Plan begründen. Musterseite Koordinatensystem: Bedienung per Tastatur (Punkt per Eingabe oder Pfeiltasten) und Textalternative.
 
 **Offen / nicht geprüft:** Lehrplan Hessen und KMK nicht gelesen. Fehlvorstellungen aus eigener Fachkenntnis, nicht aus Quelle belegt.
 **Fund für Orchestrator:** Karte verlangt für `winkel-messen` nur `grundfiguren-eben`; der Issue-Text führt Winkel als Drehung ein. Kein Widerspruch, nur Hinweis.
@@ -131,9 +133,10 @@ Baustein → Seite: je Baustein genau eine Seite, dort mind. drei Aufgaben.
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Recherche freigegeben, weiter mit dem Plan (Orchestrator in Vertretung). Kapitel 3: Symmetrie und Bewegungen auf getrennten Seiten; Koordinatensystem nur erster Quadrant.
 
 ### Answers
 
@@ -160,17 +163,17 @@ Baustein → Seite: je Baustein genau eine Seite, dort mind. drei Aufgaben.
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
@@ -182,6 +185,51 @@ checks and what it cannot; how a later agent adds a chapter. It becomes the cont
 <!-- An explainer: per figure, model and component its learning action in two to four sentences
 (`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
 page, which a link. -->
+
+**Aufbau:** `src/app.yaml` (`format: 2`, `strand: mathematik/geometrie`, nur `de`), Kapitel `punkte-linien`, `figuren-winkel`, `abbilden`.
+Gemeinsame Abschnitts-IDs je Seite: `einstieg` (erste leichte Handlung vor der Erklärung), `erklaerung`, `beispiel`, `uebung`.
+**Roter Faden:** eine Schatzkarte; jede Konstruktion/Abbildung liefert einen Hinweis. Zwei erfundene Kinder (Namen/Aussehen einmal im Content-Guide „Figures“), eine Szene je Seite (Stufe 5–6).
+**Darstellungen (einheitlich benannt):** Geodreieck und Zirkel als SVG-Zeichnung in nummerierten Schritten; „Spielbrett“ = Koordinatensystem, erster Quadrant, Achsen als Zahlenstrahl (nicht „Zahlengerade“).
+**Voraussetzungen außerhalb des Strangs:** nur `arithmetik/natuerliche-zahlen` (für `koordinatensystem`): Sammel-Wiederholung `wiederholung` am Anfang von Kapitel 1. Alle anderen Voraussetzungen liegen im Strang und werden geübt.
+
+**Komponenten (nur wo kein Block passt, `prefer-built-in-block`) und ihre Lernhandlung:**
+- `Spielbrett` (Übung): Die Lernenden setzen einen Punkt per Klick, Pfeiltasten oder Eingabe (x | y) und prüfen; so üben sie, erst x, dann y zu lesen. Prüft Lage; zeigt vor „Prüfen“ keine Lösung. Kann nur den ersten Quadranten. `nojs`-Text: Aufgabe und Lösung als Tabelle.
+- `FigurZiehen` (Darstellung): Die Lernenden ziehen Eckpunkte (Maus oder Pfeiltasten) und beobachten, welche Eigenschaften (Seiten, Winkel, Parallelität) bleiben. Text vorher benennt Bedienung und was zu beobachten ist; Textalternative beschreibt die Zustände.
+- `WinkelAblesen` (Übung): Geodreieck-Skala; Winkel ablesen. Kann keine freie Zeichnung.
+Alles andere mit Blöcken: `image` (SVG), `generated` (Zufallswerte mit Rechenprobe), Auswahl-/Zuordnungsaufgaben, `table`, `definition`.
+**Selbsteinschätzung:** Skill `lernapps-explainer-self-assessment`, je Kapitel `selfAssessment`; Abweichung: keine geplant.
+
+**Baustein → Seite → Übungen (Einstieg zuerst; steigend):**
+
+| Kap. | Seite | Baustein | Einstieg → Übungen |
+|---|---|---|---|
+| 1 | `wiederholung` | recap natuerliche-zahlen | Text, ohne Übung |
+| 1 | `grundbegriffe` | geometrische-grundbegriffe | Gleise, Fensterkreuz nachzeichnen; `matching` Punkt/Strecke/Gerade, `multiple-choice` Alltag, `generated` Strecken zwischen Punkten |
+| 1 | `parallel-senkrecht` | parallel-senkrecht-abstand | Geodreieck anlegen (SVG-Schritte); `ordering` Zeichenschritte, `generated` Abstand (Fehler: schräg gemessen) |
+| 1 | `koordinaten` (**Muster**) | koordinatensystem | Schiffe versenken; `Spielbrett`, `generated` Punkt ablesen (Fehler: x/y vertauscht), Figur aus Punkten |
+| 2 | `grundfiguren` | grundfiguren-eben | Figuren in der Umgebung; `matching`, `multiple-choice` (Quadrat ist Rechteck), `generated` Ecken/Seiten |
+| 2 | `winkel` | winkel-messen | Tür/Uhrzeiger als Drehung; `WinkelAblesen`, `generated` Winkelart (Fehler: falsche Skala) |
+| 2 | `vierecke` | vierecke-grundfiguren | `FigurZiehen`: was bleibt?; `matching` Viereck–Eigenschaft, `generated` |
+| 2 | `konstruieren` | konstruktionen | Zirkelschritte (`ordering`), `generated` Radius/Seitenlängen (Fehler: Radius falsch) |
+| 3 | `symmetrie` | symmetrie | Falten, Klecksbild; Achsen zählen (`generated`), Punkt-/Drehsymmetrie `multiple-choice` (Fehler: Diagonale beim Rechteck) |
+| 3 | `spiegeln` | bewegungen-figuren (Spiegeln) | Spiegelbild im Spielbrett; `Spielbrett`, `generated` Bildpunkt an Achse |
+| 3 | `verschieben-drehen` | bewegungen-figuren (Verschieben, Drehen) | Pfeil, Drehpunkt + Winkel; `generated` Bildpunkt (Fehler: Pfeil umgekehrt); Bildpunkte bleiben im ersten Quadranten |
+
+Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten, je ≥3). Schreibweisen: Komma, ·, :, −, geschützte Leerzeichen; Brüche gesetzt.
+**Engagement je Seite (Einstieg · Wechsel · Belohnung · Geschichte):**
+- `wiederholung`: Einstieg: drei Ich-kann-Sätze zum Selbstcheck im Kopf · Wechsel: Text, Beispiel · Belohnung: „Du kannst jetzt eine Zahl auf dem Zahlenstrahl finden“ · Geschichte: Nika und Jonas finden eine Schatzkarte mit Zahlenrand.
+- `grundbegriffe`: Gleise/Fensterkreuz nachzeichnen, Linienart benennen · Wechsel: schauen, zuordnen, zählen · Belohnung: erste Linie der Karte ist eingezeichnet · Geschichte: Weg zum ersten Hinweis folgt Geraden und Strecken.
+- `parallel-senkrecht`: Einstieg: zwei Gleise, die sich nie treffen · Wechsel: Schritte lesen, ordnen, messen · Belohnung: du kannst Parallele und Senkrechte zeichnen · Geschichte: der Hinweis liegt senkrecht zum Weg.
+- `koordinaten`: Einstieg: Schiffe versenken, einen Treffer setzen (vor der Erklärung) · Wechsel: setzen, ablesen, Figur aus Punkten · Belohnung: die Schatzkarte zeigt jetzt ihr Gitter · Geschichte: der Schatz liegt auf (x | y), das Gitter der Karte.
+- `grundfiguren`: Einstieg: Figuren im Zimmer benennen · Wechsel: zuordnen, entscheiden, zählen · Belohnung: du kannst Figuren nach Eigenschaften beschreiben · Geschichte: Stempel der Karte zeigen Figuren.
+- `winkel`: Einstieg: Tür öffnen, Uhrzeiger · Wechsel: Drehung beobachten, ablesen, einteilen · Belohnung: Winkel messen und zeichnen · Geschichte: der Hinweis nennt eine Richtung als Winkel.
+- `vierecke`: Einstieg: ein Viereck ziehen, sehen, was bleibt · Wechsel: ziehen, zuordnen · Belohnung: Viereckshierarchie · Geschichte: Rätselfelder der Karte sind Vierecke.
+- `konstruieren`: Einstieg: mit dem Zirkel einen Kreis um den Schatzpunkt · Wechsel: Schritte ordnen, berechnen · Belohnung: Konstruktion fertig, nächster Hinweis · Geschichte: Zirkelkreis grenzt den Fundort ein.
+- `symmetrie`: Einstieg: Papier falten, Klecksbild · Wechsel: falten, zählen, entscheiden · Belohnung: Symmetrien erkennen · Geschichte: die Karte ist nur halb – die andere Hälfte ist ihr Spiegelbild.
+- `spiegeln`: Einstieg: Punkt an der Achse spiegeln · Wechsel: setzen, bestimmen · Belohnung: du kannst spiegeln · Geschichte: die andere Kartenhälfte entsteht.
+- `verschieben-drehen`: Einstieg: Figur um einen Pfeil schieben · Wechsel: Pfeil/Winkel angeben, bestimmen · Belohnung: Rückblick auf das Kapitel · Geschichte: der Schatz ist gefunden.
+
+**Neues Kapitel später:** YAML-Seiten in `src/<kapitel>/`, in `chapter.yaml` eintragen, Content-Guide ergänzen.
 
 ## Code
 
@@ -206,11 +254,18 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Musterseite kapitel punkte-linien/koordinaten: Kapitelgerüst, app.yaml, Content-Guide Figures, Komponente Spielbrett (Tastatur, Textalternative), Schatzkarten-Szene, ≥3 Aufgaben mit Rückmeldung
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Kapitel 1: Seiten wiederholung (recap), grundbegriffe und parallel-senkrecht, je ≥3 Aufgaben
+- [ ] Kapitel 2: Seiten grundfiguren und winkel (Komponente WinkelAblesen)
+- [ ] Kapitel 2: Seiten vierecke (Komponente FigurZiehen) und konstruieren
+- [ ] Kapitel 3: Seiten symmetrie, spiegeln und verschieben-drehen, Bildpunkte im ersten Quadranten
+- [ ] Selbsteinschätzung je Kapitel nach Skill lernapps-explainer-self-assessment
+- [ ] Zwei Prüfer starten (Lernenden-Prüfer, fachlicher Prüfer, beide ohne Beteiligung am Schreiben), Befunde getrennt im Plan unter Review, Fehler beheben
+<!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
