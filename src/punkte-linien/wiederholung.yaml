@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: Kurze Wiederholung der natürlichen Zahlen, die du für das Koordinatensystem brauchst.
+recap: [mathematik/natuerliche-zahlen]
+blocks:
+  - type: text
+    text: |
+      Kannst du das schon? Ich kann natürliche Zahlen im Stellenwertsystem lesen, schreiben und darstellen.
+      Für dieses Kapitel heißt das: Du findest eine Zahl wie 3 oder 7 auf dem Zahlenstrahl und weißt, dass er bei 0 beginnt
+      und nach rechts immer weiter geht. Auf den Achsen des Koordinatensystems kommen diese Zahlen wieder vor.
+      Wenn dir das noch schwerfällt, schau dir den Baustein auf der Lernlandkarte an.

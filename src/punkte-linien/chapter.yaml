@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Punkte, Linien und Koordinaten
 summary: Du zeichnest Linien, misst Abstände und gibst Punkte im Koordinatensystem an.
-pages: [koordinaten]
+pages: [wiederholung, grundbegriffe, parallel-senkrecht, koordinaten]

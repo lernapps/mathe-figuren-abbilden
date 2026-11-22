@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Parallelen, Senkrechten und Abstand
+description: Parallele und senkrechte Geraden zeichnen und Abstände messen.
+competencies: [parallel-senkrecht-abstand]
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei Gleise, die sich nie treffen
+    blocks:
+      - type: text
+        text: |
+          Der Weg zum zweiten Hinweis führt zwischen zwei Gleisen entlang. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+          Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
+      - type: figure
+        image: images/abstand.svg
+        alt: Zwei waagerechte Geraden g und h auf einem Gitter. Auf g liegt der Punkt A, auf h liegt der Punkt B. A und B sind durch eine gestrichelte schräge Strecke verbunden.
+        caption: Zwei Geraden g und h auf einem Gitter. Die Linien laufen in dieselbe Richtung.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: abstand-ablesen
+        text: Wie viele Kästchen ist h von g entfernt? Gemessen wird so, dass der Weg am kürzesten ist.
+        options:
+          - text: 3 Kästchen
+            correct: true
+            info: Richtig. Gerade nach unten von g zu h sind es 3 Kästchen.
+          - text: 4 Kästchen
+            correct: false
+            info: Das sind 4 Kästchen nach rechts. Nach rechts bleibst du auf der Höhe von g oder h.
+          - text: 5 Kästchen
+            correct: false
+            info: Das ist der schräge Weg von A nach B. Er ist länger als der gerade Weg nach unten.
+        explanation: Der kürzeste Weg von g nach h geht gerade nach unten, also im rechten Winkel zu beiden Geraden.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
+  - type: section
+    id: erklaerung
+    title: Parallel, senkrecht, Abstand
+    blocks:
+      - type: text
+        text: |
+          Zwei Geraden sind **parallel**, wenn sie überall gleich weit auseinander liegen. Sie treffen sich nie. Du schreibst g ∥ h.
+          Zwei Geraden sind **senkrecht** zueinander, wenn sie einen rechten Winkel bilden. Du schreibst g ⊥ h.
+          Der **Abstand** zweier paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden. Schräg gemessen ist der Weg immer länger.
+      - type: definition
+        term: Abstand
+        explanation: Der Abstand paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden Geraden.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Gemessen wird immer senkrecht. Wer schräg misst, bekommt einen zu großen Abstand.
+  - type: section
+    id: beispiel
+    title: Eine Parallele zeichnen
+    blocks:
+      - type: example
+        title: Parallele zu g durch den Punkt P
+        blocks:
+          - type: text
+            text: |
+              1. Lege die Mittellinie des Geodreiecks genau auf g.
+              2. Schiebe das Geodreieck an g entlang, bis seine lange Kante am Punkt P liegt.
+              3. Zeichne an der Kante entlang eine Linie durch P. Sie ist parallel zu g.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: ordering
+        id: parallele-schritte
+        text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Parallele zu g durch P.
+        items:
+          - Lege die Mittellinie des Geodreiecks genau auf g.
+          - Schiebe das Geodreieck an g entlang, bis die Kante am Punkt P liegt.
+          - Zeichne an der Kante entlang eine Linie durch P.
+        explanation: Zuerst richtest du das Geodreieck an g aus. Dann verschiebst du es, ohne es zu drehen. Zum Schluss zeichnest du.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
+      - type: multiple-choice
+        id: senkrecht-beispiele
+        text: Welche Paare sind senkrecht zueinander?
+        options:
+          - text: Die Kante einer Tür und der Boden
+            correct: true
+            info: Richtig. Die Tür steht im rechten Winkel zum Boden.
+          - text: Zwei Gleise
+            correct: false
+            info: Gleise laufen parallel. Sie treffen sich nie und bilden keinen Winkel.
+          - text: Die beiden Linien eines Fensterkreuzes
+            correct: true
+            info: Richtig. Sie bilden ein Kreuz mit rechten Winkeln.
+          - text: Zwei gegenüberliegende Kanten eines Blattes
+            correct: false
+            info: Gegenüberliegende Kanten sind parallel.
+        explanation: Senkrechte Geraden bilden einen rechten Winkel. Parallele Geraden liegen überall gleich weit auseinander.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
+      - type: generated
+        id: abstand-messen
+        given:
+          d: { int: [3, 8], step: 1 }
+          s: { int: [5, 12], step: 1 }
+        where: ["s > d"]
+        task:
+          text: "Zwei parallele Geraden g und h. Mara misst von A auf g senkrecht bis h und liest {{d}} cm ab. Sie misst auch schräg von A bis zu einem Punkt auf h und liest {{s}} cm ab. Wie groß ist der Abstand von g und h in cm?"
+        answer: { value: "d", compare: { number: { unit: cm } } }
+        mistakes:
+          - { value: "s", message: "Das ist die schräge Strecke. Der Abstand wird senkrecht gemessen und ist kürzer." }
+          - { value: "d + s", message: "Du hast die beiden Längen addiert. Der Abstand ist nur die senkrechte Länge." }
+        hint: "Der Abstand ist die kürzeste Strecke zwischen den Geraden. Welche Messung ist kürzer?"
+        steps:
+          - "Die senkrechte Messung ist {{d}} cm, die schräge {{s}} cm. Der Abstand ist die kürzere, also {{answer}} cm."
+      - type: single-choice
+        id: zeichen-bedeutung
+        text: Was bedeutet g ⊥ h?
+        options:
+          - text: g und h sind senkrecht zueinander.
+            correct: true
+            info: Richtig. Das Zeichen ⊥ steht für einen rechten Winkel.
+          - text: g und h sind parallel.
+            correct: false
+            info: Parallel schreibst du mit ∥, zwei senkrechten Strichen nebeneinander.
+          - text: g und h sind gleich lang.
+            correct: false
+            info: Geraden haben keine Länge. Das Zeichen sagt etwas über ihre Lage.
+        explanation: ⊥ heißt senkrecht, ∥ heißt parallel.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/

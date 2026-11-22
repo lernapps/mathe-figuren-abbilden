@@ -258,9 +258,10 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Musterseite kapitel punkte-linien/koordinaten: Kapitelgerüst, app.yaml, Content-Guide Figures, Komponente Spielbrett (Tastatur, Textalternative), Schatzkarten-Szene, ≥3 Aufgaben mit Rückmeldung
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
+      Creator: Musterseite angenommen, die übrigen 10 Seiten dürfen nach diesem Muster entstehen (Orchestrator in Vertretung).
 - [ ] Kapitel 1: Seiten wiederholung (recap), grundbegriffe und parallel-senkrecht, je ≥3 Aufgaben
 - [ ] Kapitel 2: Seiten grundfiguren und winkel (Komponente WinkelAblesen)
 - [ ] Kapitel 2: Seiten vierecke (Komponente FigurZiehen) und konstruieren
