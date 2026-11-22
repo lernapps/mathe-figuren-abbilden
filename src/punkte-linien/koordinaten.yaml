@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Koordinatensystem
+description: Punkte auf dem Spielbrett angeben, ablesen und eintragen.
+competencies: [koordinatensystem]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wo liegt das Schiff?
+    blocks:
+      - type: text
+        text: |
+          Nika und Jonas haben eine Schatzkarte gefunden. Sie ist in Felder eingeteilt, wie ein Spielbrett bei Schiffe versenken.
+          Nach dieser Seite kannst du jeden Punkt der Karte mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
+      - type: figure
+        image: images/szene-schatzkarte.svg
+        alt: Zwei Kinder, Nika und Jonas, halten eine Karte mit Gitter und einem Kreuz.
+        caption: Nika und Jonas mit ihrer Schatzkarte.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: figure
+        image: images/spielbrett-schiff.svg
+        alt: Ein Spielbrett mit Gitter. Das Schiff A steht drei Schritte rechts vom Nullpunkt und zwei Schritte darüber.
+        caption: Das Schiff A auf dem Spielbrett.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: schiff-schreiben
+        text: Das Schiff A steht 3 Schritte nach rechts und 2 Schritte nach oben vom Nullpunkt. Welche Schreibweise nennt seine Lage?
+        options:
+          - text: P(3 | 2)
+            correct: true
+            info: Richtig. Erst steht die Zahl für nach rechts, dann die Zahl für nach oben.
+          - text: P(2 | 3)
+            correct: false
+            info: Hier sind die Zahlen vertauscht. Das wären 2 Schritte nach rechts und 3 nach oben.
+          - text: P(5)
+            correct: false
+            info: Ein Punkt auf dem Spielbrett braucht zwei Zahlen, eine für nach rechts und eine für nach oben.
+        explanation: Zwei Zahlen legen den Punkt fest, in dieser Reihenfolge, erst nach rechts, dann nach oben.
+        links:
+          - title: Baustein Koordinatensystem auf der Lernlandkarte
+            url: https://lernapps.net/apps/map/mathematik/c/koordinatensystem/
+  - type: section
+    id: erklaerung
+    title: So gibst du einen Punkt an
+    blocks:
+      - type: text
+        text: |
+          Das Gitter heißt **Koordinatensystem**. Es hat zwei Achsen: Die **x-Achse** geht nach rechts, die **y-Achse** geht nach oben.
+          Beide beginnen beim **Ursprung** mit der Lage (0 | 0).
+          Ein Punkt hat zwei **Koordinaten**. Du gehst zuerst die x-Zahl nach rechts und dann die y-Zahl nach oben. So schreibst du P(x | y).
+      - type: definition
+        term: Koordinatensystem
+        explanation: Ein Gitter mit einer x-Achse nach rechts und einer y-Achse nach oben. Jeder Punkt hat zwei Koordinaten.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Erst nach rechts (x), dann nach oben (y). Beginne bei 0 zu zählen, nicht bei 1.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Der Punkt P(4 | 1)
+        blocks:
+          - type: text
+            text: Vom Ursprung gehst du 4 Schritte nach rechts und dann 1 Schritt nach oben. Du schreibst P(4 | 1).
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: figure
+        image: images/spielbrett-punkte.svg
+        alt: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet sind.
+        caption: Vier Punkte A bis D auf dem Spielbrett.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: matching
+        id: punkte-ablesen
+        text: Ordne jedem Punkt seine Koordinaten zu.
+        pairs:
+          - { left: Punkt A, right: P(2 | 5) }
+          - { left: Punkt B, right: P(6 | 1) }
+          - { left: Punkt C, right: P(4 | 4) }
+          - { left: Punkt D, right: P(7 | 3) }
+        explanation: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
+        links:
+          - title: Baustein Koordinatensystem auf der Lernlandkarte
+            url: https://lernapps.net/apps/map/mathematik/c/koordinatensystem/
+      - type: generated
+        id: schiff-faehrt
+        given:
+          a: { int: [1, 4], step: 1 }
+          b: { int: [1, 3], step: 1 }
+          c: { int: [1, 3], step: 1 }
+          d: { int: [1, 2], step: 1 }
+        where: ["c != d", "b + d != a + c"]
+        task:
+          text: "Ein Schiff liegt auf P({{a}} | {{b}}). Es fährt {{c}} Felder nach rechts und {{d}} Felder nach oben. Wie lautet die x-Koordinate des neuen Orts?"
+        answer: { value: "a + c", compare: number }
+        mistakes:
+          - {
+              value: "b + d",
+              message: "Das ist die neue y-Koordinate. Nach rechts ändert sich x, nach oben ändert sich y.",
+            }
+          - { value: "a + d", message: "Du hast die Felder nach oben zu x addiert. Nach rechts gehst du {{c}} Felder." }
+        hint: "Nach rechts ändert sich die x-Koordinate, nach oben die y-Koordinate."
+        steps:
+          - "Die x-Koordinate ändert sich beim Fahren nach rechts: {{a}} + {{c}} = {{answer}}."
+      - type: vue-component
+        id: schiff-setzen
+        component: Spielbrett
+        props:
+          task: "Setze dein Schiff auf den Punkt P({x} | {y})."
+          board: Spielbrett, x von 0 bis 8, y von 0 bis 6. Mit den Pfeiltasten bewegst du den Marker.
+          xLabel: "x (nach rechts)"
+          yLabel: "y (nach oben)"
+          position: "Dein Schiff steht auf P({a} | {b})."
+          none: "Du hast noch kein Schiff gesetzt."
+          mistakes:
+            - "Du hast x und y vertauscht: Du bist erst {b} nach oben gegangen. Erst kommt x (nach rechts), dann y (nach oben)."
+            - "Du hast ab 1 gezählt: Dein Schiff steht je einen Schritt zu weit rechts und oben. Beginne beim Ursprung mit 0."
+        examples:
+          accepted:
+            - { answer: { x: 5, y: 1 }, seed: 1 }
+          rejected:
+            - { answer: { x: 1, y: 5 }, seed: 1 }
+            - { answer: { x: 6, y: 2 }, seed: 1 }

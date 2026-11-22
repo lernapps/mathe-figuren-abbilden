@@ -1,0 +1,196 @@
+<script setup lang="ts">
+// A board of the first quadrant for the task of the number seed. The learner sets a marker by click, with the
+// arrow keys on the board, or with the two number fields; it emits the point with answer. The explainer draws
+// "Prüfen" and gives the feedback (logic in Spielbrett.ts).
+import { computed, ref } from "vue";
+import { MAX_X, MAX_Y, fill, generate } from "./Spielbrett.ts";
+
+const props = defineProps<{
+  /** The task, with {x} and {y}. */
+  task: string;
+  /** The app's message for each typical mistake, in the order of about.mistakes. */
+  mistakes: string[];
+  /** The label of the board for screen readers. */
+  board: string;
+  /** The label of the field for x and for y. */
+  xLabel: string;
+  yLabel: string;
+  /** The line below the board, with {a} and {b} for the marker; and the one before a marker is set. */
+  position: string;
+  none: string;
+  /** The task number, which the explainer gives. */
+  seed: number;
+  /** Whether the explainer checked the answer now set. */
+  checked: boolean;
+}>();
+const emit = defineEmits<{ answer: [{ x: number; y: number }] }>();
+
+const current = computed(() => generate(props.seed, props));
+const x = ref<number | undefined>(undefined);
+const y = ref<number | undefined>(undefined);
+const STEP = 40;
+const PAD = 30;
+
+function set(nx: number, ny: number): void {
+  x.value = Math.min(MAX_X, Math.max(0, Math.round(nx)));
+  y.value = Math.min(MAX_Y, Math.max(0, Math.round(ny)));
+  emit("answer", { x: x.value, y: y.value });
+}
+
+function onField(which: "x" | "y", event: Event): void {
+  const value = Number((event.target as HTMLInputElement).value);
+  if (Number.isNaN(value)) return;
+  set(which === "x" ? value : (x.value ?? 0), which === "y" ? value : (y.value ?? 0));
+}
+
+function onClick(event: MouseEvent): void {
+  const svg = event.currentTarget as SVGSVGElement;
+  const rect = svg.getBoundingClientRect();
+  const scale = (PAD * 2 + MAX_X * STEP) / rect.width;
+  const px = (event.clientX - rect.left) * scale;
+  const py = (event.clientY - rect.top) * scale;
+  set((px - PAD) / STEP, (PAD + MAX_Y * STEP - py) / STEP);
+}
+
+function onKey(event: KeyboardEvent): void {
+  const moves: Record<string, [number, number]> = {
+    ArrowRight: [1, 0],
+    ArrowLeft: [-1, 0],
+    ArrowUp: [0, 1],
+    ArrowDown: [0, -1],
+  };
+  const move = moves[event.key];
+  if (move === undefined) return;
+  event.preventDefault();
+  set((x.value ?? 0) + move[0], (y.value ?? 0) + move[1]);
+}
+
+const width = PAD * 2 + MAX_X * STEP;
+const height = PAD * 2 + MAX_Y * STEP;
+const text = computed(() =>
+  x.value === undefined || y.value === undefined
+    ? props.none
+    : props.position.replace(/\{a\}/g, String(x.value)).replace(/\{b\}/g, String(y.value)),
+);
+</script>
+
+<template>
+  <div class="spielbrett">
+    <p>{{ fill(task, current) }}</p>
+    <svg
+      :viewBox="`0 0 ${width} ${height}`"
+      class="spielbrett-svg"
+      :class="{ 'spielbrett-checked': checked }"
+      role="application"
+      tabindex="0"
+      :aria-label="board"
+      @click="onClick"
+      @keydown="onKey"
+    >
+      <rect :width="width" :height="height" class="spielbrett-bg" />
+      <g class="spielbrett-grid">
+        <line
+          v-for="i in MAX_X + 1"
+          :key="'v' + i"
+          :x1="PAD + (i - 1) * STEP"
+          :y1="PAD"
+          :x2="PAD + (i - 1) * STEP"
+          :y2="PAD + MAX_Y * STEP"
+        />
+        <line
+          v-for="j in MAX_Y + 1"
+          :key="'h' + j"
+          :x1="PAD"
+          :y1="PAD + (j - 1) * STEP"
+          :x2="PAD + MAX_X * STEP"
+          :y2="PAD + (j - 1) * STEP"
+        />
+      </g>
+      <g class="spielbrett-axes">
+        <line :x1="PAD" :y1="PAD + MAX_Y * STEP" :x2="PAD + MAX_X * STEP + 10" :y2="PAD + MAX_Y * STEP" />
+        <line :x1="PAD" :y1="PAD + MAX_Y * STEP" :x2="PAD" :y2="PAD - 10" />
+        <text
+          v-for="i in MAX_X + 1"
+          :key="'tx' + i"
+          :x="PAD + (i - 1) * STEP"
+          :y="PAD + MAX_Y * STEP + 18"
+          text-anchor="middle"
+        >
+          {{ i - 1 }}
+        </text>
+        <text v-for="j in MAX_Y" :key="'ty' + j" :x="PAD - 8" :y="PAD + (MAX_Y - j) * STEP + 5" text-anchor="end">
+          {{ j }}
+        </text>
+      </g>
+      <g v-if="x !== undefined && y !== undefined">
+        <circle :cx="PAD + x * STEP" :cy="PAD + (MAX_Y - y) * STEP" r="8" class="spielbrett-marker" />
+        <path
+          :d="`M${PAD + x * STEP - 5} ${PAD + (MAX_Y - y) * STEP - 5} l10 10 m0 -10 l-10 10`"
+          class="spielbrett-cross"
+        />
+      </g>
+    </svg>
+    <div class="spielbrett-fields">
+      <label>
+        {{ xLabel }}
+        <input type="number" inputmode="numeric" min="0" :max="MAX_X" :value="x" @input="onField('x', $event)" />
+      </label>
+      <label>
+        {{ yLabel }}
+        <input type="number" inputmode="numeric" min="0" :max="MAX_Y" :value="y" @input="onField('y', $event)" />
+      </label>
+    </div>
+    <p aria-live="polite">{{ text }}</p>
+  </div>
+</template>
+
+<style scoped>
+.spielbrett-svg {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  touch-action: manipulation;
+}
+.spielbrett-bg {
+  fill: var(--page-surface);
+}
+.spielbrett-grid line {
+  stroke: var(--page-border);
+}
+.spielbrett-axes line {
+  stroke: var(--page-text);
+  stroke-width: 2;
+}
+.spielbrett-axes text {
+  fill: var(--page-text);
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.spielbrett-marker {
+  fill: var(--page-accent);
+  stroke: var(--page-text);
+}
+.spielbrett-cross {
+  stroke: var(--page-on-accent);
+  stroke-width: 2;
+  fill: none;
+}
+.spielbrett-checked .spielbrett-marker {
+  opacity: 0.75;
+}
+.spielbrett-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+.spielbrett-fields label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spielbrett-fields input {
+  min-height: 2.75rem;
+  width: 5rem;
+}
+</style>
