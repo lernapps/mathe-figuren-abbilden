@@ -6,6 +6,8 @@ const props = {
   mistakes: [
     "Du hast x und y vertauscht: P({a} | {b}) liegt woanders.",
     "Du hast ab 1 gezählt. Die Zählung beginnt bei 0.",
+    "x stimmt.",
+    "y stimmt.",
   ],
 };
 
