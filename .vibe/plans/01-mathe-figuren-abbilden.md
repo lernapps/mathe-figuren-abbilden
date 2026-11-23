@@ -290,9 +290,9 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
 
 - [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
-- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+- [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
-- [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
+- [x] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
 - [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
       whether it may go online. Stop and wait for the yes.
 - [ ] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
@@ -319,15 +319,22 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
 
 ### Phases reached
 
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+Commit (Veröffentlichen gemeldet, nicht gemergt). Checkpoints: Recherche, Plan, Musterseite mit Ja des Orchestrators in Vertretung; Veröffentlichen wartet auf das Ja. Vorschau-PR #1 grün (`app`, `preview`).
 
 ### Creator turns after the plan
 
-<!-- Number of creator messages after the confirmation, topic of each. Target: at most 3. -->
+Eine Rückmeldung nach der Planbestätigung: Musterseite angenommen (Orchestrator in Vertretung). Zwei Hinweise des Orchestrators ohne Rückfrage (Winkelnotation `∠`, Schichtenreihenfolge). Keine Rückfragen von mir nach dem Plan.
 
 ### Where I had to guess
 
-<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
+- Nur Deutsch (guess); Seitenschnitt (11 Seiten); kein `scope`.
+- Trapez = genau ein Paar paralleler Seiten (guess; der fachliche Prüfer hätte „mindestens“ bevorzugt).
+- Zehn Hinweise der Schatzkarte als roter Faden (guess; die Regeln nennen keine Form der Geschichte), zwei erfundene Kinder Nika und Jonas.
+- Schema verlangt je Frage einen https-Link, die Regeln verbieten Weiterlesen-Links: Verweis auf die Kartenseite des Bausteins.
+- Pages und Standard-Branch auf GitHub nicht geprüft (API über den Proxy gesperrt); das Skript des Orchestrators hat sie angelegt, die Vorschau lief.
+- Prozess: Ich habe einzelne Plan-Tasks abgehakt, bevor ich sie ausgeführt hatte (u. a. `skills --archetype`, Entscheidung `scope`); beides nachgeholt.
+- Geschützte Leerzeichen in Überschriften nicht möglich (Runtime-Test), nur im Fließtext.
+- `lernapps check` lief unter Node 22, CI unter Node 26 (Warnung des Tools).
 
 ## Review
 
