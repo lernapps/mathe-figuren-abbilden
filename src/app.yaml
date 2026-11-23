@@ -4,4 +4,4 @@ strand: mathematik/geometrie
 title: Figuren zeichnen und abbilden
 intro: Du zeichnest mit Geodreieck und Zirkel, misst Winkel, findest Symmetrien und verschiebst, spiegelst und drehst Figuren. Eine Schatzkarte führt dich durch alle Kapitel.
 languages: [de]
-chapters: [punkte-linien]
+chapters: [punkte-linien, figuren-winkel]

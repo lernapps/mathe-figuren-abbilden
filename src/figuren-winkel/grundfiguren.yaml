@@ -1,0 +1,131 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Ebene Grundfiguren
+description: Ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben.
+competencies: [grundfiguren-eben]
+blocks:
+  - type: section
+    id: einstieg
+    title: Stempel auf der Karte
+    blocks:
+      - type: text
+        text: |
+          Am Rand der Schatzkarte sind sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
+          Du brauchst dafür Strecken, Parallelen und rechte Winkel von den Seiten davor.
+      - type: figure
+        image: images/grundfiguren.svg
+        alt: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechteck, C ein Dreieck, D ein Kreis, E ein Fünfeck und F ein Parallelogramm.
+        caption: Sechs Stempel A bis F.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: ecken-zaehlen
+        text: Welche Figur im Bild hat drei Ecken?
+        options:
+          - text: Figur C
+            correct: true
+            info: Richtig. Das Dreieck hat drei Ecken und drei Seiten.
+          - text: Figur A
+            correct: false
+            info: Das Quadrat hat vier Ecken.
+          - text: Figur D
+            correct: false
+            info: Der Kreis hat keine Ecken und keine geraden Seiten.
+        explanation: Die Zahl der Ecken gibt vielen Figuren ihren Namen. Drei Ecken sind ein Dreieck.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
+  - type: section
+    id: erklaerung
+    title: Ecken, Seiten, Winkel
+    blocks:
+      - type: text
+        text: |
+          Eine Figur aus geraden Strecken heißt **Vieleck**. Die Strecken sind ihre **Seiten**, die Punkte, an denen sie sich treffen, ihre **Ecken**.
+          Ein Dreieck hat 3 Ecken, ein Viereck 4 und ein Fünfeck 5.
+          Ein **Kreis** hat keine Ecken. Alle Punkte des Kreises haben von seinem Mittelpunkt denselben Abstand.
+      - type: table
+        caption: Ecken und Seiten
+        header: [Figur, Ecken, Seiten]
+        rows:
+          - [Dreieck, "3", "3"]
+          - [Viereck, "4", "4"]
+          - [Fünfeck, "5", "5"]
+          - [Kreis, "0", "keine geraden Seiten"]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Jedes Quadrat ist auch ein Rechteck, denn es hat vier rechte Winkel und gegenüberliegende Seiten, die gleich lang sind.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Das Rechteck
+        blocks:
+          - type: text
+            text: Ein Rechteck hat vier Ecken und vier rechte Winkel. Gegenüberliegende Seiten sind gleich lang und parallel.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: figur-eigenschaft
+        text: Welche Eigenschaft passt zur Figur?
+        pairs:
+          - { left: Dreieck, right: drei Ecken }
+          - { left: Quadrat, right: vier gleich lange Seiten und vier rechte Winkel }
+          - { left: Kreis, right: keine Ecken }
+          - { left: Fünfeck, right: fünf Seiten }
+        explanation: Zähle Ecken und Seiten und achte auf rechte Winkel und gleich lange Seiten.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
+      - type: true-false
+        id: quadrat-rechteck
+        text: Jedes Quadrat ist auch ein Rechteck.
+        answer: true
+        explanation: Ein Quadrat hat vier rechte Winkel. Seine gegenüberliegenden Seiten sind gleich lang. Das reicht für ein Rechteck.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
+      - type: multiple-choice
+        id: rechteck-stimmt
+        text: Welche Aussagen gelten für jedes Rechteck?
+        options:
+          - text: Es hat vier rechte Winkel.
+            correct: true
+            info: Richtig. Das macht das Rechteck aus.
+          - text: Alle vier Seiten sind gleich lang.
+            correct: false
+            info: Das gilt nur beim Quadrat. Ein Rechteck darf lang und schmal sein.
+          - text: Gegenüberliegende Seiten sind gleich lang.
+            correct: true
+            info: Richtig. Die beiden langen Seiten sind gleich, die beiden kurzen auch.
+          - text: Es hat drei Ecken.
+            correct: false
+            info: Drei Ecken hat ein Dreieck.
+        explanation: Ein Rechteck hat vier rechte Winkel, und gegenüberliegende Seiten sind gleich lang.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
+      - type: generated
+        id: ecken-seiten
+        given:
+          n: { int: [5, 9], step: 1 }
+        task:
+          text: "Du zeichnest ein Vieleck mit {{n}} Ecken. Wie viele Seiten hat es?"
+        answer: { value: "n", compare: number }
+        mistakes:
+          - {
+              value: "n - 1",
+              message: "Zähle noch einmal: Zwischen je zwei Nachbarecken liegt eine Seite, und auch von der letzten Ecke zurück zur ersten.",
+            }
+          - {
+              value: "n + 1",
+              message: "Es gibt nicht mehr Seiten als Ecken. Jede Ecke hat genau eine Seite, die nach ihr kommt.",
+            }
+        hint: "Male ein Vieleck mit wenigen Ecken, zum Beispiel ein Viereck, und zähle Ecken und Seiten."
+        steps:
+          - "Jede Ecke gehört zu zwei Seiten, und jede Seite hat zwei Ecken. Ecken und Seiten sind gleich viele."
+          - "Bei {{n}} Ecken sind es {{answer}} Seiten."

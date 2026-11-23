@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Winkel messen und zeichnen
+description: Winkel als Drehung verstehen, mit dem Geodreieck messen, zeichnen und nach ihrer Größe einteilen.
+competencies: [winkel-messen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Eine Tür und ein Zeiger
+    blocks:
+      - type: text
+        text: |
+          Der dritte Hinweis der Karte nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
+          Eine Tür oder der Zeiger einer Uhr zeigen dir, was ein Winkel ist.
+      - type: figure
+        image: images/tuer-drehung.svg
+        alt: Eine Tür dreht sich um ihre Angel. Eine gestrichelte Linie zeigt die geschlossene Tür, eine rote Linie die halb geöffnete Tür, ein blauer Bogen die Drehung dazwischen.
+        caption: Die Tür dreht sich um die Angel. Der Bogen zeigt, wie weit.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: viertel-drehung
+        text: Der Minutenzeiger einer Uhr macht in 60 Minuten eine ganze Drehung. Wie viele Minuten braucht er für eine Vierteldrehung?
+        options:
+          - text: 15 Minuten
+            correct: true
+            info: Richtig. Ein Viertel von 60 Minuten sind 15 Minuten.
+          - text: 30 Minuten
+            correct: false
+            info: Das ist eine halbe Drehung.
+          - text: 45 Minuten
+            correct: false
+            info: Das sind drei Viertel einer Drehung.
+        explanation: Eine Vierteldrehung ist ein Viertel einer ganzen Drehung. Sie ist ein rechter Winkel.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
+  - type: section
+    id: erklaerung
+    title: Winkel und Grad
+    blocks:
+      - type: text
+        text: |
+          Ein **Winkel** zeigt, wie weit sich ein Schenkel um den Scheitel dreht. Der **Scheitel** ist der Punkt, in dem beide Schenkel beginnen.
+          Du misst Winkel in **Grad** (°). Eine ganze Drehung sind 360°, eine halbe 180°, eine Vierteldrehung 90°.
+      - type: figure
+        image: images/winkelarten.svg
+        alt: Fünf Winkel nebeneinander. Spitz ist kleiner als ein rechter Winkel, recht ist ein Viertel einer Drehung, stumpf liegt dazwischen und der gestreckte Winkel, dann kommt der überstumpfe Winkel.
+        caption: Fünf Winkelarten, von klein nach groß.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: Winkelarten
+        header: [Art, Größe]
+        rows:
+          - [spitz, kleiner als 90°]
+          - [recht, genau 90°]
+          - [stumpf, größer als 90° und kleiner als 180°]
+          - [gestreckt, genau 180°]
+          - [überstumpf, größer als 180° und kleiner als 360°]
+      - type: text
+        text: |
+          Zum Messen legst du die Nullkante des Geodreiecks auf einen Schenkel. Der Scheitel liegt genau auf dem Mittelpunkt. Den Wert liest du an der Skala ab, die an diesem Schenkel bei 0 beginnt.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Ein Winkel von 50°
+        blocks:
+          - type: text
+            text: Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. Du zeichnest ihn, indem du bei 50 auf der Skala einen Punkt setzt und ihn mit dem Scheitel verbindest.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: vue-component
+        id: winkel-ablesen
+        component: WinkelAblesen
+        props:
+          task: Der erste Schenkel liegt rechts auf der 0 der äußeren Skala. Lies den Winkel ab.
+          label: "Winkel in Grad"
+          picture: Ein Halbkreis mit einer Skala von 0 bis 180 Grad und einem eingezeichneten Winkel, dessen erster Schenkel nach rechts zeigt.
+          mistakes:
+            - "Du hast auf der falschen Skala abgelesen: {a}° statt {w}°. Der erste Schenkel liegt auf der 0 der äußeren Skala, also liest du dort ab."
+            - "Fast: {a}° liegt in der Nähe, aber nicht genau. Lies noch einmal am Strich ab, an dem der Schenkel endet."
+        examples:
+          accepted:
+            - { answer: 110, seed: 1 }
+          rejected:
+            - { answer: 70, seed: 1 }
+            - { answer: 105, seed: 1 }
+            - { answer: 0 }
+      - type: matching
+        id: winkelart
+        text: Welche Winkelart passt zur Größe?
+        pairs:
+          - { left: "30°", right: spitz }
+          - { left: "90°", right: recht }
+          - { left: "135°", right: stumpf }
+          - { left: "180°", right: gestreckt }
+          - { left: "270°", right: überstumpf }
+        explanation: Vergleiche mit 90° und 180°. Kleiner als 90° ist spitz, größer als 180° überstumpf.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
+      - type: generated
+        id: winkel-teilen
+        given:
+          a: { int: [20, 80], step: 5 }
+        task:
+          text: "Ein gestreckter Winkel (180°) wird durch einen Schenkel in zwei Winkel geteilt. Der eine misst {{a}}°. Wie groß ist der andere in Grad?"
+        answer: { value: "180 - a", compare: { number: { unit: "°" } } }
+        mistakes:
+          - { value: "90 - a", message: "Du hast von 90° abgezogen. Ein gestreckter Winkel ist 180° groß." }
+          - {
+              value: "360 - a",
+              message: "Du hast von 360° abgezogen. 360° ist die ganze Drehung, der gestreckte Winkel ist nur die halbe.",
+            }
+        hint: "Beide Winkel zusammen ergeben den gestreckten Winkel mit 180°."
+        steps:
+          - "Gestreckter Winkel: 180°. Ein Teil ist {{a}}°."
+          - "180° - {{a}}° = {{answer}}°."
+      - type: single-choice
+        id: winkelart-120
+        text: Welche Art Winkel ist ein Winkel von 120°?
+        options:
+          - text: stumpf
+            correct: true
+            info: Richtig. 120° liegt zwischen 90° und 180°.
+          - text: spitz
+            correct: false
+            info: Spitze Winkel sind kleiner als 90°.
+          - text: überstumpf
+            correct: false
+            info: Überstumpfe Winkel sind größer als 180°.
+        explanation: Stumpfe Winkel liegen zwischen 90° und 180°.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/

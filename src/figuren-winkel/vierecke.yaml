@@ -1,0 +1,149 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Besondere Vierecke
+description: Besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden.
+competencies: [vierecke-grundfiguren]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ziehe das Viereck
+    blocks:
+      - type: text
+        text: |
+          Auf der Karte gibt es Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
+          Probiere erst, was passiert, wenn du die Ecken ziehst.
+      - type: vue-component
+        id: viereck-ziehen
+        component: FigurZiehen
+        props:
+          board: Gitter mit einem Viereck ABCD. Die vier Ecken lassen sich verschieben.
+          hint: "Ziehe die Ecken A bis D mit der Maus oder dem Finger. Mit Tab wählst du eine Ecke, mit den Pfeiltasten verschiebst du sie. Achte darauf, wie sich Name, parallele Seiten und rechte Winkel ändern."
+          corner: "Ecke {n}"
+          names:
+            [
+              Quadrat,
+              Rechteck,
+              Raute,
+              Parallelogramm,
+              Drachen,
+              Trapez,
+              "Viereck ohne besondere Eigenschaft",
+              "kein Viereck",
+            ]
+          is: "Das Viereck ist ein: {n}"
+          parallel: "Paare paralleler Seiten: {n}"
+          right: "Rechte Winkel: {n}"
+          reset: Zurück zum Anfang
+        nojs: |
+          Ein Gitter mit einem Viereck ABCD, dessen Ecken du ziehen kannst. Es zeigt, wie das Viereck heißt und wie viele Paare paralleler Seiten und rechte Winkel es hat.
+          Zu Beginn ist es ein Parallelogramm mit 2 Paaren paralleler Seiten und keinem rechten Winkel. Ziehst du es zu einem Rechteck, hat es 4 rechte Winkel.
+          Ohne JavaScript lies die Tabelle weiter unten.
+      - type: single-choice
+        id: quadrat-entsteht
+        text: Du ziehst ein Rechteck so, dass alle vier Seiten gleich lang sind. Welche Figur entsteht?
+        options:
+          - text: Ein Quadrat
+            correct: true
+            info: Richtig. Vier rechte Winkel und vier gleich lange Seiten ergeben ein Quadrat.
+          - text: Eine Raute
+            correct: false
+            info: Eine Raute hat vier gleich lange Seiten, aber nicht unbedingt rechte Winkel.
+          - text: Ein Drachen
+            correct: false
+            info: Beim Drachen sind nur je zwei Nachbarseiten gleich lang.
+        explanation: Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
+  - type: section
+    id: erklaerung
+    title: Die besonderen Vierecke
+    blocks:
+      - type: table
+        caption: Besondere Vierecke und ihre Eigenschaften
+        header: [Viereck, Eigenschaften]
+        rowHeaders: true
+        rows:
+          - [Parallelogramm, zwei Paare paralleler Seiten]
+          - [Rechteck, zwei Paare paralleler Seiten und vier rechte Winkel]
+          - [Raute, zwei Paare paralleler Seiten und vier gleich lange Seiten]
+          - [Quadrat, vier rechte Winkel und vier gleich lange Seiten]
+          - [Drachen, zwei Paare gleich langer Nachbarseiten]
+          - [Trapez, mindestens ein Paar paralleler Seiten]
+      - type: text
+        text: |
+          Manche Vierecke sind auch andere. Jedes Rechteck ist ein Parallelogramm. Jede Raute ist ein Parallelogramm. Das Quadrat ist beides: Rechteck und Raute.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Je mehr Eigenschaften ein Viereck hat, desto besonderer ist es. Das Quadrat hat die meisten.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Die Raute
+        blocks:
+          - type: text
+            text: Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. Rechte Winkel hat sie nicht unbedingt. Ist einer rechtwinklig, ist sie ein Quadrat.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: viereck-eigenschaft
+        text: Welche Eigenschaft gehört zu welchem Viereck?
+        pairs:
+          - { left: Rechteck, right: vier rechte Winkel }
+          - { left: Raute, right: vier gleich lange Seiten }
+          - { left: Drachen, right: zwei Paare gleich langer Nachbarseiten }
+          - { left: Trapez, right: mindestens ein Paar paralleler Seiten }
+        explanation: Lies in der Tabelle nach, was jedes Viereck besonders macht.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
+      - type: true-false
+        id: raute-parallelogramm
+        text: Jede Raute ist auch ein Parallelogramm.
+        answer: true
+        explanation: Eine Raute hat zwei Paare paralleler Seiten. Das ist die Eigenschaft eines Parallelogramms.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
+      - type: multiple-choice
+        id: vier-rechte-winkel
+        text: Welche Vierecke haben vier rechte Winkel?
+        options:
+          - text: Rechteck
+            correct: true
+            info: Richtig. Vier rechte Winkel machen das Rechteck aus.
+          - text: Quadrat
+            correct: true
+            info: Richtig. Ein Quadrat ist ein Rechteck mit gleich langen Seiten.
+          - text: Raute
+            correct: false
+            info: Eine Raute kann schief stehen. Dann hat sie keinen rechten Winkel.
+          - text: Parallelogramm
+            correct: false
+            info: Ein Parallelogramm kann schief sein. Rechte Winkel hat es nur im Sonderfall.
+        explanation: Vier rechte Winkel haben das Rechteck und das Quadrat.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
+      - type: generated
+        id: raute-seiten
+        given:
+          a: { int: [2, 9], step: 1 }
+        task:
+          text: "Eine Raute hat eine Seite von {{a}} cm. Wie lang sind die anderen drei Seiten zusammen in cm?"
+        answer: { value: "3 * a", compare: { number: { unit: cm } } }
+        mistakes:
+          - {
+              value: "a",
+              message: "Das ist nur eine Seite. Alle vier Seiten einer Raute sind gleich lang, also gibt es noch drei Seiten dieser Länge.",
+            }
+          - { value: "4 * a", message: "Das sind alle vier Seiten. Gefragt sind nur die anderen drei." }
+        hint: "Bei einer Raute sind alle vier Seiten gleich lang."
+        steps:
+          - "Jede Seite ist {{a}} cm lang."
+          - "Die anderen drei Seiten: 3 · {{a}} cm = {{answer}} cm."

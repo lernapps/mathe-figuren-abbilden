@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Figuren, Vierecke und Winkel
+summary: Du beschreibst Figuren und Vierecke, misst Winkel und konstruierst mit dem Zirkel.
+pages: [grundfiguren, winkel, vierecke, konstruieren]
