@@ -175,7 +175,7 @@ Nr. | a | b | c | Lösung | F1 | F2
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
   - ✓ Die beiden Bögen schneiden sich nicht, das Dreieck gibt es nicht. – Richtig. Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander.
-  - ✗ Die Bögen schneiden sich genau einmal. – Dazu müssten 2 cm und 3 cm zusammen mindestens 8 cm lang sein. Das sind nur 5 cm.
+  - ✗ Die Bögen schneiden sich genau einmal. – Dann müssten sich die Bögen treffen. Die Bögen von 2 cm und 3 cm reichen zusammen aber nur 5 cm weit, die Strecke ist 8 cm lang.
   - ✗ Du bekommst ein Dreieck, wenn du den Zirkel weiter öffnest. – Dann wären die Seiten nicht mehr 2 cm und 3 cm.
 - Lösung: Die beiden Bögen schneiden sich nicht, das Dreieck gibt es nicht.
 - Erklärung: Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander. Sie treffen sich nicht, also gibt es kein Dreieck.
