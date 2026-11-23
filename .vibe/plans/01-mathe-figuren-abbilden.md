@@ -8,7 +8,7 @@ phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 2
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { checks-pass: 5 }
+failedChecks: { checks-pass: 6 }
 ---
 
 # Plan: mathe-figuren-abbilden, first version
@@ -355,3 +355,11 @@ Die Prüfer haben nichts geschrieben. Sie wurden als Unteragenten der Session ge
 - Schreibweisen: geschützte Leerzeichen vor `cm` und Minus U+2212 in angezeigten Rechnungen nachgetragen. Nicht möglich: geschütztes Leerzeichen in Überschriften (Runtime-Test „heading levels follow the nesting“ schlägt dann fehl); dort normales Leerzeichen.
 - Offen: Entscheidung Trapez = genau ein Paar paralleler Seiten (Fachprüfer schlug „mindestens“ vor; für 5-6 gewählt, damit jedes Viereck einen Namen hat; (guess)); `winkel-teilen` (Nebenwinkel) und `dreieck-unmoeglich` (Dreiecksungleichung) grenzen an #430, `was-bleibt` an Kongruenz: bewusst als Vorerfahrung drin, dem Orchestrator gemeldet.
 - Nicht geprüft: Kartenseiten auf lernapps.net (ob die Karte weitere Inhalte der Bausteine verlangt), Lehrplan Hessen/KMK.
+
+### Recap nach Regel 7 (Auftrag des Menschen über den Orchestrator)
+
+- Anzahl Recaps: 1 (`punkte-linien/wiederholung`, Baustein `natuerliche-zahlen`, die einzige Voraussetzung von außen laut `requires` der Karte). Neu: Kopf „Wofür diese Seite da ist“, ein Abschnitt je Baustein, Begriffe als Definition (natürliche Zahlen, Ziffer, Zahlenstrahl, Stellenwert, alle im Glossar), Abbildung Zahlenstrahl, Beispielkasten, Selbsttest mit Lösung und Fehlerhinweisen, Verweis auf die Kartenseite, Checkliste „Du bist bereit, wenn du …“.
+- Der Block `recap` erlaubt keine Aufgaben (Build lehnt `generated` ab), und eine Seite mit Strang braucht `competencies`. Der Selbsttest ist deshalb Text im Kasten mit sichtbarer Lösung, keine Eingabe mit sofortiger Rückmeldung. Fund fürs Werkzeug.
+- Lernenden-Prüfer (nur Recap): Beurteilung „ja, mit Einschränkung“. Befunde behoben: „Ziffer“ und „natürliche Zahlen“ ohne Erklärung und Glossar, Beispiel zum Stellenwert im Fließtext, holprige Bildunterschrift, Checkliste in Ich- und Du-Form gemischt, doppelte Überschrift. Offen: Lösung des Selbsttests steht sichtbar im Kasten (Werkzeug); Verweis führt aus der App auf lernapps.net; Kopf der Runtime-Seite (KI-Tutor-Link, Inhaltsverzeichnis) nicht änderbar.
+- Fachlicher Prüfer (nur neue Texte): Rechnungen richtig (305, 5 + 3, 427, Fehlerwerte 3, 2, 724, 13). Behoben: Definition Stellenwert (Wert der Stelle, Ziffer mal Stellenwert), „immer eine mehr“, gleiche Abstände der Marken, typischer Zählfehler 9, Abbildung mit drei Bögen. Offen: Umkehraufgabe „Zahl am Punkt ablesen“ fehlt, weil keine Aufgaben im Recap möglich; Zahlen nur bis dreistellig (für Achsen 0 bis 8 genug); Lehrplantext nicht gelesen.
+- Prüfung auf fehlende Recaps: Kapitel 2 und 3 brauchen laut `requires` nur Bausteine dieses Explainers. Nicht in `requires`, aber benutzt: Grundrechenarten (Subtraktion, Multiplikation, Division in einigen Aufgaben) und Längen in cm. Kein Recap angelegt (Fund für die Karte).
