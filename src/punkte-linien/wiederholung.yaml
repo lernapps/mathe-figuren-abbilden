@@ -38,25 +38,48 @@ blocks:
         blocks:
           - type: text
             text: 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
-      - type: note
-        title: Kannst du das? Aufgabe 1
-        blocks:
-          - type: text
-            text: |
-              Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Rechne zuerst im Kopf, dann lies die Lösung.
-
-              **Lösung:** 8, denn 5 + 3 = 8. Hast du 3 heraus, hast du nur die Schritte gezählt. Hast du 2 heraus, bist du nach links gegangen. Hast du 9 heraus, hast du die 5 schon als ersten Schritt mitgezählt.
-      - type: note
-        title: Kannst du das? Aufgabe 2
-        blocks:
-          - type: text
-            text: |
-              Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Schreibe sie auf, dann lies die Lösung.
-
-              **Lösung:** 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Hast du 724 heraus, hast du die Reihenfolge umgedreht. Hast du 13 heraus, hast du die Ziffern addiert.
+      - type: vue-component
+        id: test-zahlenstrahl
+        component: Kurztest
+        props:
+          question: "Kannst du das? Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du?"
+          options:
+            - { text: "8", correct: true, info: "5 + 3 = 8. Nach rechts werden die Zahlen größer." }
+            - { text: "3", correct: false, info: "Das sind nur die Schritte. Du startest aber bei der 5." }
+            - { text: "2", correct: false, info: "Du bist nach links gegangen. Nach rechts musst du addieren." }
+            - {
+                text: "9",
+                correct: false,
+                info: "Du hast die 5 schon als ersten Schritt mitgezählt. Die Schritte beginnen erst nach der 5.",
+              }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Zur Auswahl stehen 8, 3, 2 und 9. Richtig ist 8, denn 5 + 3 = 8. Bei 3 hast du nur die Schritte gezählt, bei 2 bist du nach links gegangen, bei 9 hast du die 5 schon mitgezählt.
+      - type: vue-component
+        id: test-stellenwert
+        component: Kurztest
+        props:
+          question: "Kannst du das? Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer?"
+          options:
+            - { text: "427", correct: true, info: "4 · 100 + 2 · 10 + 7 · 1 = 427." }
+            - {
+                text: "724",
+                correct: false,
+                info: "Du hast die Reihenfolge umgedreht. Die Hunderter stehen ganz links.",
+              }
+            - {
+                text: "13",
+                correct: false,
+                info: "Du hast die Ziffern addiert. Eine Zahl schreibst du, indem du die Ziffern nebeneinanderstellst.",
+              }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Zur Auswahl stehen 427, 724 und 13. Richtig ist 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Bei 724 hast du die Reihenfolge umgedreht, bei 13 hast du die Ziffern addiert.
       - type: text
         text: |
-          Klappt eine Aufgabe nicht? Lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
+          Klappt ein Kurztest nicht? Lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …
