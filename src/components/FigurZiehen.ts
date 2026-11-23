@@ -81,6 +81,8 @@ export function analyse(p: readonly Point[]): Facts {
     return { kind: "kein-viereck", parallelPairs: 0, rightAngles: 0, equalOppositePairs: 0, allSidesEqual: false };
   }
   const [a, b, c, d] = p as [Point, Point, Point, Point];
+  const turns = [turn(a, b, c), turn(b, c, d), turn(c, d, a), turn(d, a, b)];
+  const convex = turns.every((t) => t === turns[0]);
   const s = [len2(a, b), len2(b, c), len2(c, d), len2(d, a)] as const;
   const par0 = cross(sub(b, a), sub(c, d)) === 0;
   const par1 = cross(sub(c, b), sub(d, a)) === 0;
@@ -99,7 +101,7 @@ export function analyse(p: readonly Point[]): Facts {
   else if (parallelPairs === 2 && rightAngles === 4) kind = "rechteck";
   else if (parallelPairs === 2 && s[0] === s[1]) kind = "raute";
   else if (parallelPairs === 2) kind = "parallelogramm";
-  else if ((s[0] === s[1] && s[2] === s[3]) || (s[1] === s[2] && s[3] === s[0])) kind = "drachen";
+  else if (convex && ((s[0] === s[1] && s[2] === s[3]) || (s[1] === s[2] && s[3] === s[0]))) kind = "drachen";
   else if (parallelPairs === 1) kind = "trapez";
   else kind = "viereck";
   return { kind, parallelPairs, rightAngles, equalOppositePairs, allSidesEqual };

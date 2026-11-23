@@ -30,7 +30,7 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
       - type: figure
         image: images/symmetrie-beispiele.svg
-        alt: Ein Rechteck mit zwei gestrichelten Faltlinien, ein Quadrat mit vier und ein gleichschenkliges Dreieck mit einer.
+        alt: Ein Rechteck mit zwei gestrichelten Faltlinien, ein Quadrat mit vier und ein Dreieck mit zwei gleich langen Seiten und einer Achse.
         caption: Die gestrichelten Linien sind Symmetrieachsen.
         source: eigene Zeichnung
         licence: CC-BY-4.0
@@ -42,16 +42,16 @@ blocks:
         text: |
           Eine Figur ist **achsensymmetrisch**, wenn sie eine Symmetrieachse hat. Faltest du an dieser Linie, liegen beide Hälften genau aufeinander.
           Eine Figur ist **punktsymmetrisch**, wenn du sie um einen Punkt halb herumdrehen kannst, also um 180°, und sie dann wieder genauso aussieht.
-          Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel.
+          Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel. Ein Dreieck mit drei gleich langen Seiten heißt gleichseitig.
       - type: table
         caption: Symmetrie bei einigen Figuren
         header: [Figur, Achsen, punktsymmetrisch, kleinster Drehwinkel]
         rowHeaders: true
         rows:
-          - [Rechteck, "2", ja, 180°]
+          - [Rechteck (kein Quadrat), "2", ja, 180°]
           - [Quadrat, "4", ja, 90°]
-          - [gleichseitiges Dreieck, "3", nein, 120°]
-          - [Parallelogramm, "0", ja, 180°]
+          - ["gleichseitiges Dreieck (drei gleich lange Seiten)", "3", nein, 120°]
+          - [Parallelogramm (schief), "0", ja, 180°]
       - type: note
         title: Merke
         blocks:
@@ -75,7 +75,7 @@ blocks:
         text: Wie viele Symmetrieachsen hat die Figur?
         pairs:
           - { left: Quadrat, right: vier Achsen }
-          - { left: Rechteck, right: zwei Achsen }
+          - { left: Rechteck (kein Quadrat), right: zwei Achsen }
           - { left: gleichseitiges Dreieck, right: drei Achsen }
           - { left: Parallelogramm (schief), right: keine Achse }
         explanation: Falte in Gedanken in jede Richtung. Wo beide Hälften genau aufeinanderliegen, ist eine Achse.
@@ -110,7 +110,10 @@ blocks:
           text: "Ein regelmäßiges {{n}}-Eck hat lauter gleich lange Seiten und gleich große Winkel. Wie viele Symmetrieachsen hat es?"
         answer: { value: "n", compare: number }
         mistakes:
-          - { value: "n - 1", message: "Du hast eine Achse vergessen. Durch jede Ecke geht eine Achse." }
+          - {
+              value: "n - 1",
+              message: "Du hast eine Achse vergessen. Es gibt so viele Achsen wie Ecken: Bei einem Dreieck geht jede Achse durch eine Ecke und die Mitte der gegenüberliegenden Seite.",
+            }
           - {
               value: "2 * n",
               message: "Du hast zu viele Achsen gezählt. Eine Achse durch die Mitte zählt nur einmal, auch wenn sie zwei Ecken berührt.",

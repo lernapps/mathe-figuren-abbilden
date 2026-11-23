@@ -114,7 +114,7 @@ export function mistakes(task: Task, props?: Props): (Answer | undefined)[] {
       ? [inside({ x: CX, y: CY - a }), inside({ x: CX - a, y: CY })]
       : [inside({ x: CX + a, y: CY }), inside({ x: CX, y: CY - a })];
   } else {
-    list = [{ x: task.y, y: task.x }, inside({ x: task.x + 1, y: task.y + 1 })];
+    list = [{ x: task.y, y: task.x }, inside({ x: task.x - 1, y: task.y - 1 })];
   }
   // never the solution
   list = list.map((m) => (m !== undefined && check(task, m) ? undefined : m));
@@ -181,7 +181,7 @@ export const about = {
   correct: "Richtig, wenn der Marker genau auf dem gesuchten Punkt steht.",
   mistakes: [
     "Erster typischer Fehler der Aufgabe: bei P(x | y) x und y vertauscht; beim Spiegeln, Verschieben der Originalpunkt; beim Drehen in die falsche Richtung gedreht.",
-    "Zweiter typischer Fehler: bei P(x | y) ab 1 statt ab 0 gezählt; beim Spiegeln nur bis auf die Achse; beim Verschieben Pfeil mit vertauschten Zahlen; beim Drehen um 180° statt 90°.",
+    "Zweiter typischer Fehler: bei P(x | y) den Ursprung mit 1 gezählt (je einen Schritt zu weit links und unten); beim Spiegeln nur bis auf die Achse; beim Verschieben Pfeil mit vertauschten Zahlen; beim Drehen um 180° statt 90°.",
     "x richtig, y falsch.",
     "y richtig, x falsch.",
   ],

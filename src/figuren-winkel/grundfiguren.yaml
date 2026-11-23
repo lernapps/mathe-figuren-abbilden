@@ -13,7 +13,7 @@ blocks:
           Du brauchst dafür Strecken, Parallelen und rechte Winkel von den Seiten davor.
       - type: figure
         image: images/grundfiguren.svg
-        alt: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechteck, C ein Dreieck, D ein Kreis, E ein Fünfeck und F ein Parallelogramm.
+        alt: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechteck, C ein Dreieck, D ein Kreis, E ein Fünfeck und F ein schiefes Viereck mit zwei Paaren paralleler Seiten.
         caption: Sechs Stempel A bis F.
         source: eigene Zeichnung
         licence: CC-BY-4.0

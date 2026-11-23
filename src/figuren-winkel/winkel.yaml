@@ -13,7 +13,7 @@ blocks:
           Eine Tür oder der Zeiger einer Uhr zeigen dir, was ein Winkel ist.
       - type: figure
         image: images/tuer-drehung.svg
-        alt: Eine Tür dreht sich um ihre Angel. Eine gestrichelte Linie zeigt die geschlossene Tür, eine rote Linie die halb geöffnete Tür, ein blauer Bogen die Drehung dazwischen.
+        alt: Eine Tür dreht sich um ihre Angel. Eine gestrichelte Linie zeigt die geschlossene Tür, eine rote Linie die senkrecht dazu geöffnete Tür, ein blauer Bogen die Drehung dazwischen.
         caption: Die Tür dreht sich um die Angel. Der Bogen zeigt, wie weit.
         source: eigene Zeichnung
         licence: CC-BY-4.0
@@ -68,7 +68,12 @@ blocks:
         title: Ein Winkel von 50°
         blocks:
           - type: text
-            text: Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. Du zeichnest ihn, indem du bei 50 auf der Skala einen Punkt setzt und ihn mit dem Scheitel verbindest.
+            text: |
+              Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. So zeichnest du ihn:
+              1. Zeichne den ersten Schenkel und markiere den Scheitel.
+              2. Lege die Nullkante des Geodreiecks auf den Schenkel, den Mittelpunkt auf den Scheitel.
+              3. Setze bei 50 auf der Skala, die an diesem Schenkel bei 0 beginnt, einen Punkt.
+              4. Verbinde den Scheitel mit dem Punkt. Das ist der zweite Schenkel.
   - type: section
     id: uebung
     title: Übung
@@ -90,6 +95,18 @@ blocks:
             - { answer: 70, seed: 1 }
             - { answer: 105, seed: 1 }
             - { answer: 0 }
+      - type: ordering
+        id: winkel-zeichnen
+        text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest einen Winkel von 70°.
+        items:
+          - Zeichne den ersten Schenkel und markiere den Scheitel.
+          - Lege die Nullkante des Geodreiecks auf den Schenkel und den Mittelpunkt auf den Scheitel.
+          - Setze bei 70 auf der Skala, die bei 0 am ersten Schenkel beginnt, einen Punkt.
+          - Verbinde den Scheitel mit dem Punkt.
+        explanation: Erst brauchst du den ersten Schenkel. Dann richtest du das Geodreieck aus und markierst den Wert. Zum Schluss zeichnest du den zweiten Schenkel.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
       - type: matching
         id: winkelart
         text: Welche Winkelart passt zur Größe?
@@ -119,7 +136,7 @@ blocks:
         hint: "Beide Winkel zusammen ergeben den gestreckten Winkel mit 180°."
         steps:
           - "Gestreckter Winkel: 180°. Ein Teil ist {{a}}°."
-          - "180° - {{a}}° = {{answer}}°."
+          - "180° − {{a}}° = {{answer}}°."
       - type: single-choice
         id: winkelart-120
         text: Welche Art Winkel ist ein Winkel von 120°?

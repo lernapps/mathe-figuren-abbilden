@@ -20,7 +20,7 @@ blocks:
             info: Richtig. 2 + 3 = 5 nach rechts, 1 + 2 = 3 nach oben.
           - text: P'(3 | 5)
             correct: false
-            info: Hier sind die Pfeilzahlen vertauscht. Erst kommt nach rechts, dann nach oben.
+            info: Du hast x und y des Ergebnisses vertauscht. P'(5 | 3) hat x = 5 und y = 3.
           - text: P'(5 | 1)
             correct: false
             info: Du hast nur nach rechts verschoben. Der Pfeil geht auch 2 nach oben.
@@ -52,7 +52,7 @@ blocks:
         title: Merke
         blocks:
           - type: text
-            text: Verschieben, Spiegeln und Drehen ändern die Form und die Größe der Figur nicht. Nur ihre Lage ändert sich.
+            text: Verschieben, Spiegeln und Drehen ändern die Form und die Größe der Figur nicht. Die Lage ändert sich. Beim Spiegeln steht die Bildfigur außerdem seitenverkehrt.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -133,6 +133,17 @@ blocks:
         steps:
           - "Der Pfeil geht {{dy}} nach oben, also ändert sich nur die y-Koordinate um {{dy}}."
           - "{{py}} + {{dy}} = {{answer}}."
+      - type: matching
+        id: abbildung-angabe
+        text: Was gibst du an, um die Abbildung genau zu beschreiben?
+        pairs:
+          - { left: Spiegeln, right: die Achse }
+          - { left: Verschieben, right: den Pfeil }
+          - { left: Drehen, right: "den Drehpunkt und den Winkel" }
+        explanation: Zum Spiegeln brauchst du die Achse, zum Verschieben den Pfeil und zum Drehen den Drehpunkt und den Winkel.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
       - type: multiple-choice
         id: was-bleibt
         text: Was bleibt beim Verschieben, Spiegeln und Drehen gleich?
@@ -149,7 +160,7 @@ blocks:
           - text: Die Seitenlängen
             correct: true
             info: Richtig. Die Strecken der Bildfigur sind genauso lang wie die der Figur.
-        explanation: Diese Abbildungen verändern nur die Lage. Form, Größe und Seitenlängen bleiben gleich.
+        explanation: Diese Abbildungen verändern die Lage. Form, Größe und Seitenlängen bleiben gleich.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
             url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/

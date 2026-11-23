@@ -13,14 +13,14 @@ blocks:
           Das baut auf Strecken, Winkeln und Figuren der Seiten davor auf.
       - type: single-choice
         id: zirkel-kreis
-        text: Du stichst den Zirkel in den Punkt M, stellst ihn auf 3 cm ein und zeichnest einen Kreis. Wie weit ist jeder Punkt des Kreises von M entfernt?
+        text: Du stichst den Zirkel in den Punkt M, stellst ihn auf 3 cm ein und zeichnest einen Kreis. Wie weit ist jeder Punkt des Kreises von M entfernt?
         options:
-          - text: 3 cm
+          - text: 3 cm
             correct: true
             info: Richtig. Der Zirkel bleibt gleich weit geöffnet, also hat jeder Punkt den gleichen Abstand von M.
-          - text: 6 cm
+          - text: 6 cm
             correct: false
-            info: 6 cm ist der Durchmesser, die Breite des ganzen Kreises. Der Abstand von M ist die Hälfte.
+            info: 6 cm ist die Breite des ganzen Kreises. Der Abstand von M ist die Hälfte davon.
           - text: Das ist bei jedem Punkt anders.
             correct: false
             info: Der Zirkel ändert seine Öffnung nicht. Darum sind alle Abstände gleich.
@@ -40,8 +40,9 @@ blocks:
         licence: CC-BY-4.0
       - type: text
         text: |
+          Die Seiten heißen nach der Ecke, die ihnen gegenübersteht: a ist die Strecke BC, b die Strecke AC und c die Strecke AB.
           Du kennst die drei Seiten a, b und c. Zeichne zuerst die Strecke c mit den Endpunkten A und B.
-          Stelle den Zirkel auf b ein und zeichne einen Kreisbogen um A. Stelle ihn auf a ein und zeichne einen Kreisbogen um B.
+          Der **Radius** ist der Abstand vom Mittelpunkt zum Kreis, also die Öffnung des Zirkels. Stelle den Zirkel auf b ein und zeichne einen Kreisbogen um A. Stelle ihn auf a ein und zeichne einen Kreisbogen um B.
           Dort, wo sich die Bögen schneiden, liegt der Punkt C. Verbinde C mit A und B.
       - type: note
         title: Merke
@@ -53,10 +54,10 @@ blocks:
     title: Ein Beispiel
     blocks:
       - type: example
-        title: Dreieck mit a = 4 cm, b = 3 cm, c = 5 cm
+        title: Dreieck mit a = 4 cm, b = 3 cm, c = 5 cm
         blocks:
           - type: text
-            text: Zeichne c = 5 cm. Öffne den Zirkel auf 3 cm und ziehe einen Bogen um A. Öffne ihn auf 4 cm und ziehe einen Bogen um B. Verbinde den Schnittpunkt C mit A und B.
+            text: Zeichne c = 5 cm. Öffne den Zirkel auf 3 cm und ziehe einen Bogen um A. Öffne ihn auf 4 cm und ziehe einen Bogen um B. Verbinde den Schnittpunkt C mit A und B.
   - type: section
     id: uebung
     title: Übung
@@ -66,8 +67,8 @@ blocks:
         text: Bringe die Schritte in die richtige Reihenfolge, um ein Dreieck aus drei Seiten zu konstruieren.
         items:
           - Zeichne die Strecke c mit den Endpunkten A und B.
-          - Zeichne um A einen Kreisbogen mit dem Radius b.
-          - Zeichne um B einen Kreisbogen mit dem Radius a.
+          - Zeichne um A einen Kreisbogen mit dem Radius b (Strecke AC).
+          - Zeichne um B einen Kreisbogen mit dem Radius a (Strecke BC).
           - Verbinde den Schnittpunkt C der Bögen mit A und B.
         explanation: Zuerst brauchst du die Grundstrecke. Dann zeichnest du die beiden Bögen. Erst am Schluss verbindest du die Punkte.
         links:
@@ -81,12 +82,12 @@ blocks:
           c: { int: [3, 7], step: 1 }
         where: ["a != b", "b != c", "a != c", "a + b > c", "a + c > b", "b + c > a"]
         task:
-          text: "Du konstruierst ein Dreieck mit a = {{a}} cm, b = {{b}} cm und c = {{c}} cm. Du hast die Strecke c = AB gezeichnet. Auf wie viel cm stellst du den Zirkel für den Bogen um A ein?"
+          text: "Du konstruierst ein Dreieck mit a = {{a}} cm, b = {{b}} cm und c = {{c}} cm. Du hast die Strecke c = AB gezeichnet. Auf wie viel cm stellst du den Zirkel für den Bogen um A ein?"
         answer: { value: "b", compare: { number: { unit: cm } } }
         mistakes:
           - {
               value: "a",
-              message: "Das ist der Radius für den Bogen um B. Der Bogen um A hat die Länge der Seite b, denn b ist die Seite, die in A beginnt.",
+              message: "Das ist der Radius für den Bogen um B. Der Bogen um A hat den Radius b, denn b ist die Strecke AC.",
             }
           - {
               value: "c",
@@ -94,21 +95,21 @@ blocks:
             }
         hint: "Um A zeichnest du den Bogen mit der Seite b, um B den mit der Seite a."
         steps:
-          - "Die Seite b gehört zum Bogen um A. Sie ist {{b}} cm lang."
-          - "Du stellst den Zirkel auf {{answer}} cm ein."
+          - "Die Seite b gehört zum Bogen um A. Sie ist {{b}} cm lang."
+          - "Du stellst den Zirkel auf {{answer}} cm ein."
       - type: single-choice
         id: dreieck-unmoeglich
-        text: Du willst ein Dreieck mit den Seiten 2 cm, 3 cm und 8 cm konstruieren. Was passiert?
+        text: Du willst ein Dreieck mit den Seiten 2 cm, 3 cm und 8 cm konstruieren. Was passiert?
         options:
           - text: Die beiden Bögen schneiden sich nicht, das Dreieck gibt es nicht.
             correct: true
-            info: Richtig. Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander.
+            info: Richtig. Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander.
           - text: Die Bögen schneiden sich genau einmal.
             correct: false
-            info: Dazu müssten 2 cm und 3 cm zusammen mindestens 8 cm lang sein.
+            info: Dazu müssten 2 cm und 3 cm zusammen mindestens 8 cm lang sein. Das sind nur 5 cm.
           - text: Du bekommst ein Dreieck, wenn du den Zirkel weiter öffnest.
             correct: false
-            info: Dann wären die Seiten nicht mehr 2 cm und 3 cm.
+            info: Dann wären die Seiten nicht mehr 2 cm und 3 cm.
         explanation: Die beiden kurzen Seiten müssen zusammen länger sein als die lange Seite, sonst treffen sich die Bögen nicht.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)

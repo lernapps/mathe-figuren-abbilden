@@ -100,8 +100,8 @@ blocks:
           - { value: "4", message: "Das ist die Achse. Der Bildpunkt liegt noch einmal so weit dahinter." }
         hint: "Wie weit ist P von der Achse x = 4 entfernt? Gehe auf der anderen Seite genauso weit."
         steps:
-          - "Der Abstand von P zur Achse x = 4 ist |{{px}} - 4|."
-          - "Der Bildpunkt liegt gespiegelt: 8 - {{px}} = {{answer}}."
+          - "Der Abstand von P zur Achse x = 4 ist |{{px}} − 4|."
+          - "Der Bildpunkt liegt gespiegelt: 8 − {{px}} = {{answer}}."
       - type: single-choice
         id: spiegel-auf-achse
         text: Welcher Punkt bleibt beim Spiegeln an der Achse x = 4 unverändert?

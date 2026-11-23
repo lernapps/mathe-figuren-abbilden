@@ -142,7 +142,7 @@ blocks:
           hint: Klicke auf das Brett, oder drücke Tab bis zum Brett und nutze die Pfeiltasten, oder tippe beide Zahlen ein. Erlaubt sind x von 0 bis 8 und y von 0 bis 6.
           mistakes:
             - "Du hast x und y vertauscht: Du bist erst {b} nach oben gegangen. Erst kommt x (nach rechts), dann y (nach oben)."
-            - "Du hast ab 1 gezählt: Dein Schiff steht je einen Schritt zu weit rechts und oben. Beginne beim Ursprung mit 0."
+            - "Du hast den Ursprung mit 1 gezählt: Dein Schiff steht je einen Schritt zu weit links und unten. Beim Ursprung ist die Zahl 0."
             - "Dein x stimmt, dein y nicht: Zähle vom Ursprung aus nach oben noch einmal nach."
             - "Dein y stimmt, dein x nicht: Zähle zuerst vom Ursprung nach rechts, dann erst nach oben."
         examples:
@@ -150,4 +150,4 @@ blocks:
             - { answer: { x: 5, y: 1 }, seed: 1 }
           rejected:
             - { answer: { x: 1, y: 5 }, seed: 1 }
-            - { answer: { x: 6, y: 2 }, seed: 1 }
+            - { answer: { x: 4, y: 0 }, seed: 1 }

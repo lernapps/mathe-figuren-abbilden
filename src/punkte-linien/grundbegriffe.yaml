@@ -40,7 +40,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ein **Punkt** ist eine genaue Stelle. Du zeichnest ihn als kleines Kreuz und nennst ihn mit einem Großbuchstaben, zum Beispiel A.
+          Ein **Punkt** ist eine genaue Stelle. Du zeichnest ihn als kleinen Punkt und nennst ihn mit einem Großbuchstaben, zum Beispiel A.
           Eine **Strecke** hat zwei Endpunkte. Sie hat eine Länge, die du messen kannst. Du schreibst Strecke BC.
           Eine **Gerade** hat keine Enden. Du zeichnest sie mit Pfeilen und nennst sie mit einem kleinen Buchstaben, zum Beispiel g.
           Eine **Halbgerade** beginnt in einem Punkt und geht nur in eine Richtung weiter.
@@ -112,7 +112,7 @@ blocks:
       - type: generated
         id: strecken-zaehlen
         given:
-          n: { int: [4, 6], step: 1 }
+          n: { int: [4, 8], step: 1 }
         task:
           text: "Auf einer Geraden liegen {{n}} Punkte. Du zeichnest alle Strecken zwischen je zwei dieser Punkte. Wie viele verschiedene Strecken sind das?"
         answer: { value: "n * (n - 1) / 2", compare: number }
@@ -131,5 +131,5 @@ blocks:
             }
         hint: "Der erste Punkt hat Strecken zu allen anderen. Der zweite Punkt hat neue Strecken zu allen übrigen."
         steps:
-          - "Jeder der {{n}} Punkte hat Strecken zu den anderen {{n}} - 1 Punkten. Das sind {{n}} · ({{n}} - 1) Strecken, jede doppelt gezählt."
+          - "Jeder der {{n}} Punkte hat Strecken zu den anderen {{n}} − 1 Punkten. Das sind {{n}} · ({{n}} − 1) Strecken, jede doppelt gezählt."
           - "Teile durch 2: Es sind {{answer}} Strecken."

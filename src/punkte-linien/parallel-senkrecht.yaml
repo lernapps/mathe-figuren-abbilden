@@ -60,9 +60,18 @@ blocks:
         blocks:
           - type: text
             text: |
-              1. Lege die Mittellinie des Geodreiecks genau auf g.
-              2. Schiebe das Geodreieck an g entlang, bis seine lange Kante am Punkt P liegt.
-              3. Zeichne an der Kante entlang eine Linie durch P. Sie ist parallel zu g.
+              1. Lege die lange Kante des Geodreiecks an g.
+              2. Lege ein Lineal an eine kurze Kante des Geodreiecks und halte es fest.
+              3. Schiebe das Geodreieck am Lineal entlang, bis seine lange Kante an P liegt.
+              4. Zeichne an der langen Kante entlang eine Linie durch P. Sie ist parallel zu g.
+      - type: example
+        title: Senkrechte zu g durch den Punkt P
+        blocks:
+          - type: text
+            text: |
+              1. Lege die Mittellinie des Geodreiecks genau auf g. Die Mittellinie steht senkrecht zur langen Kante.
+              2. Schiebe das Geodreieck an g entlang, bis seine lange Kante an P liegt.
+              3. Zeichne an der langen Kante entlang eine Linie durch P. Sie ist senkrecht zu g.
   - type: section
     id: uebung
     title: Übung
@@ -71,10 +80,22 @@ blocks:
         id: parallele-schritte
         text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Parallele zu g durch P.
         items:
+          - Lege die lange Kante des Geodreiecks an g.
+          - Lege ein Lineal an eine kurze Kante des Geodreiecks.
+          - Schiebe das Geodreieck am Lineal entlang, bis die lange Kante an P liegt.
+          - Zeichne an der langen Kante entlang eine Linie durch P.
+        explanation: Zuerst richtest du die lange Kante an g aus. Das Lineal hält die Richtung fest, während du das Geodreieck verschiebst. Zum Schluss zeichnest du.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
+      - type: ordering
+        id: senkrechte-schritte
+        text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Senkrechte zu g durch P.
+        items:
           - Lege die Mittellinie des Geodreiecks genau auf g.
-          - Schiebe das Geodreieck an g entlang, bis die Kante am Punkt P liegt.
-          - Zeichne an der Kante entlang eine Linie durch P.
-        explanation: Zuerst richtest du das Geodreieck an g aus. Dann verschiebst du es, ohne es zu drehen. Zum Schluss zeichnest du.
+          - Schiebe das Geodreieck an g entlang, bis die lange Kante an P liegt.
+          - Zeichne an der langen Kante entlang eine Linie durch P.
+        explanation: Die Mittellinie steht senkrecht zur langen Kante. Liegt sie auf g, ist die lange Kante senkrecht zu g. Dann musst du das Geodreieck nur noch bis P schieben.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
             url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
@@ -105,14 +126,14 @@ blocks:
           s: { int: [5, 12], step: 1 }
         where: ["s > d"]
         task:
-          text: "Zwei parallele Geraden g und h. Mara misst von A auf g senkrecht bis h und liest {{d}} cm ab. Sie misst auch schräg von A bis zu einem Punkt auf h und liest {{s}} cm ab. Wie groß ist der Abstand von g und h in cm?"
+          text: "Zwei parallele Geraden g und h. Mara misst von A auf g senkrecht bis h und liest {{d}} cm ab. Sie misst auch schräg von A bis zu einem Punkt auf h und liest {{s}} cm ab. Wie groß ist der Abstand von g und h in cm?"
         answer: { value: "d", compare: { number: { unit: cm } } }
         mistakes:
           - { value: "s", message: "Das ist die schräge Strecke. Der Abstand wird senkrecht gemessen und ist kürzer." }
           - { value: "d + s", message: "Du hast die beiden Längen addiert. Der Abstand ist nur die senkrechte Länge." }
         hint: "Der Abstand ist die kürzeste Strecke zwischen den Geraden. Welche Messung ist kürzer?"
         steps:
-          - "Die senkrechte Messung ist {{d}} cm, die schräge {{s}} cm. Der Abstand ist die kürzere, also {{answer}} cm."
+          - "Die senkrechte Messung ist {{d}} cm, die schräge {{s}} cm. Der Abstand ist die kürzere, also {{answer}} cm."
       - type: single-choice
         id: zeichen-bedeutung
         text: Was bedeutet g ⊥ h?
