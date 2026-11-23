@@ -1,0 +1,138 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Symmetrie
+description: Achsen-, Punkt- und Drehsymmetrie bei Figuren erkennen.
+competencies: [symmetrie]
+blocks:
+  - type: section
+    id: einstieg
+    title: Falten und Klecksbild
+    blocks:
+      - type: text
+        text: |
+          Die Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
+          Falte ein Blatt Papier in der Mitte, tropfe Farbe auf eine Hälfte und klappe zu. Es entsteht ein Klecksbild mit zwei gleichen Hälften.
+      - type: single-choice
+        id: faltlinie
+        text: Du faltest ein Rechteck genau in der Mitte, sodass beide Hälften aufeinanderliegen. Wie heißt die Faltlinie?
+        options:
+          - text: Symmetrieachse
+            correct: true
+            info: Richtig. Beide Hälften sind Spiegelbilder voneinander.
+          - text: Diagonale
+            correct: false
+            info: Eine Diagonale verbindet zwei Ecken. Beim Rechteck legt sie die Hälften nicht aufeinander.
+          - text: Parallele
+            correct: false
+            info: Parallelen sind zwei Linien. Die Faltlinie ist eine einzige Linie.
+        explanation: Wo du faltest und beide Hälften genau aufeinanderliegen, liegt eine Symmetrieachse.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
+      - type: figure
+        image: images/symmetrie-beispiele.svg
+        alt: Ein Rechteck mit zwei gestrichelten Faltlinien, ein Quadrat mit vier und ein gleichschenkliges Dreieck mit einer.
+        caption: Die gestrichelten Linien sind Symmetrieachsen.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: erklaerung
+    title: Drei Arten von Symmetrie
+    blocks:
+      - type: text
+        text: |
+          Eine Figur ist **achsensymmetrisch**, wenn sie eine Symmetrieachse hat. Faltest du an dieser Linie, liegen beide Hälften genau aufeinander.
+          Eine Figur ist **punktsymmetrisch**, wenn du sie um einen Punkt halb herumdrehen kannst, also um 180°, und sie dann wieder genauso aussieht.
+          Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel.
+      - type: table
+        caption: Symmetrie bei einigen Figuren
+        header: [Figur, Achsen, punktsymmetrisch, kleinster Drehwinkel]
+        rowHeaders: true
+        rows:
+          - [Rechteck, "2", ja, 180°]
+          - [Quadrat, "4", ja, 90°]
+          - [gleichseitiges Dreieck, "3", nein, 120°]
+          - [Parallelogramm, "0", ja, 180°]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Die Diagonale eines Rechtecks ist keine Symmetrieachse. Beim Falten an ihr liegen die Hälften nicht aufeinander.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Das gleichseitige Dreieck
+        blocks:
+          - type: text
+            text: Es hat drei Symmetrieachsen. Dreht du es um 120°, sieht es wieder aus wie vorher. Es ist drehsymmetrisch, aber nicht punktsymmetrisch.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: achsen-zuordnen
+        text: Wie viele Symmetrieachsen hat die Figur?
+        pairs:
+          - { left: Quadrat, right: vier Achsen }
+          - { left: Rechteck, right: zwei Achsen }
+          - { left: gleichseitiges Dreieck, right: drei Achsen }
+          - { left: Parallelogramm (schief), right: keine Achse }
+        explanation: Falte in Gedanken in jede Richtung. Wo beide Hälften genau aufeinanderliegen, ist eine Achse.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
+      - type: multiple-choice
+        id: punktsymmetrisch
+        text: Welche Figuren sind punktsymmetrisch?
+        options:
+          - text: Rechteck
+            correct: true
+            info: Richtig. Nach einer halben Drehung um die Mitte sieht es wieder gleich aus.
+          - text: Parallelogramm
+            correct: true
+            info: Richtig. Auch das schiefe Parallelogramm sieht nach einer halben Drehung gleich aus.
+          - text: gleichseitiges Dreieck
+            correct: false
+            info: Nach einer halben Drehung steht es auf dem Kopf. Es ist nur drehsymmetrisch mit 120°.
+          - text: Quadrat
+            correct: true
+            info: Richtig. Es sieht schon nach einer Vierteldrehung gleich aus, also auch nach einer halben.
+        explanation: Punktsymmetrisch heißt, nach einer halben Drehung sieht die Figur wieder gleich aus.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
+      - type: generated
+        id: achsen-n-eck
+        given:
+          n: { oneOf: [3, 4, 5, 6, 8] }
+        task:
+          text: "Ein regelmäßiges {{n}}-Eck hat lauter gleich lange Seiten und gleich große Winkel. Wie viele Symmetrieachsen hat es?"
+        answer: { value: "n", compare: number }
+        mistakes:
+          - { value: "n - 1", message: "Du hast eine Achse vergessen. Durch jede Ecke geht eine Achse." }
+          - {
+              value: "2 * n",
+              message: "Du hast zu viele Achsen gezählt. Eine Achse durch die Mitte zählt nur einmal, auch wenn sie zwei Ecken berührt.",
+            }
+        hint: "Zeichne ein Dreieck oder ein Quadrat und zähle die Achsen. Welcher Zusammenhang mit der Zahl der Ecken fällt dir auf?"
+        steps:
+          - "Bei einem regelmäßigen Vieleck mit {{n}} Ecken gibt es genau so viele Achsen wie Ecken."
+          - "Das sind {{answer}} Achsen."
+      - type: generated
+        id: drehwinkel-n-eck
+        given:
+          n: { oneOf: [3, 4, 5, 6, 8, 9, 10] }
+        task:
+          text: "Ein regelmäßiges {{n}}-Eck wird um seinen Mittelpunkt gedreht, bis es zum ersten Mal wieder genauso aussieht. Wie groß ist diese kleinste Drehung in Grad?"
+        answer: { value: "360 / n", compare: { number: { unit: "°" } } }
+        mistakes:
+          - {
+              value: "180 / n",
+              message: "Du hast durch 180 geteilt. Eine ganze Drehung hat 360°, die teilst du durch die Zahl der Ecken.",
+            }
+          - { value: "n", message: "Das ist die Zahl der Ecken. Gefragt ist der Winkel der Drehung in Grad." }
+        hint: "Nach n gleichen Drehungen ist eine ganze Drehung von 360° geschafft."
+        steps:
+          - "Eine ganze Drehung hat 360°. Das {{n}}-Eck sieht nach {{n}} gleichen Drehungen wieder aus."
+          - "360° : {{n}} = {{answer}}°."

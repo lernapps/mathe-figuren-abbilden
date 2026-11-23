@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Symmetrie, Spiegeln, Verschieben, Drehen
+summary: Du erkennst Symmetrien und bewegst Figuren auf dem Spielbrett.
+pages: [symmetrie, spiegeln, verschieben-drehen]

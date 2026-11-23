@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Spiegeln
+description: Punkte und Figuren an einer senkrechten Achse spiegeln und die Bildfigur bestimmen.
+competencies: [bewegungen-figuren]
+blocks:
+  - type: section
+    id: einstieg
+    title: Die andere Hälfte der Karte
+    blocks:
+      - type: text
+        text: |
+          Die andere Hälfte der Schatzkarte ist das Spiegelbild der ersten. Du lernst hier, Punkte und Figuren am Spielbrett zu spiegeln.
+          Du brauchst Symmetrieachsen und das Koordinatensystem von den Seiten davor.
+      - type: single-choice
+        id: spiegel-y
+        text: Der Punkt P(2 | 3) wird an der senkrechten Achse x = 4 gespiegelt. Welche y-Koordinate hat der Spiegelpunkt P'?
+        options:
+          - text: "3"
+            correct: true
+            info: Richtig. Beim Spiegeln an einer senkrechten Achse bleibt die Höhe gleich.
+          - text: "5"
+            correct: false
+            info: 5 wäre 3 plus 2. Der Punkt wird nur nach rechts gespiegelt, nicht nach oben.
+          - text: "2"
+            correct: false
+            info: 2 ist die x-Koordinate des Punktes. Die y-Koordinate ist 3.
+        explanation: Eine senkrechte Achse spiegelt nach links und rechts. Die Höhe des Punktes ändert sich nicht.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
+  - type: section
+    id: erklaerung
+    title: Spiegeln an einer Achse
+    blocks:
+      - type: figure
+        image: images/spiegeln-beispiel.svg
+        alt: Ein Dreieck ABC links der gestrichelten senkrechten Achse bei x gleich 4 und sein Spiegelbild A'B'C' rechts davon, gleich weit von der Achse entfernt.
+        caption: Dreieck ABC und sein Spiegelbild an der Achse x = 4.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: text
+        text: |
+          Beim **Spiegeln** an einer **Achse** liegt der Bildpunkt P' auf der anderen Seite der Achse. Die Strecke von P nach P' steht senkrecht auf der Achse, und die Achse halbiert sie.
+          Jeder Punkt hat von der Achse denselben Abstand wie sein Bildpunkt. Ein Punkt auf der Achse bleibt, wo er ist.
+          Bei der senkrechten Achse x = 4 gilt: Die y-Koordinate bleibt, für die x-Koordinate zählst du den Abstand zur Achse auf der anderen Seite ab.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Die Achse liegt genau in der Mitte zwischen P und P'. Die Bildfigur ist genauso groß wie die Figur, nur seitenverkehrt.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Der Punkt A(1 | 1)
+        blocks:
+          - type: text
+            text: A hat von der Achse x = 4 den Abstand 3. Auf der anderen Seite gehst du von der Achse noch einmal 3 nach rechts und kommst bei 7. Die Höhe bleibt 1. Also A'(7 | 1).
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: vue-component
+        id: spiegel-setzen
+        component: Spielbrett
+        props:
+          mode: mirror
+          task: "Spiegele den Punkt P({px} | {py}) an der senkrechten Achse x = {m}. Setze dein Schiff auf den Bildpunkt."
+          hint: "Klicke auf das Brett, oder wähle es mit Tab aus und nutze die Pfeiltasten, oder tippe beide Zahlen ein."
+          board: Spielbrett mit einer senkrechten gestrichelten Achse bei x gleich 4 und einem gegebenen Punkt P.
+          xLabel: "x (nach rechts)"
+          yLabel: "y (nach oben)"
+          position: "Dein Schiff steht auf P'({a} | {b})."
+          none: "Du hast noch kein Schiff gesetzt."
+          mistakes:
+            - "Das ist der Punkt P selbst. Du musst ihn auf die andere Seite der Achse spiegeln."
+            - "Dein Punkt liegt auf der Achse. Er muss noch einmal so weit hinter der Achse liegen wie P davor."
+            - "Dein x stimmt, dein y nicht: Die Höhe bleibt beim Spiegeln an einer senkrechten Achse gleich."
+            - "Dein y stimmt, dein x nicht: Zähle den Abstand von P zur Achse und gehe hinter der Achse genauso weit."
+        examples:
+          accepted:
+            - { answer: { x: 3, y: 1 }, seed: 1 }
+          rejected:
+            - { answer: { x: 5, y: 1 }, seed: 1 }
+            - { answer: { x: 4, y: 1 }, seed: 1 }
+      - type: generated
+        id: spiegel-x
+        given:
+          px: { oneOf: [1, 2, 3, 5, 6, 7] }
+          py: { int: [1, 5], step: 1 }
+        task:
+          text: "Der Punkt P({{px}} | {{py}}) wird an der Achse x = 4 gespiegelt. Wie groß ist die x-Koordinate des Bildpunkts?"
+        answer: { value: "8 - px", compare: number }
+        mistakes:
+          - {
+              value: "px",
+              message: "Das ist die x-Koordinate von P. Der Bildpunkt liegt auf der anderen Seite der Achse.",
+            }
+          - { value: "4", message: "Das ist die Achse. Der Bildpunkt liegt noch einmal so weit dahinter." }
+        hint: "Wie weit ist P von der Achse x = 4 entfernt? Gehe auf der anderen Seite genauso weit."
+        steps:
+          - "Der Abstand von P zur Achse x = 4 ist |{{px}} - 4|."
+          - "Der Bildpunkt liegt gespiegelt: 8 - {{px}} = {{answer}}."
+      - type: single-choice
+        id: spiegel-auf-achse
+        text: Welcher Punkt bleibt beim Spiegeln an der Achse x = 4 unverändert?
+        options:
+          - text: P(4 | 2)
+            correct: true
+            info: Richtig. Der Punkt liegt auf der Achse, sein Abstand zur Achse ist 0.
+          - text: P(2 | 4)
+            correct: false
+            info: Dieser Punkt liegt links der Achse. Sein Spiegelpunkt wäre P'(6 | 4).
+          - text: P(3 | 3)
+            correct: false
+            info: Dieser Punkt ist einen Schritt von der Achse entfernt. Sein Spiegelpunkt wäre P'(5 | 3).
+        explanation: Ein Punkt auf der Achse hat Abstand 0 und bleibt, wo er ist.
+        links:
+          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
+            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/

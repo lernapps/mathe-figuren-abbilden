@@ -3,13 +3,15 @@
 // arrow keys on the board, or with the two number fields; it emits the point with answer. The explainer draws
 // "Prüfen" and gives the feedback (logic in Spielbrett.ts).
 import { computed, ref } from "vue";
-import { MAX_X, MAX_Y, fill, generate } from "./Spielbrett.ts";
+import { AXIS, CX, CY, MAX_X, MAX_Y, fill, generate } from "./Spielbrett.ts";
 
 const props = defineProps<{
   /** The task, with {x} and {y}. */
   task: string;
   /** What to do on the board. */
   hint: string;
+  /** The kind of task: set a point (default), reflect, shift or rotate a given point. */
+  mode?: "set" | "mirror" | "shift" | "rotate";
   /** The app's message for each typical mistake, in the order of about.mistakes. */
   mistakes: string[];
   /** The label of the board for screen readers. */
@@ -64,9 +66,9 @@ function onClick(event: MouseEvent): void {
   const svg = event.currentTarget as SVGSVGElement;
   const rect = svg.getBoundingClientRect();
   const scale = (PAD * 2 + MAX_X * STEP) / rect.width;
-  const px = (event.clientX - rect.left) * scale;
-  const py = (event.clientY - rect.top) * scale;
-  set((px - PAD) / STEP, (PAD + MAX_Y * STEP - py) / STEP);
+  const mx = (event.clientX - rect.left) * scale;
+  const my = (event.clientY - rect.top) * scale;
+  set((mx - PAD) / STEP, (PAD + MAX_Y * STEP - my) / STEP);
   sync();
 }
 
@@ -85,6 +87,8 @@ function onKey(event: KeyboardEvent): void {
   sync();
 }
 
+const px = (v: number) => PAD + v * STEP;
+const py = (v: number) => PAD + (MAX_Y - v) * STEP;
 const width = PAD * 2 + MAX_X * STEP;
 const height = PAD * 2 + MAX_Y * STEP;
 const text = computed(() =>
@@ -143,6 +147,22 @@ const text = computed(() =>
           {{ j }}
         </text>
       </g>
+      <line
+        v-if="mode === 'mirror'"
+        :x1="px(AXIS)"
+        :y1="PAD - 8"
+        :x2="px(AXIS)"
+        :y2="PAD + MAX_Y * STEP"
+        class="spielbrett-axis"
+      />
+      <g v-if="mode === 'rotate'">
+        <circle :cx="px(CX)" :cy="py(CY)" r="5" class="spielbrett-centre" />
+        <text :x="px(CX) + 8" :y="py(CY) + 18" class="spielbrett-given">Z</text>
+      </g>
+      <g v-if="mode !== undefined && mode !== 'set'">
+        <circle :cx="px(current.px)" :cy="py(current.py)" r="8" class="spielbrett-given-dot" />
+        <text :x="px(current.px) + 10" :y="py(current.py) - 10" class="spielbrett-given">P</text>
+      </g>
       <g v-if="x !== undefined && y !== undefined">
         <circle :cx="PAD + x * STEP" :cy="PAD + (MAX_Y - y) * STEP" r="8" class="spielbrett-marker" />
         <path
@@ -185,6 +205,25 @@ const text = computed(() =>
 .spielbrett-axes text {
   fill: var(--page-text);
   font-size: 14px;
+  font-family: sans-serif;
+}
+.spielbrett-axis {
+  stroke: var(--page-text);
+  stroke-width: 3;
+  stroke-dasharray: 8 5;
+}
+.spielbrett-given-dot {
+  fill: var(--page-surface);
+  stroke: var(--page-text);
+  stroke-width: 3;
+}
+.spielbrett-centre {
+  fill: var(--page-text);
+}
+.spielbrett-given {
+  fill: var(--page-text);
+  font-size: 15px;
+  font-weight: bold;
   font-family: sans-serif;
 }
 .spielbrett-marker {
