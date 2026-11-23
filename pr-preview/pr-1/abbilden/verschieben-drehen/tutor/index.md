@@ -44,7 +44,7 @@ Figuren um einen Pfeil verschieben und um einen Drehpunkt drehen und die Bildfig
 ### Der Schatz wandert
 
 Der zehnte und letzte Hinweis der Karte sagt, dass der Schatz verschoben und gedreht wurde. Du lernst hier, Figuren zu verschieben und zu drehen und ihre Bildfigur zu bestimmen.
-Du brauchst das Koordinatensystem von den Seiten davor.
+Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ein Punkt um einen Pfeil bewegt: Der Pfeil sagt, wie weit der Punkt nach rechts und wie weit er nach oben wandert.
 
 - Aufgabe `verschieben-p` (unten)
 

@@ -62,11 +62,11 @@ Bild: Ein Zahlenstrahl von 0 bis 10 mit einem roten Punkt bei 3. Drei kleine Bö
 
 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
 
-Interaktiv: Kurztest: Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Zur Auswahl stehen 8, 3, 2 und 9. Richtig ist 8, denn 5 + 3 = 8. Bei 3 hast du nur die Schritte gezählt, bei 2 bist du nach links gegangen, bei 9 hast du die 5 schon mitgezählt.
+Interaktiv: Kurztest: Du startest bei der 48 auf dem Zahlenstrahl und gehst 37 Schritte nach rechts. Bei welcher Zahl landest du? Zur Auswahl stehen 85, 37, 11 und 86. Richtig ist 85, denn 48 + 37 = 85 (zerlege: 48 + 30 = 78, dann 78 + 7). Bei 37 hast du nur die Schritte gezählt, bei 11 bist du nach links gegangen, bei 86 hast du die 48 schon mitgezählt.
 
-Interaktiv: Kurztest: Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Zur Auswahl stehen 427, 724 und 13. Richtig ist 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Bei 724 hast du die Reihenfolge umgedreht, bei 13 hast du die Ziffern addiert.
+Interaktiv: Kurztest: Welche Zahl hat 3 Tausender, 0 Hunderter, 5 Zehner und 8 Einer? Zur Auswahl stehen 3058, 358 und 3580. Richtig ist 3058, denn 3 · 1000 + 0 · 100 + 5 · 10 + 8 · 1 = 3058. Bei 358 hast du die Null weggelassen, bei 3580 hast du sie an die falsche Stelle gesetzt.
 
-Interaktiv: Kurztest: Welchen Wert hat die Ziffer 3 in der Zahl 305? Zur Auswahl stehen 300, 3 und 30. Richtig ist 300, denn die 3 steht an der Hunderterstelle: 3 · 100 = 300. Bei 3 hast du nur die Ziffer genannt, bei 30 hast du die Zehnerstelle genommen.
+Interaktiv: Kurztest: Welchen Wert hat die Ziffer 7 in der Zahl 4705? Zur Auswahl stehen 700, 7 und 70. Richtig ist 700, denn die 7 steht an der Hunderterstelle: 7 · 100 = 700. Bei 7 hast du nur die Ziffer genannt, bei 70 hast du die Zehnerstelle genommen.
 
 Du darfst jede Antwort noch einmal wählen. Hast du alle drei richtig, bist du bereit. Klappt ein Kurztest nicht, lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
 

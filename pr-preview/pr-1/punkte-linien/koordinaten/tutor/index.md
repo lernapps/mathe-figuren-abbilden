@@ -46,7 +46,7 @@ Punkte auf dem Spielbrett angeben, ablesen und eintragen.
 Der dritte Hinweis der Schatzkarte nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
 Du setzt dort ein Schiff auf einen Punkt. Nach dieser Seite kannst du jeden Punkt des Gitters mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
 
-Bild: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien. Bildunterschrift: Das Schiff A auf dem Spielbrett. Die Zahlen an den Achsen zählen die Schritte ab der 0.
+Bild: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien. Bildunterschrift: Das Schiff A auf dem Spielbrett. Die Zahlen am Rand zählen die Schritte ab der 0.
 
 - Aufgabe `schiff-schreiben` (unten)
 
@@ -85,14 +85,14 @@ Bild: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet s
 
 ### Aufgabe schiff-schreiben
 
-- Aufgabe: Schau auf das Bild. Das Schiff A startet dort, wo bei beiden Achsen die 0 steht. Wie viele Schritte geht es nach rechts, bis es unter A steht?
+- Aufgabe: Schau auf das Bild. Das Schiff A startet in der Ecke unten links, bei der 0. Wie viele Schritte geht es nach rechts, bis es unter A steht?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ 3 Schritte – Richtig. Die Zahl an der waagerechten Achse unter A ist die 3.
-  - ✗ 2 Schritte – 2 ist die Zahl an der senkrechten Achse. Sie sagt, wie weit A über der waagerechten Achse steht.
+  - ✓ 3 Schritte – Richtig. Die Zahl am unteren Rand unter A ist die 3.
+  - ✗ 2 Schritte – 2 ist die Zahl am linken Rand. Sie sagt, wie weit A über dem unteren Rand steht.
   - ✗ 5 Schritte – 5 ist 3 und 2 zusammen. Gezählt wird nach rechts nur bis unter A.
 - Lösung: 3 Schritte
-- Erklärung: Nach rechts zählst du an der waagerechten Achse. Wie weit A über der Achse steht, kommt gleich dazu.
+- Erklärung: Nach rechts zählst du am unteren Rand. Wie weit A über dem unteren Rand steht, kommt gleich dazu.
 - Link: [../?via=tutor#schiff-schreiben](../?via=tutor#schiff-schreiben)
 
 ### Aufgabe punkte-ablesen
