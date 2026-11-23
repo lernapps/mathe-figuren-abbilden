@@ -108,7 +108,7 @@ blocks:
             info: Richtig. Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander.
           - text: Die Bögen schneiden sich genau einmal.
             correct: false
-            info: Dazu müssten 2 cm und 3 cm zusammen mindestens 8 cm lang sein. Das sind nur 5 cm.
+            info: Dann müssten sich die Bögen treffen. Die Bögen von 2 cm und 3 cm reichen zusammen aber nur 5 cm weit, die Strecke ist 8 cm lang.
           - text: Du bekommst ein Dreieck, wenn du den Zirkel weiter öffnest.
             correct: false
             info: Dann wären die Seiten nicht mehr 2 cm und 3 cm.
