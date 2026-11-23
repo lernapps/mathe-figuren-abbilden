@@ -84,7 +84,8 @@ nicht gelesen. Nachschlagen ist keine Quelle: nichts aus Schulbüchern oder Wiki
 1. Neue Kompetenz der Karte wählen (Strang `geometrie`), Voraussetzungen prüfen (`requires`), fehlende als Recap-Seite.
 2. Ordner `src/<kapitel>/` mit `chapter.yaml` (title, summary, pages), Seiten als `<seite>.yaml` mit `competencies` und den Abschnitten `einstieg`, `erklaerung`, `beispiel`, `uebung`.
 3. Kapitel in `src/app.yaml` unter `chapters` eintragen; Übungen nach den Mustern oben; Bilder nach Figures.
-4. Diesen Guide in derselben Änderung ergänzen; `npx --no -- lernapps check`; Commit.
+4. 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt.
+5. Diesen Guide in derselben Änderung ergänzen; `npx --no -- lernapps check`; Commit.
 
 ## Rules learned from mistakes
 

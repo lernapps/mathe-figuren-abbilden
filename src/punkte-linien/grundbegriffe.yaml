@@ -44,12 +44,18 @@ blocks:
           Eine **Strecke** hat zwei Endpunkte. Sie hat eine Länge, die du messen kannst. Du schreibst Strecke BC.
           Eine **Gerade** hat keine Enden. Du zeichnest sie mit Pfeilen und nennst sie mit einem kleinen Buchstaben, zum Beispiel g.
           Eine **Halbgerade** beginnt in einem Punkt und geht nur in eine Richtung weiter.
+      - type: table
+        caption: Punkt, Strecke, Gerade und Halbgerade im Vergleich
+        header: [Name, Enden, Schreibweise]
+        rowHeaders: true
+        rows:
+          - [Punkt, kein Ende, Großbuchstabe A]
+          - [Strecke, zwei Enden, Strecke BC]
+          - [Halbgerade, ein Ende, vom Anfangspunkt D aus]
+          - [Gerade, kein Ende, kleiner Buchstabe g]
       - type: definition
         term: Strecke
         explanation: Eine Strecke ist die gerade Verbindung zwischen zwei Punkten. Sie endet in beiden Punkten und hat eine Länge.
-      - type: definition
-        term: Gerade
-        explanation: Eine Gerade geht in beide Richtungen ohne Ende weiter. Sie hat keine Länge.
       - type: text
         text: |
           Alle Punkte und Linien liegen in einer **Ebene**. Denke an ein Blatt Papier, das du dir nach allen Seiten unendlich groß vorstellst.
