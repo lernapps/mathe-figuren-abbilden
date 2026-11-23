@@ -62,19 +62,11 @@ Bild: Ein Zahlenstrahl von 0 bis 10 mit einem roten Punkt bei 3. Drei kleine Bö
 
 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
 
-**Merke: Kannst du das? Aufgabe 1**
+Interaktiv: Kurztest: Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Zur Auswahl stehen 8, 3, 2 und 9. Richtig ist 8, denn 5 + 3 = 8. Bei 3 hast du nur die Schritte gezählt, bei 2 bist du nach links gegangen, bei 9 hast du die 5 schon mitgezählt.
 
-Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Rechne zuerst im Kopf, dann lies die Lösung.
+Interaktiv: Kurztest: Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Zur Auswahl stehen 427, 724 und 13. Richtig ist 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Bei 724 hast du die Reihenfolge umgedreht, bei 13 hast du die Ziffern addiert.
 
-**Lösung:** 8, denn 5 + 3 = 8. Hast du 3 heraus, hast du nur die Schritte gezählt. Hast du 2 heraus, bist du nach links gegangen. Hast du 9 heraus, hast du die 5 schon als ersten Schritt mitgezählt.
-
-**Merke: Kannst du das? Aufgabe 2**
-
-Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Schreibe sie auf, dann lies die Lösung.
-
-**Lösung:** 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Hast du 724 heraus, hast du die Reihenfolge umgedreht. Hast du 13 heraus, hast du die Ziffern addiert.
-
-Klappt eine Aufgabe nicht? Lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
+Klappt ein Kurztest nicht? Lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
 
 ### Du bist bereit, wenn du …
 
