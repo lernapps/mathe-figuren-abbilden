@@ -51,7 +51,7 @@ blocks:
         title: Merke
         blocks:
           - type: text
-            text: Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal. Die beiden kurzen Seiten müssen zusammen länger sein als die lange, sonst treffen sich die Bögen nicht.
+            text: Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal. Sind die Seiten zu kurz, reichen die Bögen nicht bis zueinander, und es entsteht kein Dreieck.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -112,7 +112,7 @@ blocks:
           - text: Du bekommst ein Dreieck, wenn du den Zirkel weiter öffnest.
             correct: false
             info: Dann wären die Seiten nicht mehr 2 cm und 3 cm.
-        explanation: Die beiden kurzen Seiten müssen zusammen länger sein als die lange Seite, sonst treffen sich die Bögen nicht.
+        explanation: Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander. Sie treffen sich nicht, also gibt es kein Dreieck.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
             url: https://lernapps.net/apps/map/mathematik/c/konstruktionen/
