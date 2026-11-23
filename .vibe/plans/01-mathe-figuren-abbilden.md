@@ -262,11 +262,11 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
       Creator: Musterseite angenommen, die übrigen 10 Seiten dürfen nach diesem Muster entstehen (Orchestrator in Vertretung).
-- [ ] Kapitel 1: Seiten wiederholung (recap), grundbegriffe und parallel-senkrecht, je ≥3 Aufgaben
-- [ ] Kapitel 2: Seiten grundfiguren und winkel (Komponente WinkelAblesen)
-- [ ] Kapitel 2: Seiten vierecke (Komponente FigurZiehen) und konstruieren
-- [ ] Kapitel 3: Seiten symmetrie, spiegeln und verschieben-drehen, Bildpunkte im ersten Quadranten
-- [ ] Selbsteinschätzung je Kapitel nach Skill lernapps-explainer-self-assessment
+- [x] Kapitel 1: Seiten wiederholung (recap), grundbegriffe und parallel-senkrecht, je ≥3 Aufgaben
+- [x] Kapitel 2: Seiten grundfiguren und winkel (Komponente WinkelAblesen)
+- [x] Kapitel 2: Seiten vierecke (Komponente FigurZiehen) und konstruieren
+- [x] Kapitel 3: Seiten symmetrie, spiegeln und verschieben-drehen, Bildpunkte im ersten Quadranten
+- [x] Selbsteinschätzung je Kapitel nach Skill lernapps-explainer-self-assessment
 - [ ] Zwei Prüfer starten (Lernenden-Prüfer, fachlicher Prüfer, beide ohne Beteiligung am Schreiben), Befunde getrennt im Plan unter Review, Fehler beheben
 <!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
