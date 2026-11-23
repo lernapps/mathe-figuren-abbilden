@@ -45,7 +45,7 @@ blocks:
           Der **Abstand** zweier paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden. Schräg gemessen ist der Weg immer länger.
       - type: definition
         term: Abstand
-        explanation: Der Abstand paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden Geraden.
+        explanation: Die senkrecht gemessene Entfernung zweier paralleler Geraden.
       - type: note
         title: Merke
         blocks:
@@ -56,22 +56,20 @@ blocks:
     title: Eine Parallele zeichnen
     blocks:
       - type: example
-        title: Parallele zu g durch den Punkt P
+        title: Parallele und Senkrechte durch den Punkt P
         blocks:
           - type: text
             text: |
+              **Parallele zu g durch P:**
               1. Lege die lange Kante des Geodreiecks an g.
               2. Lege ein Lineal an eine kurze Kante des Geodreiecks und halte es fest.
               3. Schiebe das Geodreieck am Lineal entlang, bis seine lange Kante an P liegt.
-              4. Zeichne an der langen Kante entlang eine Linie durch P. Sie ist parallel zu g.
-      - type: example
-        title: Senkrechte zu g durch den Punkt P
-        blocks:
-          - type: text
-            text: |
-              1. Lege die Mittellinie des Geodreiecks genau auf g. Die Mittellinie steht senkrecht zur langen Kante.
+              4. Zeichne an der langen Kante entlang eine Linie durch P.
+
+              **Senkrechte zu g durch P:**
+              1. Lege die Mittellinie des Geodreiecks genau auf g. Sie steht senkrecht zur langen Kante.
               2. Schiebe das Geodreieck an g entlang, bis seine lange Kante an P liegt.
-              3. Zeichne an der langen Kante entlang eine Linie durch P. Sie ist senkrecht zu g.
+              3. Zeichne an der langen Kante entlang eine Linie durch P.
   - type: section
     id: uebung
     title: Übung

@@ -54,7 +54,7 @@ blocks:
     title: Ein Beispiel
     blocks:
       - type: example
-        title: Dreieck mit a = 4 cm, b = 3 cm, c = 5 cm
+        title: Dreieck mit a = 4 cm, b = 3 cm, c = 5 cm
         blocks:
           - type: text
             text: Zeichne c = 5 cm. Öffne den Zirkel auf 3 cm und ziehe einen Bogen um A. Öffne ihn auf 4 cm und ziehe einen Bogen um B. Verbinde den Schnittpunkt C mit A und B.
