@@ -61,7 +61,7 @@ Ein **Kreisbogen** ist ein Stück eines Kreises. Dort, wo sich die Bögen schnei
 
 **Merke: Merke**
 
-Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal. Die beiden kurzen Seiten müssen zusammen länger sein als die lange, sonst treffen sich die Bögen nicht.
+Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal. Sind die Seiten zu kurz, reichen die Bögen nicht bis zueinander, und es entsteht kein Dreieck.
 
 ### Ein Beispiel
 
@@ -178,5 +178,5 @@ Nr. | a | b | c | Lösung | F1 | F2
   - ✗ Die Bögen schneiden sich genau einmal. – Dazu müssten 2 cm und 3 cm zusammen mindestens 8 cm lang sein. Das sind nur 5 cm.
   - ✗ Du bekommst ein Dreieck, wenn du den Zirkel weiter öffnest. – Dann wären die Seiten nicht mehr 2 cm und 3 cm.
 - Lösung: Die beiden Bögen schneiden sich nicht, das Dreieck gibt es nicht.
-- Erklärung: Die beiden kurzen Seiten müssen zusammen länger sein als die lange Seite, sonst treffen sich die Bögen nicht.
+- Erklärung: Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander. Sie treffen sich nicht, also gibt es kein Dreieck.
 - Link: [../?via=tutor#dreieck-unmoeglich](../?via=tutor#dreieck-unmoeglich)

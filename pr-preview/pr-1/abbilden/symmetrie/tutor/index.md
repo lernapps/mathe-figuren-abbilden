@@ -90,7 +90,7 @@ Es hat drei Symmetrieachsen. Dreht du es um 120°, sieht es wieder aus wie vorhe
 - Aufgabe: Du faltest ein Quadrat entlang der Linie, die zwei gegenüberliegende Ecken verbindet. Liegen die beiden Hälften genau aufeinander?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ Ja, genau aufeinander. – Richtig. Beim Quadrat sind beide Hälften nach dem Falten deckungsgleich.
+  - ✓ Ja, genau aufeinander. – Richtig. Beim Quadrat liegen beide Hälften nach dem Falten genau aufeinander.
   - ✗ Nein, eine Hälfte steht über. – Beim Quadrat ist das nicht so. Probiere es mit einem Blatt Papier aus.
 - Lösung: Ja, genau aufeinander.
 - Erklärung: Wo du faltest und beide Hälften genau aufeinanderliegen, liegt eine Symmetrieachse. Beim Quadrat gilt das für diese Linie.
