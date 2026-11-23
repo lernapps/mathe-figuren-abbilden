@@ -43,7 +43,7 @@ Achsen-, Punkt- und Drehsymmetrie bei Figuren erkennen.
 
 ### Falten und Klecksbild
 
-Der achte Hinweis: Die Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
+Nika und Jonas lesen den achten Hinweis: Ihre Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
 Falte ein Blatt Papier in der Mitte, tropfe Farbe auf eine Hälfte und klappe zu. Es entsteht ein Klecksbild mit zwei gleichen Hälften.
 
 - Aufgabe `faltlinie` (unten)

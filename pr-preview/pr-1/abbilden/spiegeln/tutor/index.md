@@ -43,7 +43,7 @@ Punkte und Figuren an einer senkrechten Achse spiegeln und die Bildfigur bestimm
 
 ### Die andere Hälfte der Karte
 
-Der neunte Hinweis: Die andere Hälfte der Schatzkarte ist das Spiegelbild der ersten. Du lernst hier, Punkte am Spielbrett zu spiegeln.
+Nika und Jonas lesen den neunten Hinweis: Die andere Hälfte ihrer Schatzkarte ist das Spiegelbild der ersten. Du lernst hier, Punkte am Spielbrett zu spiegeln.
 Du brauchst Symmetrieachsen und das Koordinatensystem von den Seiten davor.
 
 - Aufgabe `spiegel-y` (unten)

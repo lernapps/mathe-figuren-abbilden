@@ -43,7 +43,7 @@ Winkel als Drehung verstehen, mit dem Geodreieck messen, zeichnen und nach ihrer
 
 ### Eine Tür und ein Zeiger
 
-Der fünfte Hinweis der Karte nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
+Nika und Jonas lesen den fünften Hinweis ihrer Schatzkarte: Er nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
 Eine Tür oder der Zeiger einer Uhr zeigen dir, was ein Winkel ist.
 
 Bild: Eine Tür dreht sich um ihre Angel. Eine gestrichelte Linie zeigt die geschlossene Tür, eine rote Linie die senkrecht dazu geöffnete Tür, ein blauer Bogen die Drehung dazwischen. Bildunterschrift: Die Tür dreht sich um die Angel. Der Bogen zeigt, wie weit.

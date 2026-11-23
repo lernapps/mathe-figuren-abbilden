@@ -43,7 +43,7 @@ Parallele und senkrechte Geraden zeichnen und Abstände messen.
 
 ### Zwei Gleise, die sich nie treffen
 
-Der zweite Hinweis liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
 Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
 
 Bild: Zwei waagerechte Geraden g und h auf einem Gitter. Auf g liegt der Punkt A, auf h liegt der Punkt B. A und B sind durch eine gestrichelte schräge Strecke verbunden. Bildunterschrift: Zwei Geraden g und h auf einem Gitter. Die Linien laufen in dieselbe Richtung.

@@ -43,7 +43,7 @@ Besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden.
 
 ### Ziehe das Viereck
 
-Der sechste Hinweis der Karte sind Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
+Nika und Jonas lesen den sechsten Hinweis ihrer Schatzkarte: Er zeigt Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
 Probiere erst, was passiert, wenn du die Ecken ziehst.
 
 Interaktiv: Ein Gitter mit einem Viereck ABCD, dessen Ecken du ziehen kannst. Es zeigt, wie das Viereck heißt und wie viele Paare paralleler Seiten und rechte Winkel es hat. Zu Beginn hat es 2 Paare paralleler Seiten und keinen rechten Winkel. Ziehst du es zu einem Rechteck, hat es 4 rechte Winkel. Ohne JavaScript lies die Tabelle weiter unten.

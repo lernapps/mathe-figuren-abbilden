@@ -43,7 +43,7 @@ Ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben.
 
 ### Stempel auf der Karte
 
-Der vierte Hinweis der Schatzkarte sind sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
+Nika und Jonas lesen den vierten Hinweis ihrer Schatzkarte: Er zeigt sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
 Du brauchst dafür Strecken und Parallelen von den Seiten davor.
 
 Bild: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechteck, C ein Dreieck, D ein Kreis, E ein Fünfeck und F ein schiefes Viereck mit zwei Paaren paralleler Seiten. Bildunterschrift: Sechs Stempel A bis F.

@@ -43,7 +43,7 @@ Punkte auf dem Spielbrett angeben, ablesen und eintragen.
 
 ### Wo liegt das Schiff?
 
-Der dritte Hinweis der Schatzkarte nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
+Nika und Jonas lesen den dritten Hinweis ihrer Schatzkarte: Er nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
 Du setzt dort ein Schiff auf einen Punkt. Nach dieser Seite kannst du jeden Punkt des Gitters mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
 
 Bild: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien. Bildunterschrift: Das Schiff A auf dem Spielbrett. Die Zahlen am Rand zählen die Schritte ab der 0.
@@ -99,7 +99,7 @@ Bild: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet s
 
 - Aufgabe: Ordne jedem Punkt seine Koordinaten zu.
 - Antwortformat: jedem Eintrag links den passenden rechts zuordnen
-- Lösung: Punkt A – A(2 | 5); Punkt B – B(6 | 1); Punkt C – C(4 | 4); Punkt D – D(7 | 3)
+- Lösung: Punkt A – (2 | 5); Punkt B – (6 | 1); Punkt C – (4 | 4); Punkt D – (7 | 3)
 - Erklärung: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
 - Link: [../?via=tutor#punkte-ablesen](../?via=tutor#punkte-ablesen)
 

@@ -43,7 +43,7 @@ Mit Zirkel und Lineal ein Dreieck aus drei Seiten konstruieren.
 
 ### Ein Kreis um den Schatz
 
-Der siebte Hinweis der Karte ist ein Kreis um den Schatzpunkt, den du mit dem Zirkel zeichnest. Du lernst hier, mit dem Zirkel zu konstruieren und ein Dreieck aus seinen drei Seiten zu zeichnen.
+Nika und Jonas lesen den siebten Hinweis ihrer Schatzkarte: Er verlangt einen Kreis um den Schatzpunkt, den du mit dem Zirkel zeichnest. Du lernst hier, mit dem Zirkel zu konstruieren und ein Dreieck aus seinen drei Seiten zu zeichnen.
 Das baut auf Strecken und Figuren der Seiten davor auf.
 
 - Aufgabe `zirkel-kreis` (unten)
