@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der Hinweis der Karte sagt, dass der Schatz verschoben und gedreht wurde. Du lernst hier, Figuren zu verschieben und zu drehen und ihre Bildfigur zu bestimmen.
-          Du brauchst das Spiegeln und das Koordinatensystem von den Seiten davor.
+          Der zehnte und letzte Hinweis der Karte sagt, dass der Schatz verschoben und gedreht wurde. Du lernst hier, Figuren zu verschieben und zu drehen und ihre Bildfigur zu bestimmen.
+          Du brauchst das Koordinatensystem von den Seiten davor.
       - type: single-choice
         id: verschieben-p
         text: Der Punkt P(2 | 1) wird um den Pfeil 3 nach rechts und 2 nach oben verschoben. Welche Koordinaten hat P'?
@@ -41,13 +41,16 @@ blocks:
       - type: text
         text: |
           Beim **Verschieben** wird jeder Punkt um denselben **Pfeil** bewegt. Die Bildfigur sieht genauso aus und steht nur an einer anderen Stelle.
-          Beim **Drehen** brauchst du einen **Drehpunkt** und einen Winkel. Jeder Punkt wandert auf einem Kreis um den Drehpunkt. Eine Drehung gegen den Uhrzeigersinn zählt als positive Drehung.
+          Beim **Drehen** brauchst du einen **Drehpunkt** und einen Winkel. Jeder Punkt wandert auf einem Kreis um den Drehpunkt. Der Uhrzeigersinn ist die Richtung, in die sich die Zeiger einer Uhr drehen. Gedreht wird hier gegen den Uhrzeigersinn.
       - type: figure
         image: images/drehen-beispiel.svg
         alt: Der Drehpunkt Z und der Punkt P rechts von Z. Ein Bogen führt gegen den Uhrzeigersinn zum Bildpunkt P' direkt über Z.
         caption: P wird um Z um 90° gegen den Uhrzeigersinn gedreht.
         source: eigene Zeichnung
         licence: CC-BY-4.0
+      - type: definition
+        term: Drehpunkt
+        explanation: Der Drehpunkt ist der Punkt, um den sich eine Figur dreht. Er bleibt an seinem Platz.
       - type: note
         title: Merke
         blocks:
@@ -164,3 +167,11 @@ blocks:
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
             url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
+  - type: section
+    id: rueckblick
+    title: Rückblick
+    blocks:
+      - type: text
+        text: |
+          Nika und Jonas graben dort, wo der letzte Hinweis hinzeigt, und finden den Schatz.
+          Du kannst jetzt Punkte im Koordinatensystem angeben, Winkel messen, Figuren konstruieren, Symmetrien erkennen und Punkte spiegeln, verschieben und drehen.

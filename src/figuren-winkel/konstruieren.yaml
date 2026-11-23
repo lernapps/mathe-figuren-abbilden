@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Zeichnen und Konstruieren
-description: Mit Zirkel und Geodreieck ein Dreieck aus drei Seiten zeichnen.
+description: Mit Zirkel und Lineal ein Dreieck aus drei Seiten konstruieren.
 competencies: [konstruktionen]
 blocks:
   - type: section
@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der letzte Hinweis des Kapitels ist ein Kreis um den Schatzpunkt. Du lernst hier, mit dem Zirkel zu konstruieren und ein Dreieck aus seinen drei Seiten zu zeichnen.
-          Das baut auf Strecken, Winkeln und Figuren der Seiten davor auf.
+          Der siebte Hinweis der Karte ist ein Kreis um den Schatzpunkt, den du mit dem Zirkel zeichnest. Du lernst hier, mit dem Zirkel zu konstruieren und ein Dreieck aus seinen drei Seiten zu zeichnen.
+          Das baut auf Strecken und Figuren der Seiten davor auf.
       - type: single-choice
         id: zirkel-kreis
         text: Du stichst den Zirkel in den Punkt M, stellst ihn auf 3 cm ein und zeichnest einen Kreis. Wie weit ist jeder Punkt des Kreises von M entfernt?
@@ -43,12 +43,15 @@ blocks:
           Die Seiten heißen nach der Ecke, die ihnen gegenübersteht: a ist die Strecke BC, b die Strecke AC und c die Strecke AB.
           Du kennst die drei Seiten a, b und c. Zeichne zuerst die Strecke c mit den Endpunkten A und B.
           Der **Radius** ist der Abstand vom Mittelpunkt zum Kreis, also die Öffnung des Zirkels. Stelle den Zirkel auf b ein und zeichne einen Kreisbogen um A. Stelle ihn auf a ein und zeichne einen Kreisbogen um B.
-          Dort, wo sich die Bögen schneiden, liegt der Punkt C. Verbinde C mit A und B.
+          Ein **Kreisbogen** ist ein Stück eines Kreises. Dort, wo sich die Bögen schneiden, liegt der Punkt C, ihr **Schnittpunkt**. Verbinde C mit A und B.
+      - type: definition
+        term: Radius
+        explanation: Der Radius ist der Abstand vom Mittelpunkt eines Kreises zum Kreis. Er ist die Öffnung des Zirkels.
       - type: note
         title: Merke
         blocks:
           - type: text
-            text: Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal.
+            text: Der Zirkel muss genau auf die Länge der Seite eingestellt sein. Prüfe die Öffnung vor dem Zeichnen am Lineal. Die beiden kurzen Seiten müssen zusammen länger sein als die lange, sonst treffen sich die Bögen nicht.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -67,8 +70,7 @@ blocks:
         text: Bringe die Schritte in die richtige Reihenfolge, um ein Dreieck aus drei Seiten zu konstruieren.
         items:
           - Zeichne die Strecke c mit den Endpunkten A und B.
-          - Zeichne um A einen Kreisbogen mit dem Radius b (Strecke AC).
-          - Zeichne um B einen Kreisbogen mit dem Radius a (Strecke BC).
+          - "Zeichne die beiden Kreisbögen: um A mit dem Radius b (Strecke AC) und um B mit dem Radius a (Strecke BC)."
           - Verbinde den Schnittpunkt C der Bögen mit A und B.
         explanation: Zuerst brauchst du die Grundstrecke. Dann zeichnest du die beiden Bögen. Erst am Schluss verbindest du die Punkte.
         links:

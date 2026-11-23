@@ -5,12 +5,18 @@ competencies: [geometrische-grundbegriffe]
 blocks:
   - type: section
     id: einstieg
-    title: Gleise und Fensterkreuz
+    title: Gleise und Linien
     blocks:
       - type: text
         text: |
-          Nika und Jonas starten bei der Schatzkarte. Der erste Hinweis sagt: Folge den Gleisen. Du lernst hier, Punkte und Linien genau zu benennen.
-          Danach kannst du den Weg der Karte beschreiben.
+          Nika und Jonas haben eine Schatzkarte gefunden. Das Kreuz X zeigt den Schatz. Der erste Hinweis sagt: Folge den Gleisen.
+          Du lernst hier, Punkte und Linien genau zu benennen. Danach kannst du den Weg der Karte beschreiben.
+      - type: figure
+        image: images/szene-schatzkarte.svg
+        alt: Zwei Kinder, Nika und Jonas, halten eine Karte mit Gitter und einem Kreuz, das den Schatz zeigt.
+        caption: Nika und Jonas mit ihrer Schatzkarte. Das X ist der Schatz.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
       - type: figure
         image: images/linien-arten.svg
         alt: Vier Zeichnungen untereinander. Ein Punkt A. Eine Strecke von B nach C mit zwei Endpunkten. Eine Gerade g mit Pfeilen an beiden Enden. Eine Halbgerade, die bei D beginnt und nach rechts mit einem Pfeil weitergeht.
@@ -72,7 +78,7 @@ blocks:
         title: Gleise und Bahnhöfe
         blocks:
           - type: text
-            text: Die Schienen sehen in der Ferne unendlich lang aus. Sie zeigen eine Gerade. Die Entfernung zwischen zwei Bahnhöfen ist eine Strecke, denn sie hat zwei Endpunkte.
+            text: "Jede Schiene sieht in der Ferne unendlich lang aus. Sie zeigt eine Gerade. Die Entfernung zwischen zwei Bahnhöfen ist eine Strecke, denn sie hat zwei Endpunkte. Auf einer Geraden mit den Punkten A, B und C gibt es drei Strecken: AB, AC und BC."
   - type: section
     id: uebung
     title: Übung
@@ -112,7 +118,7 @@ blocks:
       - type: generated
         id: strecken-zaehlen
         given:
-          n: { int: [4, 8], step: 1 }
+          n: { int: [4, 6], step: 1 }
         task:
           text: "Auf einer Geraden liegen {{n}} Punkte. Du zeichnest alle Strecken zwischen je zwei dieser Punkte. Wie viele verschiedene Strecken sind das?"
         answer: { value: "n * (n - 1) / 2", compare: number }

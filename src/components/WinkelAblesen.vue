@@ -34,8 +34,9 @@ const leg = computed(() => pos(current.value.w, R + 10));
 
 function onInput(event: Event): void {
   typed.value = (event.target as HTMLInputElement).value;
-  const n = Number(typed.value.replace(",", "."));
-  emit("answer", typed.value === "" || Number.isNaN(n) ? undefined : n);
+  // "110", "110°", "110 °" and "110 Grad" all count
+  const match = /^\s*(\d{1,3})\s*(°|grad)?\s*$/i.exec(typed.value);
+  emit("answer", match?.[1] === undefined ? undefined : Number(match[1]));
 }
 </script>
 
@@ -58,7 +59,7 @@ function onInput(event: Event): void {
           {{ d }}
         </text>
         <text
-          v-if="d % 30 === 0"
+          v-if="d % 30 === 0 && d > 0 && d < 180"
           :x="pos(d, R - 40).x"
           :y="pos(d, R - 40).y + 4"
           text-anchor="middle"

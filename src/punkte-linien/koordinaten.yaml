@@ -9,14 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nika und Jonas haben eine Schatzkarte gefunden. Das Kreuz X zeigt den Schatz. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
-          Nach dieser Seite kannst du jeden Punkt der Karte mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
-      - type: figure
-        image: images/szene-schatzkarte.svg
-        alt: Zwei Kinder, Nika und Jonas, halten eine Karte mit Gitter und einem Kreuz, das den Schatz zeigt.
-        caption: Nika und Jonas mit ihrer Schatzkarte. Das X ist der Schatz.
-        source: eigene Zeichnung
-        licence: CC-BY-4.0
+          Der dritte Hinweis der Schatzkarte nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
+          Du setzt dort ein Schiff auf einen Punkt. Nach dieser Seite kannst du jeden Punkt des Gitters mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
       - type: figure
         image: images/spielbrett-schiff.svg
         alt: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien.
@@ -51,7 +45,7 @@ blocks:
       - type: text
         text: |
           Ein Punkt liegt dort, wo sich zwei Gitterlinien kreuzen. Er hat zwei **Koordinaten**: Du gehst zuerst die x-Zahl nach rechts und dann die y-Zahl nach oben.
-          Du schreibst sie so auf: P(3 | 2). P steht für Punkt, der senkrechte Strich trennt die beiden Zahlen. Die erste ist x, die zweite ist y.
+          Du schreibst sie so auf: P(3 | 2). P steht für Punkt, ein anderer Buchstabe geht auch, zum Beispiel A(3 | 2). Der senkrechte Strich trennt die beiden Zahlen. Die erste ist x, die zweite ist y.
           Der Ursprung ist P(0 | 0).
       - type: definition
         term: Koordinatensystem
@@ -90,10 +84,10 @@ blocks:
         id: punkte-ablesen
         text: Ordne jedem Punkt seine Koordinaten zu.
         pairs:
-          - { left: Punkt A, right: P(2 | 5) }
-          - { left: Punkt B, right: P(6 | 1) }
-          - { left: Punkt C, right: P(4 | 4) }
-          - { left: Punkt D, right: P(7 | 3) }
+          - { left: Punkt A, right: A(2 | 5) }
+          - { left: Punkt B, right: B(6 | 1) }
+          - { left: Punkt C, right: C(4 | 4) }
+          - { left: Punkt D, right: D(7 | 3) }
         explanation: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
         links:
           - title: Baustein Koordinatensystem auf der Lernlandkarte

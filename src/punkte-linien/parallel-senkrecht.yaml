@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der Weg zum zweiten Hinweis führt zwischen zwei Gleisen entlang. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+          Der zweite Hinweis liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
           Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
       - type: figure
         image: images/abstand.svg
@@ -27,9 +27,9 @@ blocks:
           - text: 4 Kästchen
             correct: false
             info: Das sind 4 Kästchen nach rechts. Nach rechts bleibst du auf der Höhe von g oder h.
-          - text: 5 Kästchen
+          - text: 7 Kästchen
             correct: false
-            info: Das ist der schräge Weg von A nach B. Er ist länger als der gerade Weg nach unten.
+            info: Das sind der Weg nach rechts (4) und der Weg nach unten (3) zusammen. Gesucht ist nur der gerade Weg von g nach h.
         explanation: Der kürzeste Weg von g nach h geht gerade nach unten, also im rechten Winkel zu beiden Geraden.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
@@ -41,7 +41,7 @@ blocks:
       - type: text
         text: |
           Zwei Geraden sind **parallel**, wenn sie überall gleich weit auseinander liegen. Sie treffen sich nie. Du schreibst g ∥ h.
-          Zwei Geraden sind **senkrecht** zueinander, wenn sie einen rechten Winkel bilden. Du schreibst g ⊥ h.
+          Zwei Geraden sind **senkrecht** zueinander, wenn sie einen rechten Winkel bilden, also eine Ecke wie bei einem Blatt Papier. Du schreibst g ⊥ h. Zum Zeichnen benutzt du das **Geodreieck**: ein Dreieck mit einer Skala an der langen Kante und einer Mittellinie, die senkrecht dazu steht.
           Der **Abstand** zweier paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden. Schräg gemessen ist der Weg immer länger.
       - type: definition
         term: Abstand
@@ -101,7 +101,7 @@ blocks:
         id: senkrecht-beispiele
         text: Welche Paare sind senkrecht zueinander?
         options:
-          - text: Die Kante einer Tür und der Boden
+          - text: Die senkrechte Türkante und der Boden
             correct: true
             info: Richtig. Die Tür steht im rechten Winkel zum Boden.
           - text: Zwei Gleise
@@ -124,7 +124,7 @@ blocks:
           s: { int: [5, 12], step: 1 }
         where: ["s > d"]
         task:
-          text: "Zwei parallele Geraden g und h. Mara misst von A auf g senkrecht bis h und liest {{d}} cm ab. Sie misst auch schräg von A bis zu einem Punkt auf h und liest {{s}} cm ab. Wie groß ist der Abstand von g und h in cm?"
+          text: "Zwei parallele Geraden g und h. Nika misst von A auf g senkrecht bis h und liest {{d}} cm ab. Sie misst auch schräg von A bis zu einem Punkt auf h und liest {{s}} cm ab. Wie groß ist der Abstand von g und h in cm?"
         answer: { value: "d", compare: { number: { unit: cm } } }
         mistakes:
           - { value: "s", message: "Das ist die schräge Strecke. Der Abstand wird senkrecht gemessen und ist kürzer." }

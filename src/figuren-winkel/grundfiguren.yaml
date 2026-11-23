@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Am Rand der Schatzkarte sind sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
-          Du brauchst dafür Strecken, Parallelen und rechte Winkel von den Seiten davor.
+          Der vierte Hinweis der Schatzkarte sind sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
+          Du brauchst dafür Strecken und Parallelen von den Seiten davor.
       - type: figure
         image: images/grundfiguren.svg
         alt: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechteck, C ein Dreieck, D ein Kreis, E ein Fünfeck und F ein schiefes Viereck mit zwei Paaren paralleler Seiten.
@@ -36,7 +36,7 @@ blocks:
             url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
   - type: section
     id: erklaerung
-    title: Ecken, Seiten, Winkel
+    title: Ecken und Seiten
     blocks:
       - type: text
         text: |
@@ -49,13 +49,18 @@ blocks:
         rows:
           - [Dreieck, "3", "3"]
           - [Viereck, "4", "4"]
+          - [Rechteck, "4", "4"]
+          - [Quadrat, "4", "4"]
           - [Fünfeck, "5", "5"]
           - [Kreis, "0", "keine geraden Seiten"]
+      - type: definition
+        term: Vieleck
+        explanation: Ein Vieleck ist eine Figur, die nur aus geraden Strecken besteht, zum Beispiel ein Dreieck oder ein Viereck.
       - type: note
         title: Merke
         blocks:
           - type: text
-            text: Jedes Quadrat ist auch ein Rechteck, denn es hat vier rechte Winkel und gegenüberliegende Seiten, die gleich lang sind.
+            text: Eine Figur kann mehr als einen Namen haben. Ein Rechteck ist auch ein Viereck.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -64,7 +69,7 @@ blocks:
         title: Das Rechteck
         blocks:
           - type: text
-            text: Ein Rechteck hat vier Ecken und vier rechte Winkel. Gegenüberliegende Seiten sind gleich lang und parallel.
+            text: Ein Rechteck hat vier Ecken und vier rechte Winkel, also vier Ecken wie bei einem Blatt Papier. Gegenüberliegende Seiten sind gleich lang und parallel. Ein Quadrat ist ein Rechteck, bei dem alle vier Seiten gleich lang sind.
   - type: section
     id: uebung
     title: Übung

@@ -9,14 +9,14 @@ blocks:
     blocks:
       - type: text
         text: |
-          Auf der Karte gibt es Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
+          Der sechste Hinweis der Karte sind Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
           Probiere erst, was passiert, wenn du die Ecken ziehst.
       - type: vue-component
         id: viereck-ziehen
         component: FigurZiehen
         props:
           board: Gitter mit einem Viereck ABCD. Die vier Ecken lassen sich verschieben.
-          hint: "Ziehe die Ecken A bis D mit der Maus oder dem Finger. Mit Tab wählst du eine Ecke, mit den Pfeiltasten verschiebst du sie. Achte darauf, wie sich Name, parallele Seiten und rechte Winkel ändern."
+          hint: "Ziehe die Ecken A bis D mit der Maus oder dem Finger. Mit Tab wählst du eine Ecke, mit den Pfeiltasten verschiebst du sie. Achte darauf, wie sich Name, parallele Seiten und rechte Winkel ändern. Kreuzen sich Seiten oder liegen drei Ecken auf einer Linie, heißt die Figur „kein Viereck“."
           corner: "Ecke {n}"
           names:
             [
@@ -35,7 +35,7 @@ blocks:
           reset: Zurück zum Anfang
         nojs: |
           Ein Gitter mit einem Viereck ABCD, dessen Ecken du ziehen kannst. Es zeigt, wie das Viereck heißt und wie viele Paare paralleler Seiten und rechte Winkel es hat.
-          Zu Beginn ist es ein Parallelogramm mit 2 Paaren paralleler Seiten und keinem rechten Winkel. Ziehst du es zu einem Rechteck, hat es 4 rechte Winkel.
+          Zu Beginn hat es 2 Paare paralleler Seiten und keinen rechten Winkel. Ziehst du es zu einem Rechteck, hat es 4 rechte Winkel.
           Ohne JavaScript lies die Tabelle weiter unten.
       - type: single-choice
         id: quadrat-entsteht
@@ -66,9 +66,9 @@ blocks:
           - [Parallelogramm, zwei Paare paralleler Seiten]
           - [Rechteck, zwei Paare paralleler Seiten und vier rechte Winkel]
           - [Raute, zwei Paare paralleler Seiten und vier gleich lange Seiten]
-          - [Quadrat, vier rechte Winkel und vier gleich lange Seiten]
+          - [Quadrat, vier rechte Winkel und vier gleich lange Seiten (Rechteck und Raute zugleich)]
           - [Drachen, zwei Paare gleich langer Nachbarseiten]
-          - [Trapez, mindestens ein Paar paralleler Seiten]
+          - [Trapez, genau ein Paar paralleler Seiten]
       - type: text
         text: |
           Manche Vierecke sind auch andere. Jedes Rechteck ist ein Parallelogramm. Jede Raute ist ein Parallelogramm. Das Quadrat ist beides: Rechteck und Raute.
@@ -97,7 +97,7 @@ blocks:
           - { left: Rechteck, right: vier rechte Winkel }
           - { left: Raute, right: vier gleich lange Seiten }
           - { left: Drachen, right: zwei Paare gleich langer Nachbarseiten }
-          - { left: Trapez, right: mindestens ein Paar paralleler Seiten }
+          - { left: Trapez, right: genau ein Paar paralleler Seiten }
         explanation: Lies in der Tabelle nach, was jedes Viereck besonders macht.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)

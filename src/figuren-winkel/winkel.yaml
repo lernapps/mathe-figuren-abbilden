@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der dritte Hinweis der Karte nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
+          Der fünfte Hinweis der Karte nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
           Eine Tür oder der Zeiger einer Uhr zeigen dir, was ein Winkel ist.
       - type: figure
         image: images/tuer-drehung.svg
@@ -40,8 +40,11 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ein **Winkel** zeigt, wie weit sich ein Schenkel um den Scheitel dreht. Der **Scheitel** ist der Punkt, in dem beide Schenkel beginnen.
+          Ein **Winkel** entsteht, wenn sich ein Schenkel um einen Punkt dreht, den **Scheitel**.
           Du misst Winkel in **Grad** (°). Eine ganze Drehung sind 360°, eine halbe 180°, eine Vierteldrehung 90°.
+      - type: definition
+        term: Winkel
+        explanation: Ein Winkel zeigt, wie weit sich ein Schenkel um den Scheitel dreht. Der Scheitel ist der Punkt, in dem beide Schenkel beginnen.
       - type: figure
         image: images/winkelarten.svg
         alt: Fünf Winkel nebeneinander. Spitz ist kleiner als ein rechter Winkel, recht ist ein Viertel einer Drehung, stumpf liegt dazwischen und der gestreckte Winkel, dann kommt der überstumpfe Winkel.
@@ -59,7 +62,7 @@ blocks:
           - [überstumpf, größer als 180° und kleiner als 360°]
       - type: text
         text: |
-          Zum Messen legst du die Nullkante des Geodreiecks auf einen Schenkel. Der Scheitel liegt genau auf dem Mittelpunkt. Den Wert liest du an der Skala ab, die an diesem Schenkel bei 0 beginnt.
+          Zum Messen legst du die Nullkante des Geodreiecks auf einen Schenkel. Der Scheitel liegt genau auf dem Mittelpunkt. Das Geodreieck hat zwei Skalen: Du liest die ab, die an diesem Schenkel bei 0 beginnt.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -82,11 +85,11 @@ blocks:
         id: winkel-ablesen
         component: WinkelAblesen
         props:
-          task: Der erste Schenkel liegt rechts auf der 0 der äußeren Skala. Lies den Winkel ab.
+          task: Das Bild zeigt ein Geodreieck als Halbkreis mit zwei Skalen. Der erste Schenkel liegt rechts auf der 0 der äußeren Skala. Lies den Winkel ab und gib ihn in Grad ein, zum Beispiel 40.
           label: "Winkel in Grad"
           picture: Ein Halbkreis mit einer Skala von 0 bis 180 Grad und einem eingezeichneten Winkel, dessen erster Schenkel nach rechts zeigt.
           mistakes:
-            - "Du hast auf der falschen Skala abgelesen: {a}° statt {w}°. Der erste Schenkel liegt auf der 0 der äußeren Skala, also liest du dort ab."
+            - "Du hast auf der falschen Skala abgelesen. Der erste Schenkel liegt auf der 0 der äußeren Skala, also liest du dort ab."
             - "Fast: {a}° liegt in der Nähe, aber nicht genau. Lies noch einmal am Strich ab, an dem der Schenkel endet."
         examples:
           accepted:

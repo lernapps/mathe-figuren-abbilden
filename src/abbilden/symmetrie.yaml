@@ -9,22 +9,19 @@ blocks:
     blocks:
       - type: text
         text: |
-          Die Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
+          Der achte Hinweis: Die Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
           Falte ein Blatt Papier in der Mitte, tropfe Farbe auf eine Hälfte und klappe zu. Es entsteht ein Klecksbild mit zwei gleichen Hälften.
       - type: single-choice
         id: faltlinie
-        text: Du faltest ein Rechteck genau in der Mitte, sodass beide Hälften aufeinanderliegen. Wie heißt die Faltlinie?
+        text: Du faltest ein Quadrat entlang der Linie, die zwei gegenüberliegende Ecken verbindet. Liegen die beiden Hälften genau aufeinander?
         options:
-          - text: Symmetrieachse
+          - text: Ja, genau aufeinander.
             correct: true
-            info: Richtig. Beide Hälften sind Spiegelbilder voneinander.
-          - text: Diagonale
+            info: Richtig. Beim Quadrat sind beide Hälften nach dem Falten deckungsgleich.
+          - text: Nein, eine Hälfte steht über.
             correct: false
-            info: Eine Diagonale verbindet zwei Ecken. Beim Rechteck legt sie die Hälften nicht aufeinander.
-          - text: Parallele
-            correct: false
-            info: Parallelen sind zwei Linien. Die Faltlinie ist eine einzige Linie.
-        explanation: Wo du faltest und beide Hälften genau aufeinanderliegen, liegt eine Symmetrieachse.
+            info: Beim Quadrat ist das nicht so. Probiere es mit einem Blatt Papier aus.
+        explanation: Wo du faltest und beide Hälften genau aufeinanderliegen, liegt eine Symmetrieachse. Beim Quadrat gilt das für diese Linie.
         links:
           - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
             url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
@@ -40,9 +37,9 @@ blocks:
     blocks:
       - type: text
         text: |
-          Eine Figur ist **achsensymmetrisch**, wenn sie eine Symmetrieachse hat. Faltest du an dieser Linie, liegen beide Hälften genau aufeinander.
+          Eine Figur ist **achsensymmetrisch**, wenn sie eine **Symmetrieachse** hat. Eine **Diagonale** ist eine Linie zwischen zwei gegenüberliegenden Ecken. Faltest du an dieser Linie, liegen beide Hälften genau aufeinander.
           Eine Figur ist **punktsymmetrisch**, wenn du sie um einen Punkt halb herumdrehen kannst, also um 180°, und sie dann wieder genauso aussieht.
-          Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel. Ein Dreieck mit drei gleich langen Seiten heißt gleichseitig.
+          Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel. Ein Dreieck mit drei gleich langen Seiten heißt gleichseitig. Ein Vieleck mit gleich langen Seiten und gleich großen Winkeln heißt regelmäßig. Bei einem regelmäßigen Vieleck mit n Ecken gibt es n Achsen, und die kleinste Drehung ist 360° : n groß. Ist eine Figur punktsymmetrisch, ist sie auch drehsymmetrisch, mit einer halben Drehung.
       - type: table
         caption: Symmetrie bei einigen Figuren
         header: [Figur, Achsen, punktsymmetrisch, kleinster Drehwinkel]
@@ -52,6 +49,9 @@ blocks:
           - [Quadrat, "4", ja, 90°]
           - ["gleichseitiges Dreieck (drei gleich lange Seiten)", "3", nein, 120°]
           - [Parallelogramm (schief), "0", ja, 180°]
+      - type: definition
+        term: Symmetrieachse
+        explanation: Eine Symmetrieachse ist eine Linie, an der du eine Figur falten kannst, sodass beide Hälften genau aufeinanderliegen.
       - type: note
         title: Merke
         blocks:
@@ -107,7 +107,7 @@ blocks:
         given:
           n: { oneOf: [3, 4, 5, 6, 8] }
         task:
-          text: "Ein regelmäßiges {{n}}-Eck hat lauter gleich lange Seiten und gleich große Winkel. Wie viele Symmetrieachsen hat es?"
+          text: "Ein regelmäßiges Vieleck hat {{n}} Ecken. Wie viele Symmetrieachsen hat es?"
         answer: { value: "n", compare: number }
         mistakes:
           - {
@@ -127,7 +127,7 @@ blocks:
         given:
           n: { oneOf: [3, 4, 5, 6, 8, 9, 10] }
         task:
-          text: "Ein regelmäßiges {{n}}-Eck wird um seinen Mittelpunkt gedreht, bis es zum ersten Mal wieder genauso aussieht. Wie groß ist diese kleinste Drehung in Grad?"
+          text: "Ein regelmäßiges Vieleck mit {{n}} Ecken wird um seinen Mittelpunkt gedreht, bis es zum ersten Mal wieder genauso aussieht. Wie groß ist diese kleinste Drehung in Grad?"
         answer: { value: "360 / n", compare: { number: { unit: "°" } } }
         mistakes:
           - {
@@ -137,5 +137,5 @@ blocks:
           - { value: "n", message: "Das ist die Zahl der Ecken. Gefragt ist der Winkel der Drehung in Grad." }
         hint: "Nach n gleichen Drehungen ist eine ganze Drehung von 360° geschafft."
         steps:
-          - "Eine ganze Drehung hat 360°. Das {{n}}-Eck sieht nach {{n}} gleichen Drehungen wieder aus."
+          - "Eine ganze Drehung hat 360°. Das Vieleck sieht nach {{n}} gleichen Drehungen wieder aus."
           - "360° : {{n}} = {{answer}}°."
