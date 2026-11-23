@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Der zehnte und letzte Hinweis der Karte sagt, dass der Schatz verschoben und gedreht wurde. Du lernst hier, Figuren zu verschieben und zu drehen und ihre Bildfigur zu bestimmen.
-          Du brauchst das Koordinatensystem von den Seiten davor.
+          Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ein Punkt um einen Pfeil bewegt: Der Pfeil sagt, wie weit der Punkt nach rechts und wie weit er nach oben wandert.
       - type: single-choice
         id: verschieben-p
         text: Der Punkt P(2 | 1) wird um den Pfeil 3 nach rechts und 2 nach oben verschoben. Welche Koordinaten hat P'?
@@ -25,9 +25,6 @@ blocks:
             correct: false
             info: Du hast nur nach rechts verschoben. Der Pfeil geht auch 2 nach oben.
         explanation: Beim Verschieben addierst du die Pfeilzahlen zu den Koordinaten, die erste zur x-Koordinate, die zweite zur y-Koordinate.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
   - type: section
     id: erklaerung
     title: Verschieben und Drehen
@@ -74,6 +71,7 @@ blocks:
         component: Spielbrett
         props:
           mode: shift
+          legend: "Der Pfeil: {dx} nach rechts, {dy} nach oben."
           task: "Verschiebe den Punkt P({px} | {py}) um den Pfeil {dx} nach rechts und {dy} nach oben. Setze dein Schiff auf den Bildpunkt."
           hint: "Klicke auf das Brett, oder wähle es mit Tab aus und nutze die Pfeiltasten, oder tippe beide Zahlen ein."
           board: Spielbrett mit einem gegebenen Punkt P.
@@ -97,6 +95,7 @@ blocks:
         component: Spielbrett
         props:
           mode: rotate
+          legend: "Die Drehung: eine Vierteldrehung (90°) gegen den Uhrzeigersinn um Z."
           task: "Drehe den Punkt P({px} | {py}) um den Drehpunkt Z({cx} | {cy}) um 90° gegen den Uhrzeigersinn. Setze dein Schiff auf den Bildpunkt."
           hint: "Klicke auf das Brett, oder wähle es mit Tab aus und nutze die Pfeiltasten, oder tippe beide Zahlen ein."
           board: Spielbrett mit dem Drehpunkt Z und einem gegebenen Punkt P.
@@ -144,9 +143,6 @@ blocks:
           - { left: Verschieben, right: den Pfeil }
           - { left: Drehen, right: "den Drehpunkt und den Winkel" }
         explanation: Zum Spiegeln brauchst du die Achse, zum Verschieben den Pfeil und zum Drehen den Drehpunkt und den Winkel.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
       - type: multiple-choice
         id: was-bleibt
         text: Was bleibt beim Verschieben, Spiegeln und Drehen gleich?
@@ -164,9 +160,6 @@ blocks:
             correct: true
             info: Richtig. Die Strecken der Bildfigur sind genauso lang wie die der Figur.
         explanation: Diese Abbildungen verändern die Lage. Form, Größe und Seitenlängen bleiben gleich.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
   - type: section
     id: rueckblick
     title: Rückblick

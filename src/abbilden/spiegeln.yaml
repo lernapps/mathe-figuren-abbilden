@@ -25,9 +25,6 @@ blocks:
             correct: false
             info: 2 ist die x-Koordinate des Punktes. Die y-Koordinate ist 3.
         explanation: Eine senkrechte Achse spiegelt nach links und rechts. Die Höhe des Punktes ändert sich nicht.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/
   - type: section
     id: erklaerung
     title: Spiegeln an einer Achse
@@ -119,6 +116,3 @@ blocks:
             correct: false
             info: Dieser Punkt ist einen Schritt von der Achse entfernt. Sein Spiegelpunkt wäre P'(5 | 3).
         explanation: Ein Punkt auf der Achse hat Abstand 0 und bleibt, wo er ist.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/bewegungen-figuren/

@@ -14,26 +14,23 @@ blocks:
       - type: figure
         image: images/spielbrett-schiff.svg
         alt: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien.
-        caption: Das Schiff A auf dem Spielbrett. Die Zahlen an den Achsen zählen die Schritte ab der 0.
+        caption: Das Schiff A auf dem Spielbrett. Die Zahlen am Rand zählen die Schritte ab der 0.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: single-choice
         id: schiff-schreiben
-        text: Schau auf das Bild. Das Schiff A startet dort, wo bei beiden Achsen die 0 steht. Wie viele Schritte geht es nach rechts, bis es unter A steht?
+        text: Schau auf das Bild. Das Schiff A startet in der Ecke unten links, bei der 0. Wie viele Schritte geht es nach rechts, bis es unter A steht?
         options:
           - text: 3 Schritte
             correct: true
-            info: Richtig. Die Zahl an der waagerechten Achse unter A ist die 3.
+            info: Richtig. Die Zahl am unteren Rand unter A ist die 3.
           - text: 2 Schritte
             correct: false
-            info: 2 ist die Zahl an der senkrechten Achse. Sie sagt, wie weit A über der waagerechten Achse steht.
+            info: 2 ist die Zahl am linken Rand. Sie sagt, wie weit A über dem unteren Rand steht.
           - text: 5 Schritte
             correct: false
             info: 5 ist 3 und 2 zusammen. Gezählt wird nach rechts nur bis unter A.
-        explanation: Nach rechts zählst du an der waagerechten Achse. Wie weit A über der Achse steht, kommt gleich dazu.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/koordinatensystem/
+        explanation: Nach rechts zählst du am unteren Rand. Wie weit A über dem unteren Rand steht, kommt gleich dazu.
   - type: section
     id: erklaerung
     title: So gibst du einen Punkt an
@@ -89,9 +86,6 @@ blocks:
           - { left: Punkt C, right: C(4 | 4) }
           - { left: Punkt D, right: D(7 | 3) }
         explanation: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
-        links:
-          - title: Baustein Koordinatensystem auf der Lernlandkarte
-            url: https://lernapps.net/apps/map/mathematik/c/koordinatensystem/
       - type: generated
         id: schiff-faehrt
         given:

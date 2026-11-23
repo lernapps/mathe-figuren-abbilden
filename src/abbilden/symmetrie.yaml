@@ -22,9 +22,6 @@ blocks:
             correct: false
             info: Beim Quadrat ist das nicht so. Probiere es mit einem Blatt Papier aus.
         explanation: Wo du faltest und beide Hälften genau aufeinanderliegen, liegt eine Symmetrieachse. Beim Quadrat gilt das für diese Linie.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
       - type: figure
         image: images/symmetrie-beispiele.svg
         alt: Ein Rechteck mit zwei gestrichelten Faltlinien, ein Quadrat mit vier und ein Dreieck mit zwei gleich langen Seiten und einer Achse.
@@ -79,9 +76,6 @@ blocks:
           - { left: gleichseitiges Dreieck, right: drei Achsen }
           - { left: Parallelogramm (schief), right: keine Achse }
         explanation: Falte in Gedanken in jede Richtung. Wo beide Hälften genau aufeinanderliegen, ist eine Achse.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
       - type: multiple-choice
         id: punktsymmetrisch
         text: Welche Figuren sind punktsymmetrisch?
@@ -99,9 +93,6 @@ blocks:
             correct: true
             info: Richtig. Es sieht schon nach einer Vierteldrehung gleich aus, also auch nach einer halben.
         explanation: Punktsymmetrisch heißt, nach einer halben Drehung sieht die Figur wieder gleich aus.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/symmetrie/
       - type: generated
         id: achsen-n-eck
         given:

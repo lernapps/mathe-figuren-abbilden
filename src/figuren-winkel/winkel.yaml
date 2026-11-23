@@ -31,9 +31,6 @@ blocks:
             correct: false
             info: Das sind drei Viertel einer Drehung.
         explanation: Eine Vierteldrehung ist ein Viertel einer ganzen Drehung. Sie ist ein rechter Winkel.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
   - type: section
     id: erklaerung
     title: Winkel und Grad
@@ -107,9 +104,6 @@ blocks:
           - Setze bei 70 auf der Skala, die bei 0 am ersten Schenkel beginnt, einen Punkt.
           - Verbinde den Scheitel mit dem Punkt.
         explanation: Erst brauchst du den ersten Schenkel. Dann richtest du das Geodreieck aus und markierst den Wert. Zum Schluss zeichnest du den zweiten Schenkel.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
       - type: matching
         id: winkelart
         text: Welche Winkelart passt zur Größe?
@@ -120,9 +114,6 @@ blocks:
           - { left: "180°", right: gestreckt }
           - { left: "270°", right: überstumpf }
         explanation: Vergleiche mit 90° und 180°. Kleiner als 90° ist spitz, größer als 180° überstumpf.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/
       - type: generated
         id: winkel-teilen
         given:
@@ -154,6 +145,3 @@ blocks:
             correct: false
             info: Überstumpfe Winkel sind größer als 180°.
         explanation: Stumpfe Winkel liegen zwischen 90° und 180°.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/winkel-messen/

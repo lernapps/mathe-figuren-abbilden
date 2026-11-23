@@ -22,6 +22,8 @@ const props = defineProps<{
   /** The line below the board, with {a} and {b} for the marker; and the one before a marker is set. */
   position: string;
   none: string;
+  /** The tool shown beside the board for a shift or a rotation, with {dx} and {dy}: what the arrow or the turn says. */
+  legend?: string;
   /** The task number, which the explainer gives. */
   seed: number;
   /** Whether the explainer checked the answer now set. */
@@ -171,6 +173,17 @@ const text = computed(() =>
         />
       </g>
     </svg>
+    <p v-if="legend !== undefined && (mode === 'shift' || mode === 'rotate')" class="spielbrett-legend">
+      <svg v-if="mode === 'shift'" :width="current.dx * 16 + 20" :height="current.dy * 16 + 20" aria-hidden="true">
+        <line :x1="6" :y1="current.dy * 16 + 14" :x2="current.dx * 16 + 6" :y2="8" class="spielbrett-legend-line" />
+        <path :d="`M${current.dx * 16 + 6} 8 l-9 2 l6 7z`" class="spielbrett-legend-head" />
+      </svg>
+      <svg v-else width="34" height="34" aria-hidden="true">
+        <path d="M28 20 A12 12 0 1 0 17 29" class="spielbrett-legend-arc" />
+        <path d="M17 29 l7 -6 l-1 9z" class="spielbrett-legend-head" />
+      </svg>
+      <span>{{ fill(legend, current) }}</span>
+    </p>
     <div class="spielbrett-fields">
       <label>
         {{ xLabel }}
@@ -206,6 +219,21 @@ const text = computed(() =>
   fill: var(--page-text);
   font-size: 14px;
   font-family: sans-serif;
+}
+.spielbrett-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+}
+.spielbrett-legend-line,
+.spielbrett-legend-arc {
+  stroke: var(--page-text);
+  stroke-width: 3;
+  fill: none;
+}
+.spielbrett-legend-head {
+  fill: var(--page-text);
 }
 .spielbrett-axis {
   stroke: var(--page-text);

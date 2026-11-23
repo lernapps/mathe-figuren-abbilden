@@ -61,9 +61,9 @@ Winkel heißen mit griechischen Buchstaben (α, β) und Eckpunkten; "Strecke AB"
 - Auswahl: `single-choice`, `multiple-choice`, `true-false` höchstens zur Hälfte der Aufgaben einer Seite.
 - Komponenten (nur wo kein Block passt, `prefer-built-in-block`): `Spielbrett` (Übung mit `mode`: `set` einen Punkt P(x | y) setzen, `mirror` einen Punkt an
   der Achse x = 4 spiegeln, `shift` um einen Pfeil verschieben, `rotate` um Z(3 | 2) um 90° gegen den Uhrzeigersinn drehen; Klick, Pfeiltasten oder Eingabe;
-  nur erster Quadrant, Ziele immer im Brett; Rückmeldung je Fehlertyp, `mistakes` in der Reihenfolge der Fehlerantworten, dann „x stimmt“, „y stimmt“), `FigurZiehen` (Darstellung: Ecken ziehen, Eigenschaften beobachten, immer mit `nojs`-Text), `WinkelAblesen` (Übung: Halbkreis-Skala, Winkel 20° bis 160° in Zehnerschritten, nimmt `110`, `110°` und `110 Grad` an; Rückmeldung nennt die Lösung nicht).
+  nur erster Quadrant, Ziele immer im Brett; bei `shift` und `rotate` zeigt `legend` neben dem Brett den Pfeil bzw. die Drehung als Zeichen; Rückmeldung je Fehlertyp, `mistakes` in der Reihenfolge der Fehlerantworten, dann „x stimmt“, „y stimmt“), `FigurZiehen` (Darstellung: Ecken ziehen, Eigenschaften beobachten, immer mit `nojs`-Text), `WinkelAblesen` (Übung: Halbkreis-Skala, Winkel 20° bis 160° in Zehnerschritten, nimmt `110`, `110°` und `110 Grad` an; Rückmeldung nennt die Lösung nicht).
   Jede mit `<Name>.ts`, `<Name>.test.ts` und Textalternative.
-- Datendateien: `src/data/` nur wenn ein Muster Datensätze braucht; Eintrag je Fakt einmal.
+- Recap `wiederholung`: Begriffe als `definition`, Selbsttest als `Kurztest` (Komponente aus dem Epic, 3 Tests, nicht zu leicht für die Stufe, `nojs` mit Lösung). Keine `links:` an Aufgaben (Regel 9.6). Datendateien: `src/data/` nur wenn ein Muster Datensätze braucht; Eintrag je Fakt einmal.
 
 ## Figures
 

@@ -25,9 +25,6 @@ blocks:
             correct: false
             info: Der Zirkel ändert seine Öffnung nicht. Darum sind alle Abstände gleich.
         explanation: Alle Punkte eines Kreises haben denselben Abstand zum Mittelpunkt. Das ist die Öffnung des Zirkels.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/konstruktionen/
   - type: section
     id: erklaerung
     title: Ein Dreieck aus drei Seiten
@@ -73,9 +70,6 @@ blocks:
           - "Zeichne die beiden Kreisbögen: um A mit dem Radius b (Strecke AC) und um B mit dem Radius a (Strecke BC)."
           - Verbinde den Schnittpunkt C der Bögen mit A und B.
         explanation: Zuerst brauchst du die Grundstrecke. Dann zeichnest du die beiden Bögen. Erst am Schluss verbindest du die Punkte.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/konstruktionen/
       - type: generated
         id: zirkel-einstellen
         given:
@@ -113,6 +107,3 @@ blocks:
             correct: false
             info: Dann wären die Seiten nicht mehr 2 cm und 3 cm.
         explanation: Die Bögen von 2 cm und 3 cm reichen von den Enden der 8-cm-Strecke nicht bis zueinander. Sie treffen sich nicht, also gibt es kein Dreieck.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/konstruktionen/

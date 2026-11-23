@@ -31,9 +31,6 @@ blocks:
             correct: false
             info: Das sind der Weg nach rechts (4) und der Weg nach unten (3) zusammen. Gesucht ist nur der gerade Weg von g nach h.
         explanation: Der kürzeste Weg von g nach h geht gerade nach unten, also im rechten Winkel zu beiden Geraden.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
   - type: section
     id: erklaerung
     title: Parallel, senkrecht, Abstand
@@ -83,9 +80,6 @@ blocks:
           - Schiebe das Geodreieck am Lineal entlang, bis die lange Kante an P liegt.
           - Zeichne an der langen Kante entlang eine Linie durch P.
         explanation: Zuerst richtest du die lange Kante an g aus. Das Lineal hält die Richtung fest, während du das Geodreieck verschiebst. Zum Schluss zeichnest du.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
       - type: ordering
         id: senkrechte-schritte
         text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Senkrechte zu g durch P.
@@ -94,9 +88,6 @@ blocks:
           - Schiebe das Geodreieck an g entlang, bis die lange Kante an P liegt.
           - Zeichne an der langen Kante entlang eine Linie durch P.
         explanation: Die Mittellinie steht senkrecht zur langen Kante. Liegt sie auf g, ist die lange Kante senkrecht zu g. Dann musst du das Geodreieck nur noch bis P schieben.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
       - type: multiple-choice
         id: senkrecht-beispiele
         text: Welche Paare sind senkrecht zueinander?
@@ -114,9 +105,6 @@ blocks:
             correct: false
             info: Gegenüberliegende Kanten sind parallel.
         explanation: Senkrechte Geraden bilden einen rechten Winkel. Parallele Geraden liegen überall gleich weit auseinander.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/
       - type: generated
         id: abstand-messen
         given:
@@ -146,6 +134,3 @@ blocks:
             correct: false
             info: Geraden haben keine Länge. Das Zeichen sagt etwas über ihre Lage.
         explanation: ⊥ heißt senkrecht, ∥ heißt parallel.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/parallel-senkrecht-abstand/

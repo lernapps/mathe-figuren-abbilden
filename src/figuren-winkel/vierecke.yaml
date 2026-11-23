@@ -51,9 +51,6 @@ blocks:
             correct: false
             info: Die rechten Winkel des Rechtecks bleiben erhalten, wenn du die Seiten gleich lang ziehst.
         explanation: Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
   - type: section
     id: erklaerung
     title: Die besonderen Vierecke
@@ -99,17 +96,11 @@ blocks:
           - { left: Drachen, right: zwei Paare gleich langer Nachbarseiten }
           - { left: Trapez, right: genau ein Paar paralleler Seiten }
         explanation: Lies in der Tabelle nach, was jedes Viereck besonders macht.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
       - type: true-false
         id: raute-parallelogramm
         text: Jede Raute ist auch ein Parallelogramm.
         answer: true
         explanation: Eine Raute hat zwei Paare paralleler Seiten. Das ist die Eigenschaft eines Parallelogramms.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
       - type: multiple-choice
         id: vier-rechte-winkel
         text: Welche Vierecke haben immer vier rechte Winkel?
@@ -127,9 +118,6 @@ blocks:
             correct: false
             info: Ein Parallelogramm kann Winkel haben, die nicht 90° groß sind. Vier rechte Winkel hat es nur im Sonderfall.
         explanation: Immer vier rechte Winkel haben das Rechteck und das Quadrat.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/
       - type: generated
         id: raute-seiten
         given:

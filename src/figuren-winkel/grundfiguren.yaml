@@ -31,9 +31,6 @@ blocks:
             correct: false
             info: Der Kreis hat keine Ecken und keine geraden Seiten.
         explanation: Die Zahl der Ecken gibt vielen Figuren ihren Namen. Drei Ecken sind ein Dreieck.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
   - type: section
     id: erklaerung
     title: Ecken und Seiten
@@ -83,17 +80,11 @@ blocks:
           - { left: Kreis, right: keine Ecken }
           - { left: Fünfeck, right: fünf Seiten }
         explanation: Zähle Ecken und Seiten und achte auf rechte Winkel und gleich lange Seiten.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
       - type: true-false
         id: quadrat-rechteck
         text: Jedes Quadrat ist auch ein Rechteck.
         answer: true
         explanation: Ein Quadrat hat vier rechte Winkel. Seine gegenüberliegenden Seiten sind gleich lang. Das reicht für ein Rechteck.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
       - type: multiple-choice
         id: rechteck-stimmt
         text: Welche Aussagen gelten für jedes Rechteck?
@@ -111,9 +102,6 @@ blocks:
             correct: false
             info: Drei Ecken hat ein Dreieck.
         explanation: Ein Rechteck hat vier rechte Winkel, und gegenüberliegende Seiten sind gleich lang.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/
       - type: generated
         id: ecken-seiten
         given:

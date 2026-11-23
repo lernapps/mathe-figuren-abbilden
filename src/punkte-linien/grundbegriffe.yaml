@@ -37,9 +37,6 @@ blocks:
             correct: false
             info: Keine Enden hat die Gerade g. Sie geht in beide Richtungen immer weiter.
         explanation: Eine Strecke hat zwei Endpunkte, darum kannst du sie messen.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/geometrische-grundbegriffe/
   - type: section
     id: erklaerung
     title: Wie heißen die Linien?
@@ -92,9 +89,6 @@ blocks:
           - { left: "Gleise, die in der Ferne nie enden", right: Gerade }
           - { left: "Der Lichtstrahl einer Taschenlampe, der in einem Punkt beginnt", right: Halbgerade }
         explanation: Achte darauf, wie viele Enden die Linie hat. Zwei Enden sind eine Strecke, eins eine Halbgerade und keins eine Gerade.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/geometrische-grundbegriffe/
       - type: multiple-choice
         id: gerade-stimmt
         text: Welche Aussagen über eine Gerade stimmen?
@@ -112,9 +106,6 @@ blocks:
             correct: false
             info: Zwei Endpunkte hat eine Strecke.
         explanation: Eine Gerade hat keine Enden. Darum hat sie keine Länge, und du nennst sie mit einem kleinen Buchstaben.
-        links:
-          - title: Mehr zu diesem Baustein (Lernlandkarte auf lernapps.net)
-            url: https://lernapps.net/apps/map/mathematik/c/geometrische-grundbegriffe/
       - type: generated
         id: strecken-zaehlen
         given:
