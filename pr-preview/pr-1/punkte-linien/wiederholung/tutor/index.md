@@ -44,7 +44,7 @@ Wiederholung der natürlichen Zahlen mit Selbsttest, damit du weißt, ob du für
 ### Wofür diese Seite da ist
 
 Im Kapitel „Punkte, Linien und Koordinaten“ gibst du Punkte mit Zahlen an. Dafür musst du Zahlen sicher lesen, schreiben und am Zahlenstrahl finden.
-Zwei Kurzaufgaben zeigen dir, ob du bereit bist. Hast du beide richtig, kannst du gleich weiter.
+Drei Kurztests zeigen dir, ob du bereit bist. Hast du alle drei richtig, kannst du gleich weiter.
 
 ### Natürliche Zahlen im Stellenwertsystem
 
@@ -66,7 +66,9 @@ Interaktiv: Kurztest: Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Sch
 
 Interaktiv: Kurztest: Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Zur Auswahl stehen 427, 724 und 13. Richtig ist 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Bei 724 hast du die Reihenfolge umgedreht, bei 13 hast du die Ziffern addiert.
 
-Klappt ein Kurztest nicht? Lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
+Interaktiv: Kurztest: Welchen Wert hat die Ziffer 3 in der Zahl 305? Zur Auswahl stehen 300, 3 und 30. Richtig ist 300, denn die 3 steht an der Hunderterstelle: 3 · 100 = 300. Bei 3 hast du nur die Ziffer genannt, bei 30 hast du die Zehnerstelle genommen.
+
+Du darfst jede Antwort noch einmal wählen. Hast du alle drei richtig, bist du bereit. Klappt ein Kurztest nicht, lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
 
 ### Du bist bereit, wenn du …
 
