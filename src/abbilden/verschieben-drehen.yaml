@@ -9,8 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der zehnte und letzte Hinweis der Karte sagt, dass der Schatz verschoben und gedreht wurde. Du lernst hier, Figuren zu verschieben und zu drehen und ihre Bildfigur zu bestimmen.
-          Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ein Punkt um einen Pfeil bewegt: Der Pfeil sagt, wie weit der Punkt nach rechts und wie weit er nach oben wandert.
+          Nika und Jonas lesen den zehnten und letzten Hinweis ihrer Schatzkarte: Der Schatz wurde verschoben und gedreht. Du lernst hier, Punkte und Figuren zu verschieben und zu drehen und zu bestimmen, wo sie danach liegen.
+          Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ein Punkt um einen Pfeil bewegt: Der Pfeil sagt, wie weit der Punkt nach rechts und wie weit er nach oben wandert. Beim Drehen wandert ein Punkt auf einem Kreisbogen um einen festen Punkt, den Drehpunkt. Der Punkt nach der Bewegung heißt Bildpunkt und bekommt einen Strich: P wird zu P'.
       - type: single-choice
         id: verschieben-p
         text: Der Punkt P(2 | 1) wird um den Pfeil 3 nach rechts und 2 nach oben verschoben. Welche Koordinaten hat P'?

@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der vierte Hinweis der Schatzkarte sind sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
+          Nika und Jonas lesen den vierten Hinweis ihrer Schatzkarte: Er zeigt sechs Stempel mit Figuren. Du lernst hier, jede Figur zu benennen und ihre Eigenschaften zu beschreiben.
           Du brauchst dafür Strecken und Parallelen von den Seiten davor.
       - type: figure
         image: images/grundfiguren.svg

@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der achte Hinweis: Die Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
+          Nika und Jonas lesen den achten Hinweis: Ihre Schatzkarte ist an einer Faltlinie zerrissen. Du lernst hier, Symmetrien zu erkennen, damit Nika und Jonas die zweite Hälfte finden.
           Falte ein Blatt Papier in der Mitte, tropfe Farbe auf eine Hälfte und klappe zu. Es entsteht ein Klecksbild mit zwei gleichen Hälften.
       - type: single-choice
         id: faltlinie

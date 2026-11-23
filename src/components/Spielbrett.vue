@@ -91,6 +91,12 @@ function onKey(event: KeyboardEvent): void {
 
 const px = (v: number) => PAD + v * STEP;
 const py = (v: number) => PAD + (MAX_Y - v) * STEP;
+// once a right answer is checked, the way from P to P' is drawn (the tool at work); never before
+const shown = computed(() => props.checked && x.value === current.value.x && y.value === current.value.y);
+const arc = computed(() => {
+  const r = STEP * (Math.abs(current.value.px - CX) + Math.abs(current.value.py - CY));
+  return `M${px(current.value.px)} ${py(current.value.py)} A${r} ${r} 0 0 0 ${px(current.value.x)} ${py(current.value.y)}`;
+});
 const width = PAD * 2 + MAX_X * STEP;
 const height = PAD * 2 + MAX_Y * STEP;
 const text = computed(() =>
@@ -165,6 +171,17 @@ const text = computed(() =>
         <circle :cx="px(current.px)" :cy="py(current.py)" r="8" class="spielbrett-given-dot" />
         <text :x="px(current.px) + 10" :y="py(current.py) - 10" class="spielbrett-given">P</text>
       </g>
+      <g v-if="shown && mode !== undefined && mode !== 'set'">
+        <path v-if="mode === 'rotate'" :d="arc" class="spielbrett-path" />
+        <line
+          v-else
+          :x1="px(current.px)"
+          :y1="py(current.py)"
+          :x2="px(current.x)"
+          :y2="py(current.y)"
+          class="spielbrett-path"
+        />
+      </g>
       <g v-if="x !== undefined && y !== undefined">
         <circle :cx="PAD + x * STEP" :cy="PAD + (MAX_Y - y) * STEP" r="8" class="spielbrett-marker" />
         <path
@@ -179,8 +196,8 @@ const text = computed(() =>
         <path :d="`M${current.dx * 16 + 6} 8 l-9 2 l6 7z`" class="spielbrett-legend-head" />
       </svg>
       <svg v-else width="34" height="34" aria-hidden="true">
-        <path d="M28 20 A12 12 0 1 0 17 29" class="spielbrett-legend-arc" />
-        <path d="M17 29 l7 -6 l-1 9z" class="spielbrett-legend-head" />
+        <path d="M25.4 9.9 A11 11 0 1 0 25.4 24.1" class="spielbrett-legend-arc" />
+        <path d="M28.5 26.7 L29.2 19.5 L22.3 21.5z" class="spielbrett-legend-head" />
       </svg>
       <span>{{ fill(legend, current) }}</span>
     </p>
@@ -234,6 +251,12 @@ const text = computed(() =>
 }
 .spielbrett-legend-head {
   fill: var(--page-text);
+}
+.spielbrett-path {
+  fill: none;
+  stroke: var(--page-text);
+  stroke-width: 3;
+  stroke-dasharray: 6 4;
 }
 .spielbrett-axis {
   stroke: var(--page-text);

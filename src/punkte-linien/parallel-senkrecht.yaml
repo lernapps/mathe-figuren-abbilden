@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der zweite Hinweis liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+          Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
           Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
       - type: figure
         image: images/abstand.svg

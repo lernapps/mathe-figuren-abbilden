@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der fünfte Hinweis der Karte nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
+          Nika und Jonas lesen den fünften Hinweis ihrer Schatzkarte: Er nennt eine Richtung als Drehung. Du lernst hier, Winkel zu messen, zu zeichnen und nach ihrer Größe einzuteilen.
           Eine Tür oder der Zeiger einer Uhr zeigen dir, was ein Winkel ist.
       - type: figure
         image: images/tuer-drehung.svg

@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der dritte Hinweis der Schatzkarte nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
+          Nika und Jonas lesen den dritten Hinweis ihrer Schatzkarte: Er nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
           Du setzt dort ein Schiff auf einen Punkt. Nach dieser Seite kannst du jeden Punkt des Gitters mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
       - type: figure
         image: images/spielbrett-schiff.svg
@@ -81,10 +81,10 @@ blocks:
         id: punkte-ablesen
         text: Ordne jedem Punkt seine Koordinaten zu.
         pairs:
-          - { left: Punkt A, right: A(2 | 5) }
-          - { left: Punkt B, right: B(6 | 1) }
-          - { left: Punkt C, right: C(4 | 4) }
-          - { left: Punkt D, right: D(7 | 3) }
+          - { left: Punkt A, right: (2 | 5) }
+          - { left: Punkt B, right: (6 | 1) }
+          - { left: Punkt C, right: (4 | 4) }
+          - { left: Punkt D, right: (7 | 3) }
         explanation: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
       - type: generated
         id: schiff-faehrt

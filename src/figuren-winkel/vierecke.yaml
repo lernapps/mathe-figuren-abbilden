@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der sechste Hinweis der Karte sind Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
+          Nika und Jonas lesen den sechsten Hinweis ihrer Schatzkarte: Er zeigt Rätselfelder in Form von Vierecken. Du lernst hier, besondere Vierecke zu unterscheiden. Das Rechteck kennst du schon.
           Probiere erst, was passiert, wenn du die Ecken ziehst.
       - type: vue-component
         id: viereck-ziehen
