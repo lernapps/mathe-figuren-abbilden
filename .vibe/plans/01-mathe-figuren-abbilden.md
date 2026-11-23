@@ -267,10 +267,10 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
 - [x] Kapitel 2: Seiten vierecke (Komponente FigurZiehen) und konstruieren
 - [x] Kapitel 3: Seiten symmetrie, spiegeln und verschieben-drehen, Bildpunkte im ersten Quadranten
 - [x] Selbsteinschätzung je Kapitel nach Skill lernapps-explainer-self-assessment
-- [ ] Zwei Prüfer starten (Lernenden-Prüfer, fachlicher Prüfer, beide ohne Beteiligung am Schreiben), Befunde getrennt im Plan unter Review, Fehler beheben
+- [x] Zwei Prüfer starten (Lernenden-Prüfer, fachlicher Prüfer, beide ohne Beteiligung am Schreiben), Befunde getrennt im Plan unter Review, Fehler beheben
 <!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
-- [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
-- [ ] Run `npx --no -- lernapps check` until it passes.
+- [x] Update the content guide so that it describes the app as built (`app-content-matches`).
+- [x] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
 - [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
@@ -326,3 +326,23 @@ Pro Baustein ≥3 Aufgaben (bei `bewegungen-figuren` zusammen über zwei Seiten,
 ### Where I had to guess
 
 <!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
+
+## Review
+
+Die Prüfer haben nichts geschrieben. Sie wurden als Unteragenten der Session gestartet (nach der Musterseite und nach allen Seiten); ihre Befunde sind eingearbeitet, soweit unten nicht als offen genannt.
+
+### Lernenden-Prüfer (Klasse 5)
+
+- Musterseite (1. Lauf): „Nullpunkt“ und „Achse“ vor der Erklärung, Einstiegsaufgabe verriet die Lösung, Beispiel ohne Bild, „Felder“ statt Schritte, Grammatik („1 Felder“), Spielbrett ohne Bedienhinweis, Eingabe setzte y auf 0, Marker wie „Schließen“-Knopf. Behoben.
+- Ganze App (2. Lauf): Nika und Jonas nicht eingeführt (Auftritt jetzt auf `grundbegriffe`), „Mara“ ohne Einführung (jetzt Nika), Hinweise der Karte nicht fortlaufend (jetzt zehn Hinweise), „Schiff“ ohne Erklärung, Ende ohne Schluss (Abschnitt `rueckblick`), „rechter Winkel“/„Geodreieck“ vor Einführung, „Radius“, „Kreisbogen“, „Schnittpunkt“, „Diagonale“, „regelmäßig“ ohne Einführung, Ordering mit zwei richtigen Reihenfolgen (Bögen), Trapez-Zuordnung mehrdeutig, Rückmeldung verriet Lösung (WinkelAblesen), Eingabe „110°“ gesperrt, Glossar zu klein. Behoben, soweit im Text möglich.
+- Dev-Server: `WinkelAblesen` und `FigurZiehen` liefen dort nicht, weil die Komponenten nach dem Start des Servers entstanden (Insel-Modul veraltet); im gebauten `dist/` und in den End-zu-End-Tests laufen sie.
+- Offen (Runtime, nicht in diesem Repo änderbar): Rückmeldung bei Zuordnung und Reihenfolge nennt nur „Richtig zugeordnet: 1 von 4“ ohne Warum; der „Lösung“-Knopf zeigte nichts Sichtbares; Satz der Selbsteinschätzung „Sie fragt jede Seite ab“ gilt nicht für Wiederholungsseiten.
+- Offen (inhaltlich, bewusst nicht gebaut): Zeichnen und Messen mit echtem Geodreieck kann die App nicht (nur Schritte ordnen und Ablesen am Bild); Bewegungen üben einzelne Punkte, keine Figuren; Spiegeln nur an x = 4, Drehen nur 90° um Z(3 | 2); kein überstumpfer Winkel im Ablesen.
+
+### Fachlicher Prüfer
+
+- Nachgerechnet: alle `generated`-Aufgaben über den vollen Wertebereich (kein Fehlerwert gleich der Lösung, nichts unlösbar), Komponentenlogik (Spielbrett 2000 Seeds je Modus, FigurZiehen alle Eckenkombinationen im Gitter 0 bis 4, WinkelAblesen), alle `examples`.
+- Fehler, behoben: falsches Verfahren für die Parallele mit der Mittellinie (jetzt lange Kante, Lineal an kurzer Kante; Mittellinie nur bei der Senkrechten); `dreieck-konstruktion.svg` zeigte keine Bögen durch C; Rückmeldung bei `verschieben-p` (x und y des Ergebnisses vertauscht); `quadrat-entsteht` und `vier-rechte-winkel` (Quadrat auch Raute); „ein: Raute“; Seitenbezeichnung a, b, c nicht eingeführt; Tür „halb“ geöffnet bei 70° (jetzt 90°); „ab 1 gezählt“ war umgekehrt (jetzt zu weit links und unten); Drachen nur konvex; Tabelle Symmetrie mit „kein Quadrat“ und „schief“; „Nur ihre Lage ändert sich“ beim Spiegeln.
+- Schreibweisen: geschützte Leerzeichen vor `cm` und Minus U+2212 in angezeigten Rechnungen nachgetragen. Nicht möglich: geschütztes Leerzeichen in Überschriften (Runtime-Test „heading levels follow the nesting“ schlägt dann fehl); dort normales Leerzeichen.
+- Offen: Entscheidung Trapez = genau ein Paar paralleler Seiten (Fachprüfer schlug „mindestens“ vor; für 5-6 gewählt, damit jedes Viereck einen Namen hat; (guess)); `winkel-teilen` (Nebenwinkel) und `dreieck-unmoeglich` (Dreiecksungleichung) grenzen an #430, `was-bleibt` an Kongruenz: bewusst als Vorerfahrung drin, dem Orchestrator gemeldet.
+- Nicht geprüft: Kartenseiten auf lernapps.net (ob die Karte weitere Inhalte der Bausteine verlangt), Lehrplan Hessen/KMK.

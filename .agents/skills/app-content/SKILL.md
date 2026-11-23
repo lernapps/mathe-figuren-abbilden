@@ -43,13 +43,13 @@ Gemeinsame Abschnitts-IDs je Seite, in dieser Reihenfolge: `einstieg` (erste lei
 Lernendenworten ("Du kannst danach …") und endet mit dem nächsten Schritt der Schatzkarte. Mindestens drei Aufgaben je Baustein,
 steigend: erkennen, anwenden, neue Situation. Höchstens 350 Wörter Text. Jede Seite hat ein Bild oder eine Komponente.
 Schatzkarte als roter Faden: zwei erfundene Kinder (siehe Figures), eine Szene je Seite, jede Konstruktion liefert einen Hinweis.
-Kapitel 1 beginnt mit der Sammel-Wiederholung `wiederholung`; ein Kapitel endet mit einem Rückblick und einer Selbsteinschätzung (`selfAssessment`).
+Die Schatzkarte hat zehn Hinweise, einen je Seite ab `grundbegriffe` (erster Hinweis: Gleise; dritter: zwei Zahlen; vierter: Stempel mit Figuren; fünfter: Drehung; sechster: Rätselfelder; siebter: Kreis um den Schatzpunkt; achter: zerrissene Karte; neunter: Spiegelbild der Karte; zehnter: Schatz verschoben und gedreht). Nika und Jonas treten auf `grundbegriffe` auf (einziges Bild der beiden); `verschieben-drehen` endet mit dem Abschnitt `rueckblick`. Kapitel 1 beginnt mit der Sammel-Wiederholung `wiederholung`; ein Kapitel endet mit einem Rückblick und einer Selbsteinschätzung (`selfAssessment`).
 
 ## Terminology
 
 Das Wort der Karte gilt (Name des Bausteins). Anrede "du", kurze Sätze, kein "man" in Arbeitsaufträgen. Schreibweisen: Dezimalkomma
 (`3,5`), Einheiten mit geschütztem Leerzeichen (`3 cm`, Einheit nie kursiv), Winkel `45°` (geschütztes Leerzeichen vor `°` nicht), Minus `−`,
-Mal `·`, geteilt `:`, Brüche gesetzt. Das Wort „Ursprung“ (nicht „Nullpunkt“). Punkte werden `P(3 | 2)` geschrieben: erst x, dann y (Eingabe akzeptiert `3|2`, `3 2`, `(3|2)`).
+Mal `·`, geteilt `:`, Brüche gesetzt. Das Wort „Ursprung“ (nicht „Nullpunkt“), „Bildpunkt“ (nicht „Spiegelpunkt“), „Trapez“ = genau ein Paar paralleler Seiten (Entscheidung für 5-6, damit jedes Viereck genau einen Namen hat; Quadrat = Rechteck und Raute zugleich). Punkte werden `P(3 | 2)` geschrieben: erst x, dann y (Eingabe akzeptiert `3|2`, `3 2`, `(3|2)`).
 "Zahlenstrahl" für die Achsen (nicht "Zahlengerade"). Neue Wörter werden bei der ersten Verwendung am Beispiel erklärt.
 Winkel heißen mit griechischen Buchstaben (α, β) und Eckpunkten; "Strecke AB" mit Überstrich in Formeln.
 
@@ -59,8 +59,9 @@ Winkel heißen mit griechischen Buchstaben (α, β) und Eckpunkten; "Strecke AB"
   (x/y vertauscht, schräg gemessen, falsche Skala, Pfeil umgekehrt). Beispiel: `koordinaten-ablesen` auf `src/punkte-linien/koordinaten.yaml`.
 - Zuordnen/Ordnen: `matching`, `ordering` (Zeichenschritte, Begriff–Eigenschaft).
 - Auswahl: `single-choice`, `multiple-choice`, `true-false` höchstens zur Hälfte der Aufgaben einer Seite.
-- Komponenten (nur wo kein Block passt, `prefer-built-in-block`): `Spielbrett` (Übung: Punkt per Klick, Pfeiltasten oder Eingabe setzen, nur
-  erster Quadrant), `FigurZiehen` (Darstellung: Ecken ziehen, Eigenschaften beobachten, immer mit `nojs`-Text), `WinkelAblesen` (Übung: Geodreieck-Skala).
+- Komponenten (nur wo kein Block passt, `prefer-built-in-block`): `Spielbrett` (Übung mit `mode`: `set` einen Punkt P(x | y) setzen, `mirror` einen Punkt an
+  der Achse x = 4 spiegeln, `shift` um einen Pfeil verschieben, `rotate` um Z(3 | 2) um 90° gegen den Uhrzeigersinn drehen; Klick, Pfeiltasten oder Eingabe;
+  nur erster Quadrant, Ziele immer im Brett; Rückmeldung je Fehlertyp, `mistakes` in der Reihenfolge der Fehlerantworten, dann „x stimmt“, „y stimmt“), `FigurZiehen` (Darstellung: Ecken ziehen, Eigenschaften beobachten, immer mit `nojs`-Text), `WinkelAblesen` (Übung: Halbkreis-Skala, Winkel 20° bis 160° in Zehnerschritten, nimmt `110`, `110°` und `110 Grad` an; Rückmeldung nennt die Lösung nicht).
   Jede mit `<Name>.ts`, `<Name>.test.ts` und Textalternative.
 - Datendateien: `src/data/` nur wenn ein Muster Datensätze braucht; Eintrag je Fakt einmal.
 
