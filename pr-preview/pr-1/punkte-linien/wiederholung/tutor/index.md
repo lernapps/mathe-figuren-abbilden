@@ -39,9 +39,45 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/
 
-Kurze Wiederholung der natürlichen Zahlen, die du für das Koordinatensystem brauchst.
+Wiederholung der natürlichen Zahlen mit Selbsttest, damit du weißt, ob du für das Koordinatensystem bereit bist.
 
-Kannst du das schon? Ich kann natürliche Zahlen im Stellenwertsystem lesen, schreiben und darstellen.
-Für dieses Kapitel heißt das: Du findest eine Zahl wie 3 oder 7 auf dem Zahlenstrahl und weißt, dass er bei 0 beginnt
-und nach rechts immer weiter geht. Im Koordinatensystem kommen solche Zahlen später wieder vor.
-Wenn dir das noch schwerfällt, schau dir den Baustein auf der Lernlandkarte an. Danach starten Nika und Jonas mit der Geometrie.
+### Das brauchst du für dieses Kapitel
+
+Im Koordinatensystem gibst du Punkte mit Zahlen an. Dafür musst du Zahlen sicher lesen, schreiben und am Zahlenstrahl finden.
+Zwei Kurzaufgaben zeigen dir, ob du bereit bist.
+
+### Natürliche Zahlen im Stellenwertsystem
+
+Die **natürlichen Zahlen** sind 0, 1, 2, 3 und so weiter, immer eine mehr. Am **Zahlenstrahl** siehst du sie der Größe nach: Je weiter rechts, desto größer.
+Der **Stellenwert** sagt, was eine Ziffer wert ist: Das hängt von ihrer Stelle ab, Einer, Zehner, Hunderter und so weiter.
+
+Bild: Ein Zahlenstrahl von 0 bis 10 mit einem roten Punkt bei 3. Ein Bogen zeigt drei Schritte von der 0 bis zum Punkt. Bildunterschrift: Auf dem Zahlenstrahl liegt die 3 drei Schritte rechts von der 0.
+
+- **Zahlenstrahl**: Eine Linie, die bei 0 beginnt und nach rechts weitergeht. Jede natürliche Zahl hat dort ihren Platz.
+
+- **Stellenwert**: Der Wert einer Ziffer hängt von ihrer Stelle ab. In 305 steht die 3 an der Hunderterstelle und ist 300 wert, die 0 an der Zehnerstelle ist 0 wert, die 5 ist 5 wert.
+
+**Beispiel: Die Zahl 305**
+
+305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
+
+**Merke: Kannst du das? Aufgabe 1**
+
+Du startest bei der 5 auf dem Zahlenstrahl und gehst 3 Schritte nach rechts. Bei welcher Zahl landest du? Rechne zuerst im Kopf, dann lies die Lösung.
+
+**Lösung:** 8, denn 5 + 3 = 8. Hast du 3 heraus, hast du nur die Schritte gezählt. Hast du 2 heraus, bist du nach links gegangen.
+
+**Merke: Kannst du das? Aufgabe 2**
+
+Welche Zahl hat 4 Hunderter, 2 Zehner und 7 Einer? Schreibe sie auf, dann lies die Lösung.
+
+**Lösung:** 427, denn 4 · 100 + 2 · 10 + 7 · 1 = 427. Hast du 724 heraus, hast du die Reihenfolge umgedreht. Hast du 13 heraus, hast du die Ziffern addiert.
+
+Klappt eine Aufgabe nicht? Lies den Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte nach.
+
+### Du bist bereit, wenn du …
+
+Ich kann natürliche Zahlen im Stellenwertsystem lesen, schreiben und darstellen. Für dieses Kapitel heißt das:
+- Du findest eine Zahl wie 3 oder 7 auf dem Zahlenstrahl und gehst von ihr aus nach rechts weiter.
+- Du erklärst, was eine Ziffer an ihrer Stelle wert ist.
+- Du schreibst eine Zahl aus Hundertern, Zehnern und Einern auf.
