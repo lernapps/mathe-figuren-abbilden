@@ -40,18 +40,18 @@ blocks:
           Ohne JavaScript lies die Tabelle weiter unten.
       - type: single-choice
         id: quadrat-entsteht
-        text: Du ziehst ein Rechteck so, dass alle vier Seiten gleich lang sind. Welcher Name passt am genauesten?
+        text: Du ziehst das Viereck so, dass es vier rechte Winkel und vier gleich lange Seiten hat. Welcher Name passt am genauesten?
         options:
           - text: Quadrat
             correct: true
             info: Richtig. Vier rechte Winkel und vier gleich lange Seiten ergeben ein Quadrat.
           - text: Eine Raute ohne rechte Winkel
             correct: false
-            info: Die vier rechten Winkel des Rechtecks bleiben erhalten. Eine Raute ohne rechte Winkel ist es also nicht.
+            info: Dein Viereck hat vier rechte Winkel. Eine Raute ohne rechte Winkel ist es also nicht.
           - text: Ein Parallelogramm ohne rechte Winkel
             correct: false
-            info: Die rechten Winkel des Rechtecks bleiben erhalten, wenn du die Seiten gleich lang ziehst.
-        explanation: Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.
+            info: Dein Viereck hat vier rechte Winkel. Ein Parallelogramm ohne rechte Winkel ist es also nicht.
+        explanation: Vier rechte Winkel und vier gleich lange Seiten ergeben ein Quadrat.
   - type: section
     id: erklaerung
     title: Die besonderen Vierecke
@@ -72,11 +72,6 @@ blocks:
       - type: text
         text: |
           Manche Vierecke sind auch andere. Jedes Rechteck ist ein Parallelogramm. Jede Raute ist ein Parallelogramm. Das Quadrat ist beides: Rechteck und Raute.
-      - type: note
-        title: Merke
-        blocks:
-          - type: text
-            text: Je mehr Eigenschaften ein Viereck hat, desto besonderer ist es. Das Quadrat hat die meisten.
   - type: section
     id: beispiel
     title: Ein Beispiel
@@ -85,11 +80,13 @@ blocks:
         title: Die Raute
         blocks:
           - type: text
-            text: Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. Rechte Winkel hat sie nicht unbedingt. Ist einer rechtwinklig, ist sie ein Quadrat.
+            text: Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. Ist einer ihrer Winkel ein rechter, ist sie ein Quadrat.
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du die besonderen Vierecke unterscheiden kannst."
       - type: matching
         id: viereck-eigenschaft
         text: Welche Eigenschaft gehört zu welchem Viereck?

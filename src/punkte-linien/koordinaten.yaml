@@ -72,6 +72,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Punkte im Gitter nennen und setzen kannst."
       - type: figure
         image: images/spielbrett-punkte.svg
         alt: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet sind.

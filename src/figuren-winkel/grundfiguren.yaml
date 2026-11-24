@@ -72,6 +72,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Figuren an ihren Eigenschaften erkennst."
       - type: matching
         id: figur-eigenschaft
         text: Welche Eigenschaft passt zur Figur?

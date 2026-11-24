@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+          Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen. Der Abstand zweier Linien ist der kürzeste Weg von der einen zur anderen.
           Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
       - type: figure
         image: images/abstand.svg
@@ -44,11 +44,6 @@ blocks:
       - type: definition
         term: Abstand
         explanation: Die senkrecht gemessene Entfernung zweier paralleler Geraden.
-      - type: note
-        title: Merke
-        blocks:
-          - type: text
-            text: Gemessen wird immer senkrecht. Wer schräg misst, bekommt einen zu großen Abstand.
   - type: section
     id: beispiel
     title: Eine Parallele zeichnen
@@ -74,12 +69,14 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Parallelen, Senkrechten und Abstände richtig zeichnest und erkennst."
       - type: ordering
         id: parallele-schritte
         text: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Parallele zu g durch P.
         items:
           - Lege die lange Kante des Geodreiecks an g.
-          - Lege ein Lineal an eine kurze Kante des Geodreiecks.
+          - Lege ein Lineal an eine kurze Kante des Geodreiecks und halte es fest.
           - Schiebe das Geodreieck am Lineal entlang, bis die lange Kante an P liegt.
           - Zeichne an der langen Kante entlang eine Linie durch P.
         explanation: Zuerst richtest du die lange Kante an g aus. Das Lineal hält die Richtung fest, während du das Geodreieck verschiebst. Zum Schluss zeichnest du.

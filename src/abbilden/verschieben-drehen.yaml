@@ -67,6 +67,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Punkte verschieben und drehen kannst."
       - type: vue-component
         id: verschieben-setzen
         component: Spielbrett

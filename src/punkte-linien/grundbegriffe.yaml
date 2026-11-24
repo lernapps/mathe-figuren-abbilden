@@ -81,6 +81,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Punkt, Strecke und Gerade auseinanderhältst."
       - type: matching
         id: alltag-zuordnen
         text: Welcher Begriff passt? Ordne zu.

@@ -68,6 +68,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Symmetrien erkennst und nutzt."
       - type: matching
         id: achsen-zuordnen
         text: Wie viele Symmetrieachsen hat die Figur?

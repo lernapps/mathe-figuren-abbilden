@@ -63,6 +63,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du ein Dreieck aus drei Seiten konstruieren kannst."
       - type: ordering
         id: dreieck-schritte
         text: Bringe die Schritte in die richtige Reihenfolge, um ein Dreieck aus drei Seiten zu konstruieren.

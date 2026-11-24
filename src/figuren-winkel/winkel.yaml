@@ -79,6 +79,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Winkel ablesen, zeichnen und einteilen kannst."
       - type: vue-component
         id: winkel-ablesen
         component: WinkelAblesen
