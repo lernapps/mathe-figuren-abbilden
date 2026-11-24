@@ -80,6 +80,8 @@ Ein Rechteck hat vier Ecken und vier rechte Winkel, also vier Ecken wie bei eine
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Figuren an ihren Eigenschaften erkennst.
+
 - Aufgabe `figur-eigenschaft` (unten)
 
 - Aufgabe `quadrat-rechteck` (unten)

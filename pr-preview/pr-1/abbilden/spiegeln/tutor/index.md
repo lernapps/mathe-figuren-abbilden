@@ -71,6 +71,8 @@ A hat von der Achse x = 4 den Abstand 3. Auf der anderen Seite gehst du von der 
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Punkte an einer Achse spiegeln kannst.
+
 - Aufgabe `spiegel-setzen` (unten)
 
 - Aufgabe `spiegel-x` (unten)

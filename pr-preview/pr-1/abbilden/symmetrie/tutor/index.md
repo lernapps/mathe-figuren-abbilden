@@ -78,6 +78,8 @@ Es hat drei Symmetrieachsen. Dreht du es um 120°, sieht es wieder aus wie vorhe
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Symmetrien erkennst und nutzt.
+
 - Aufgabe `achsen-zuordnen` (unten)
 
 - Aufgabe `punktsymmetrisch` (unten)

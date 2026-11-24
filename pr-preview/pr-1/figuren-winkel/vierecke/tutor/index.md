@@ -65,17 +65,15 @@ Besondere Vierecke und ihre Eigenschaften:
 
 Manche Vierecke sind auch andere. Jedes Rechteck ist ein Parallelogramm. Jede Raute ist ein Parallelogramm. Das Quadrat ist beides: Rechteck und Raute.
 
-**Merke: Merke**
-
-Je mehr Eigenschaften ein Viereck hat, desto besonderer ist es. Das Quadrat hat die meisten.
-
 ### Ein Beispiel
 
 **Beispiel: Die Raute**
 
-Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. Rechte Winkel hat sie nicht unbedingt. Ist einer rechtwinklig, ist sie ein Quadrat.
+Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. Ist einer ihrer Winkel ein rechter, ist sie ein Quadrat.
 
 ### Übung
+
+Mit diesen Aufgaben prüfst du, ob du die besonderen Vierecke unterscheiden kannst.
 
 - Aufgabe `viereck-eigenschaft` (unten)
 
@@ -87,14 +85,14 @@ Alle vier Seiten sind gleich lang und gegenüberliegende Seiten sind parallel. R
 
 ### Aufgabe quadrat-entsteht
 
-- Aufgabe: Du ziehst ein Rechteck so, dass alle vier Seiten gleich lang sind. Welcher Name passt am genauesten?
+- Aufgabe: Du ziehst das Viereck so, dass es vier rechte Winkel und vier gleich lange Seiten hat. Welcher Name passt am genauesten?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
   - ✓ Quadrat – Richtig. Vier rechte Winkel und vier gleich lange Seiten ergeben ein Quadrat.
-  - ✗ Eine Raute ohne rechte Winkel – Die vier rechten Winkel des Rechtecks bleiben erhalten. Eine Raute ohne rechte Winkel ist es also nicht.
-  - ✗ Ein Parallelogramm ohne rechte Winkel – Die rechten Winkel des Rechtecks bleiben erhalten, wenn du die Seiten gleich lang ziehst.
+  - ✗ Eine Raute ohne rechte Winkel – Dein Viereck hat vier rechte Winkel. Eine Raute ohne rechte Winkel ist es also nicht.
+  - ✗ Ein Parallelogramm ohne rechte Winkel – Dein Viereck hat vier rechte Winkel. Ein Parallelogramm ohne rechte Winkel ist es also nicht.
 - Lösung: Quadrat
-- Erklärung: Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.
+- Erklärung: Vier rechte Winkel und vier gleich lange Seiten ergeben ein Quadrat.
 - Link: [../?via=tutor#quadrat-entsteht](../?via=tutor#quadrat-entsteht)
 
 ### Aufgabe viereck-eigenschaft

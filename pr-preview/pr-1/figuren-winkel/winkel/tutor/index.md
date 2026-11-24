@@ -82,6 +82,8 @@ Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. Wenn du ihn zeichne
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Winkel ablesen, zeichnen und einteilen kannst.
+
 - Aufgabe `winkel-ablesen` (unten)
 
 - Aufgabe `winkel-zeichnen` (unten)

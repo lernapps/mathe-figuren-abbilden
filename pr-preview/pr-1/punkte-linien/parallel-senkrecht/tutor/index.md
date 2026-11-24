@@ -43,7 +43,7 @@ Parallele und senkrechte Geraden zeichnen und Abstände messen.
 
 ### Zwei Gleise, die sich nie treffen
 
-Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen.
+Nika und Jonas lesen den zweiten Hinweis ihrer Schatzkarte: Er liegt zwischen zwei Gleisen. Du kannst danach parallele und senkrechte Geraden zeichnen und den Abstand zwischen ihnen messen. Der Abstand zweier Linien ist der kürzeste Weg von der einen zur anderen.
 Das baut auf Punkt, Strecke und Gerade der Seite davor auf.
 
 Bild: Zwei waagerechte Geraden g und h auf einem Gitter. Auf g liegt der Punkt A, auf h liegt der Punkt B. A und B sind durch eine gestrichelte schräge Strecke verbunden. Bildunterschrift: Zwei Geraden g und h auf einem Gitter. Die Linien laufen in dieselbe Richtung.
@@ -58,10 +58,6 @@ Zwei Geraden sind **senkrecht** zueinander, wenn sie einen rechten Winkel bilden
 Der **Abstand** zweier paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden. Schräg gemessen ist der Weg immer länger.
 
 - **Abstand**: Die senkrecht gemessene Entfernung zweier paralleler Geraden.
-
-**Merke: Merke**
-
-Gemessen wird immer senkrecht. Wer schräg misst, bekommt einen zu großen Abstand.
 
 ### Eine Parallele zeichnen
 
@@ -81,6 +77,8 @@ Wenn du durch einen Punkt P eine Linie zeichnen willst, die zu g parallel oder s
 3. Zeichne an der langen Kante entlang eine Linie durch P.
 
 ### Übung
+
+Mit diesen Aufgaben prüfst du, ob du Parallelen, Senkrechten und Abstände richtig zeichnest und erkennst.
 
 - Aufgabe `parallele-schritte` (unten)
 
@@ -108,7 +106,7 @@ Wenn du durch einen Punkt P eine Linie zeichnen willst, die zu g parallel oder s
 
 - Aufgabe: Bringe die Schritte in die richtige Reihenfolge. Du zeichnest eine Parallele zu g durch P.
 - Antwortformat: die Einträge in die richtige Reihenfolge bringen (die App zeigt sie gemischt)
-- Lösung: 1. Lege die lange Kante des Geodreiecks an g., 2. Lege ein Lineal an eine kurze Kante des Geodreiecks., 3. Schiebe das Geodreieck am Lineal entlang, bis die lange Kante an P liegt., 4. Zeichne an der langen Kante entlang eine Linie durch P.
+- Lösung: 1. Lege die lange Kante des Geodreiecks an g., 2. Lege ein Lineal an eine kurze Kante des Geodreiecks und halte es fest., 3. Schiebe das Geodreieck am Lineal entlang, bis die lange Kante an P liegt., 4. Zeichne an der langen Kante entlang eine Linie durch P.
 - Erklärung: Zuerst richtest du die lange Kante an g aus. Das Lineal hält die Richtung fest, während du das Geodreieck verschiebst. Zum Schluss zeichnest du.
 - Link: [../?via=tutor#parallele-schritte](../?via=tutor#parallele-schritte)
 

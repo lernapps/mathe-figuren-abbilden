@@ -60,11 +60,11 @@ Wenn du Punkte im Gitter angeben willst, musst du Zahlen sicher lesen und schrei
 
 - **Zahlenstrahl**: Eine Linie, die bei 0 beginnt und nach rechts weitergeht. Die Marken haben gleiche Abstände. Jede natürliche Zahl hat dort ihren Platz, und je weiter rechts sie liegt, desto größer ist sie.
 
-- **Stellenwert**: Der Stellenwert ist der Wert einer Stelle: 1 bei den Einern, 10 bei den Zehnern, 100 bei den Hundertern und so weiter. Eine Ziffer ist so viel wert wie die Ziffer mal der Stellenwert ihrer Stelle. In 305 ist die 3 an der Hunderterstelle 3 · 100 = 300 wert, die 5 ist 5 · 1 = 5 wert.
+- **Stellenwert**: Der Stellenwert ist der Wert einer Stelle: 1 bei den Einern, 10 bei den Zehnern, 100 bei den Hundertern, 1000 bei den Tausendern und so weiter. Eine Ziffer ist so viel wert wie die Ziffer mal der Stellenwert ihrer Stelle. In 305 ist die 3 an der Hunderterstelle 3 · 100 = 300 wert, die 5 ist 5 · 1 = 5 wert.
 
 **Beispiel: Die Zahl 305**
 
-305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
+Wenn du eine Zahl in ihre Stellen zerlegen willst, rechnest du so. 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
 
 - Aufgabe `zahlenstrahl-gehen` (unten)
 
@@ -83,7 +83,7 @@ Die Lernlandkarte nennt als Ziel: Ich kann natürliche Zahlen im Stellenwertsyst
 
 - Aufgabe: „Kannst du das? Du startest bei der {a} auf dem Zahlenstrahl und gehst {b} Schritte nach rechts. Bei welcher Zahl landest du?“
 - Antwortformat: eine Zahl eintippen
-- Tipp der App: „Zerlege die Schritte in Zehner und Einer: Rechne erst die Zehner von {b} zu {a}, dann die Einer.“
+- Tipp der App: „Zerlege {b} in Zehner und Einer. Gehe erst die Zehner nach rechts, dann die Einer.“
 - Lösungsweg:
   - Nach rechts werden die Zahlen größer, also rechnest du {a} + {b}.
   - {a} + {b} = {answer}.

@@ -72,6 +72,8 @@ P liegt 2 rechts von Z. Bei 90° gegen den Uhrzeigersinn liegt der Bildpunkt 2 �
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Punkte verschieben und drehen kannst.
+
 - Aufgabe `verschieben-setzen` (unten)
 
 - Aufgabe `drehen-setzen` (unten)

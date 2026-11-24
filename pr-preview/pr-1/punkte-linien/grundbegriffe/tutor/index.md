@@ -83,6 +83,8 @@ Jede Schiene sieht in der Ferne unendlich lang aus. Sie zeigt eine Gerade. Die E
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Punkt, Strecke und Gerade auseinanderhältst.
+
 - Aufgabe `alltag-zuordnen` (unten)
 
 - Aufgabe `gerade-stimmt` (unten)

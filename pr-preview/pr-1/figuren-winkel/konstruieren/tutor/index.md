@@ -72,6 +72,8 @@ Zeichne c = 5 cm. Öffne den Zirkel auf 3 cm und ziehe einen Bogen um A. Öffn
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du ein Dreieck aus drei Seiten konstruieren kannst.
+
 - Aufgabe `dreieck-schritte` (unten)
 
 - Aufgabe `zirkel-einstellen` (unten)

@@ -76,6 +76,8 @@ Erst 4 Schritte nach rechts, dann 1 Schritt nach oben. Du schreibst P(4 | 1).
 
 ### Übung
 
+Mit diesen Aufgaben prüfst du, ob du Punkte im Gitter nennen und setzen kannst.
+
 Bild: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet sind. Bildunterschrift: Vier Punkte A bis D auf dem Spielbrett.
 
 - Aufgabe `punkte-ablesen` (unten)
