@@ -18,8 +18,9 @@ const props = defineProps<{
   /** The facts, with {n} for the number: parallel pairs, right angles. */
   parallel: string;
   right: string;
-  /** The text of the button that puts the corners back. */
+  /** The text of the button that puts the corners back, and the note shown instead of a working button at the start. */
   reset: string;
+  resetDone: string;
 }>();
 
 const points = ref(START.map((p) => ({ ...p })));
@@ -77,6 +78,7 @@ function back(): void {
   points.value = START.map((p) => ({ ...p }));
 }
 
+const atStart = computed(() => points.value.every((p, i) => p.x === START[i]?.x && p.y === START[i]?.y));
 const width = PAD * 2 + MAX_X * STEP;
 const height = PAD * 2 + MAX_Y * STEP;
 </script>
@@ -116,7 +118,10 @@ const height = PAD * 2 + MAX_Y * STEP;
       <li>{{ fill(parallel, facts.parallelPairs) }}</li>
       <li>{{ fill(right, facts.rightAngles) }}</li>
     </ul>
-    <button type="button" class="fz-reset" @click="back">{{ reset }}</button>
+    <p class="fz-reset-row">
+      <button type="button" class="fz-reset" :disabled="atStart" @click="back">{{ reset }}</button>
+      <span v-if="atStart" class="fz-reset-note">{{ resetDone }}</span>
+    </p>
   </div>
 </template>
 
@@ -160,8 +165,33 @@ const height = PAD * 2 + MAX_Y * STEP;
   margin: 0.5rem 0;
   padding-left: 1.2rem;
 }
+.fz-reset-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0.25rem 0 0;
+}
+/* the look of the runtime's buttons: a frame in the accent colour, the page's background */
 .fz-reset {
+  font: inherit;
   min-height: 2.75rem;
-  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--page-accent);
+  border-radius: 0.375rem;
+  background: var(--page-background);
+  color: var(--page-accent);
+  cursor: pointer;
+}
+.fz-reset:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.fz-reset:focus-visible {
+  outline: 3px solid var(--page-text);
+  outline-offset: 2px;
+}
+.fz-reset-note {
+  color: var(--page-muted);
 }
 </style>

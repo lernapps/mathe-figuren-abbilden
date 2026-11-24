@@ -8,7 +8,7 @@ phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 2
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { checks-pass: 6 }
+failedChecks: { checks-pass: 7 }
 ---
 
 # Plan: mathe-figuren-abbilden, first version

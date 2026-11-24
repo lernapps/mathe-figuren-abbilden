@@ -33,6 +33,7 @@ blocks:
           parallel: "Paare paralleler Seiten: {n}"
           right: "Rechte Winkel: {n}"
           reset: Zurück zum Anfang
+          resetDone: Das Viereck steht schon am Anfang.
         nojs: |
           Ein Gitter mit einem Viereck ABCD, dessen Ecken du ziehen kannst. Es zeigt, wie das Viereck heißt und wie viele Paare paralleler Seiten und rechte Winkel es hat.
           Zu Beginn hat es 2 Paare paralleler Seiten und keinen rechten Winkel. Ziehst du es zu einem Rechteck, hat es 4 rechte Winkel.
@@ -55,6 +56,8 @@ blocks:
     id: erklaerung
     title: Die besonderen Vierecke
     blocks:
+      - type: text
+        text: Wenn du ein Viereck genau benennen willst, vergleichst du seine Seiten und Winkel. Die Tabelle zeigt, woran du jedes besondere Viereck erkennst.
       - type: table
         caption: Besondere Vierecke und ihre Eigenschaften
         header: [Viereck, Eigenschaften]

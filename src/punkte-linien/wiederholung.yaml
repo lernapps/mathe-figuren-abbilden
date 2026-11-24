@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Im Kapitel „Punkte, Linien und Koordinaten“ gibst du Punkte mit Zahlen an. Dafür musst du Zahlen sicher lesen, schreiben und am Zahlenstrahl finden.
-          Drei Kurztests zeigen dir, ob du bereit bist. Hast du alle drei richtig, kannst du gleich weiter.
+          Zwei Aufgaben zeigen dir, ob du bereit bist. Hast du beide richtig, kannst du gleich weiter.
   - type: section
     id: natuerliche-zahlen
     title: Natürliche Zahlen im Stellenwertsystem
@@ -21,6 +21,8 @@ blocks:
         caption: Die Zahl 3 liegt drei Schritte rechts von der 0.
         source: eigene Zeichnung
         licence: CC-BY-4.0
+      - type: text
+        text: Wenn du Punkte im Gitter angeben willst, musst du Zahlen sicher lesen und schreiben. Diese Wörter brauchst du dafür.
       - type: definition
         term: natürliche Zahlen
         explanation: "Die Zahlen, mit denen du zählst: 0, 1, 2, 3 und so weiter. Jede ist um 1 größer als die davor. Zum Beispiel sind 7 und 305 natürliche Zahlen."
@@ -38,81 +40,53 @@ blocks:
         blocks:
           - type: text
             text: 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
-      - type: vue-component
-        id: test-zahlenstrahl
-        component: Kurztest
-        props:
-          question: "Kannst du das? Du startest bei der 48 auf dem Zahlenstrahl und gehst 37 Schritte nach rechts. Bei welcher Zahl landest du?"
-          options:
-            - { text: "37", correct: false, info: "Das sind nur die Schritte. Du startest aber bei der 48." }
-            - {
-                text: "85",
-                correct: true,
-                info: "48 + 37 = 85. Zerlege: 48 + 30 = 78, dann 78 + 7 = 85. Nach rechts werden die Zahlen größer.",
-              }
-            - {
-                text: "11",
-                correct: false,
-                info: "Du bist nach links gegangen und hast 48 − 37 gerechnet. Nach rechts musst du addieren.",
-              }
-            - {
-                text: "86",
-                correct: false,
-                info: "Du hast die 48 schon als ersten Schritt mitgezählt. Die Schritte beginnen erst nach der 48.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Du startest bei der 48 auf dem Zahlenstrahl und gehst 37 Schritte nach rechts. Bei welcher Zahl landest du? Zur Auswahl stehen 37, 85, 11 und 86. Richtig ist 85, denn 48 + 37 = 85 (zerlege: 48 + 30 = 78, dann 78 + 7). Bei 37 hast du nur die Schritte gezählt, bei 11 bist du nach links gegangen, bei 86 hast du die 48 schon mitgezählt.
-      - type: vue-component
-        id: test-stellenwert
-        component: Kurztest
-        props:
-          question: "Kannst du das? Welche Zahl hat 3 Tausender, 0 Hunderter, 5 Zehner und 8 Einer?"
-          options:
-            - {
-                text: "358",
-                correct: false,
-                info: "Du hast die Null weggelassen. Ohne sie rutschen alle Ziffern eine Stelle nach rechts und die Zahl wird viel kleiner.",
-              }
-            - {
-                text: "3580",
-                correct: false,
-                info: "Du hast die Null an die falsche Stelle gesetzt. Die Hunderter stehen zwischen den Tausendern und den Zehnern.",
-              }
-            - {
-                text: "3058",
-                correct: true,
-                info: "3 · 1000 + 0 · 100 + 5 · 10 + 8 · 1 = 3058. Die Null hält den Platz der Hunderter frei.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welche Zahl hat 3 Tausender, 0 Hunderter, 5 Zehner und 8 Einer? Zur Auswahl stehen 358, 3580 und 3058. Richtig ist 3058, denn 3 · 1000 + 0 · 100 + 5 · 10 + 8 · 1 = 3058. Bei 358 hast du die Null weggelassen, bei 3580 hast du sie an die falsche Stelle gesetzt.
-      - type: vue-component
-        id: test-ziffernwert
-        component: Kurztest
-        props:
-          question: "Kannst du das? Welchen Wert hat die Ziffer 7 in der Zahl 4705?"
-          options:
-            - {
-                text: "7",
-                correct: false,
-                info: "Das ist die Ziffer selbst. Ihr Wert hängt von der Stelle ab, an der sie steht.",
-              }
-            - {
-                text: "70",
-                correct: false,
-                info: "Dann stünde die 7 an der Zehnerstelle, wie in 4075. In 4705 stehen rechts von ihr noch zwei Ziffern, die Zehner und die Einer.",
-              }
-            - { text: "700", correct: true, info: "Die 7 steht an der Hunderterstelle: 7 · 100 = 700." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welchen Wert hat die Ziffer 7 in der Zahl 4705? Zur Auswahl stehen 7, 70 und 700. Richtig ist 700, denn die 7 steht an der Hunderterstelle: 7 · 100 = 700. Bei 7 hast du nur die Ziffer genannt, bei 70 hast du die Zehnerstelle genommen.
+      - type: generated
+        id: zahlenstrahl-gehen
+        given:
+          a: { int: [41, 69], step: 1 }
+          b: { int: [27, 38], step: 1 }
+        task:
+          text: "Kannst du das? Du startest bei der {{a}} auf dem Zahlenstrahl und gehst {{b}} Schritte nach rechts. Bei welcher Zahl landest du?"
+        answer: { value: "a + b", compare: number }
+        mistakes:
+          - { value: "b", message: "Das sind nur die Schritte. Du startest aber bei der {{a}}." }
+          - {
+              value: "a - b",
+              message: "Du bist nach links gegangen und hast {{a}} − {{b}} gerechnet. Nach rechts musst du addieren.",
+            }
+          - {
+              value: "a + b + 1",
+              message: "Du hast die {{a}} schon als ersten Schritt mitgezählt. Die Schritte beginnen erst nach der {{a}}.",
+            }
+        hint: "Zerlege die Schritte in Zehner und Einer: Rechne erst die Zehner von {{b}} zu {{a}}, dann die Einer."
+        steps:
+          - "Nach rechts werden die Zahlen größer, also rechnest du {{a}} + {{b}}."
+          - "{{a}} + {{b}} = {{answer}}."
+      - type: generated
+        id: stellenwert-schreiben
+        given:
+          t: { int: [1, 9], step: 1 }
+          z: { int: [1, 9], step: 1 }
+          e: { int: [1, 9], step: 1 }
+        task:
+          text: "Kannst du das? Welche Zahl hat {{t}} Tausender, 0 Hunderter, {{z}} Zehner und {{e}} Einer?"
+        answer: { value: "1000 * t + 10 * z + e", compare: number }
+        mistakes:
+          - {
+              value: "100 * t + 10 * z + e",
+              message: "Du hast die Null bei den Hundertern weggelassen. Dann rutschen alle Ziffern eine Stelle nach rechts und die Zahl wird viel kleiner.",
+            }
+          - {
+              value: "1000 * t + 100 * z + 10 * e",
+              message: "Du hast die Null an die falsche Stelle gesetzt. Die Hunderter stehen zwischen den Tausendern und den Zehnern.",
+            }
+        hint: "Schreibe die Ziffern von links nach rechts: Tausender, Hunderter, Zehner, Einer. Für die Hunderter schreibst du eine 0."
+        steps:
+          - "{{t}} Tausender sind {{t}} · 1000, 0 Hunderter sind 0, {{z}} Zehner sind {{z}} · 10, {{e}} Einer sind {{e}}."
+          - "Zusammen: {{answer}}."
       - type: text
         text: |
-          Du darfst jede Antwort noch einmal wählen. Hast du alle drei richtig, bist du bereit. Klappt ein Kurztest nicht, lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
+          Hast du beide Aufgaben richtig, bist du bereit. Klappt eine Aufgabe nicht, lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

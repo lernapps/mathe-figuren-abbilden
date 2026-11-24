@@ -37,6 +37,7 @@ blocks:
         licence: CC-BY-4.0
       - type: text
         text: |
+          Wenn du eine Figur an einen anderen Platz bringen willst, ohne sie zu verändern, verschiebst oder drehst du sie.
           Beim **Verschieben** wird jeder Punkt um denselben **Pfeil** bewegt. Die Bildfigur sieht genauso aus und steht nur an einer anderen Stelle.
           Beim **Drehen** brauchst du einen **Drehpunkt** und einen Winkel. Jeder Punkt wandert auf einem Kreis um den Drehpunkt. Der Uhrzeigersinn ist die Richtung, in die sich die Zeiger einer Uhr drehen. Gedreht wird hier gegen den Uhrzeigersinn.
       - type: figure
