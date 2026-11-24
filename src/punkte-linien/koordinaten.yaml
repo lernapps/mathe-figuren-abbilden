@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Koordinatensystem
+description: Punkte auf dem Spielbrett angeben, ablesen und eintragen.
+competencies: [koordinatensystem]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wo liegt das Schiff?
+    blocks:
+      - type: text
+        text: |
+          Nika und Jonas lesen den dritten Hinweis ihrer Schatzkarte: Er nennt zwei Zahlen. Die Karte hat ein Gitter, wie das Spielbrett bei Schiffe versenken.
+          Du setzt dort ein Schiff auf einen Punkt. Nach dieser Seite kannst du jeden Punkt des Gitters mit zwei Zahlen angeben, damit Nika und Jonas den Schatz wiederfinden.
+      - type: figure
+        image: images/spielbrett-schiff.svg
+        alt: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer Kreuzung der Gitterlinien.
+        caption: Das Schiff A auf dem Spielbrett. Die Zahlen am Rand zählen die Schritte ab der 0.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: single-choice
+        id: schiff-schreiben
+        text: Schau auf das Bild. Das Schiff A startet in der Ecke unten links, bei der 0. Wie viele Schritte geht es nach rechts, bis es unter A steht?
+        options:
+          - text: 3 Schritte
+            correct: true
+            info: Richtig. Die Zahl am unteren Rand unter A ist die 3.
+          - text: 2 Schritte
+            correct: false
+            info: 2 ist die Zahl am linken Rand. Sie sagt, wie weit A über dem unteren Rand steht.
+          - text: 5 Schritte
+            correct: false
+            info: 5 ist 3 und 2 zusammen. Gezählt wird nach rechts nur bis unter A.
+        explanation: Nach rechts zählst du am unteren Rand. Wie weit A über dem unteren Rand steht, kommt gleich dazu.
+  - type: section
+    id: erklaerung
+    title: So gibst du einen Punkt an
+    blocks:
+      - type: text
+        text: |
+          Wenn du jemandem sagen willst, wo ein Punkt auf dem Gitter liegt, ohne ihn zu zeigen, brauchst du ein festes System aus zwei Zahlen.
+          Das Gitter heißt **Koordinatensystem**. Es hat zwei Achsen: Die **x-Achse** geht nach rechts, die **y-Achse** geht nach oben.
+          Dort, wo beide bei 0 beginnen, liegt der **Ursprung**.
+      - type: text
+        text: |
+          Ein Punkt liegt dort, wo sich zwei Gitterlinien kreuzen. Er hat zwei **Koordinaten**: Du gehst zuerst die x-Zahl nach rechts und dann die y-Zahl nach oben.
+          Du schreibst sie so auf: P(3 | 2). P steht für Punkt, ein anderer Buchstabe geht auch, zum Beispiel A(3 | 2). Der senkrechte Strich trennt die beiden Zahlen. Die erste ist x, die zweite ist y.
+          Der Ursprung ist P(0 | 0).
+      - type: definition
+        term: Koordinatensystem
+        explanation: Ein Gitter mit einer x-Achse nach rechts und einer y-Achse nach oben. Jeder Punkt hat zwei Koordinaten.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Wer P(2 | 3) und P(3 | 2) verwechselt, landet an zwei verschiedenen Stellen. Die Reihenfolge entscheidet.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: Der Punkt P(4 | 1)
+        blocks:
+          - type: figure
+            image: images/spielbrett-beispiel.svg
+            alt: Ein Spielbrett mit einem Punkt P, der vier Schritte rechts vom Ursprung und einen Schritt darüber steht. Ein Pfeil führt vom Ursprung erst nach rechts, dann nach oben.
+            caption: Der Weg zu P(4 | 1) vom Ursprung aus.
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+          - type: text
+            text: Erst 4 Schritte nach rechts, dann 1 Schritt nach oben. Du schreibst P(4 | 1).
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Punkte im Gitter nennen und setzen kannst."
+      - type: figure
+        image: images/spielbrett-punkte.svg
+        alt: Ein Spielbrett mit vier roten Punkten, die mit A, B, C und D beschriftet sind.
+        caption: Vier Punkte A bis D auf dem Spielbrett.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: matching
+        id: punkte-ablesen
+        text: Ordne jedem Punkt seine Koordinaten zu.
+        pairs:
+          - { left: Punkt A, right: (2 | 5) }
+          - { left: Punkt B, right: (6 | 1) }
+          - { left: Punkt C, right: (4 | 4) }
+          - { left: Punkt D, right: (7 | 3) }
+        explanation: Lies zuerst den Wert auf der x-Achse ab, dann den auf der y-Achse.
+      - type: generated
+        id: schiff-faehrt
+        given:
+          a: { int: [1, 4], step: 1 }
+          b: { int: [1, 3], step: 1 }
+          c: { int: [2, 4], step: 1 }
+          d: { int: [2, 3], step: 1 }
+        where: ["c != d", "b + d != a + c"]
+        task:
+          text: "Ein Schiff liegt auf P({{a}} | {{b}}). Es fährt {{c}} Schritte nach rechts und {{d}} Schritte nach oben. Wie groß ist danach seine x-Koordinate?"
+        answer: { value: "a + c", compare: number }
+        mistakes:
+          - {
+              value: "a",
+              message: "Das ist die x-Koordinate vor der Fahrt. Das Schiff fährt {{c}} Schritte nach rechts, also ändert sich x.",
+            }
+          - {
+              value: "c",
+              message: "Das sind nur die Schritte nach rechts. Rechne sie zur alten x-Koordinate {{a}} dazu.",
+            }
+          - {
+              value: "b + d",
+              message: "Das ist die neue y-Koordinate. Nach rechts ändert sich x, nach oben ändert sich y.",
+            }
+          - {
+              value: "a + d",
+              message: "Du hast die Schritte nach oben zu x addiert. Nach rechts gehst du {{c}} Schritte.",
+            }
+        hint: "Nach rechts ändert sich die x-Koordinate, nach oben die y-Koordinate."
+        steps:
+          - "Die x-Koordinate ändert sich beim Fahren nach rechts: {{a}} + {{c}} = {{answer}}."
+      - type: vue-component
+        id: schiff-setzen
+        component: Spielbrett
+        props:
+          task: "Setze dein Schiff auf den Punkt P({x} | {y})."
+          board: Spielbrett, x von 0 bis 8, y von 0 bis 6. Mit den Pfeiltasten bewegst du den Marker.
+          xLabel: "x (nach rechts)"
+          yLabel: "y (nach oben)"
+          position: "Dein Schiff steht auf P({a} | {b})."
+          none: "Du hast noch kein Schiff gesetzt."
+          hint: Klicke auf das Brett, oder drücke Tab bis zum Brett und nutze die Pfeiltasten, oder tippe beide Zahlen ein. Erlaubt sind x von 0 bis 8 und y von 0 bis 6.
+          mistakes:
+            - "Du hast x und y vertauscht: Du bist erst {b} nach oben gegangen. Erst kommt x (nach rechts), dann y (nach oben)."
+            - "Du hast den Ursprung mit 1 gezählt: Dein Schiff steht je einen Schritt zu weit links und unten. Beim Ursprung ist die Zahl 0."
+            - "Dein x stimmt, dein y nicht: Zähle vom Ursprung aus nach oben noch einmal nach."
+            - "Dein y stimmt, dein x nicht: Zähle zuerst vom Ursprung nach rechts, dann erst nach oben."
+        examples:
+          accepted:
+            - { answer: { x: 5, y: 1 }, seed: 1 }
+          rejected:
+            - { answer: { x: 1, y: 5 }, seed: 1 }
+            - { answer: { x: 4, y: 0 }, seed: 1 }

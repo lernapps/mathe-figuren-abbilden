@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Figuren, Vierecke und Winkel
+summary: Du beschreibst Figuren und Vierecke, misst Winkel und konstruierst mit dem Zirkel.
+pages: [grundfiguren, winkel, vierecke, konstruieren]
+selfAssessment:
+  pages:
+    - exercises:
+        - /figuren-winkel/grundfiguren/#ecken-seiten
+        - /figuren-winkel/grundfiguren/#rechteck-stimmt
+        - /figuren-winkel/grundfiguren/#ecken-seiten
+    - exercises:
+        - /figuren-winkel/winkel/#winkel-ablesen
+        - /figuren-winkel/winkel/#winkel-teilen
+        - /figuren-winkel/winkel/#winkel-ablesen
+    - exercises:
+        - /figuren-winkel/vierecke/#raute-seiten
+        - /figuren-winkel/vierecke/#vier-rechte-winkel
+        - /figuren-winkel/vierecke/#raute-seiten
+    - exercises:
+        - /figuren-winkel/konstruieren/#zirkel-einstellen
+        - /figuren-winkel/konstruieren/#dreieck-unmoeglich
+        - /figuren-winkel/konstruieren/#zirkel-einstellen

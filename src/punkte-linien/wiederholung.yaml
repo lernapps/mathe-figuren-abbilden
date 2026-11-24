@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: Wiederholung der natürlichen Zahlen mit Selbsttest, damit du weißt, ob du für das Koordinatensystem bereit bist.
+recap: [mathematik/natuerliche-zahlen]
+blocks:
+  - type: section
+    id: wofuer
+    title: Wofür diese Seite da ist
+    blocks:
+      - type: text
+        text: |
+          Im Kapitel „Punkte, Linien und Koordinaten“ gibst du Punkte mit Zahlen an. Dafür musst du Zahlen sicher lesen, schreiben und am Zahlenstrahl finden.
+          Zwei Aufgaben zeigen dir, ob du bereit bist. Hast du beide richtig, kannst du gleich weiter.
+  - type: section
+    id: natuerliche-zahlen
+    title: Natürliche Zahlen im Stellenwertsystem
+    blocks:
+      - type: figure
+        image: images/zahlenstrahl.svg
+        alt: Ein Zahlenstrahl von 0 bis 10 mit einem roten Punkt bei 3. Drei kleine Bögen zeigen drei Schritte von der 0 bis zum Punkt.
+        caption: Die Zahl 3 liegt drei Schritte rechts von der 0.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: text
+        text: Wenn du Punkte im Gitter angeben willst, musst du Zahlen sicher lesen und schreiben. Diese Wörter brauchst du dafür.
+      - type: definition
+        term: natürliche Zahlen
+        explanation: "Die Zahlen, mit denen du zählst: 0, 1, 2, 3 und so weiter. Jede ist um 1 größer als die davor. Zum Beispiel sind 7 und 305 natürliche Zahlen."
+      - type: definition
+        term: Ziffer
+        explanation: Eins der zehn Zeichen 0 bis 9, aus denen du Zahlen schreibst. Die Zahl 305 besteht aus den Ziffern 3, 0 und 5.
+      - type: definition
+        term: Zahlenstrahl
+        explanation: Eine Linie, die bei 0 beginnt und nach rechts weitergeht. Die Marken haben gleiche Abstände. Jede natürliche Zahl hat dort ihren Platz, und je weiter rechts sie liegt, desto größer ist sie.
+      - type: definition
+        term: Stellenwert
+        explanation: "Der Stellenwert ist der Wert einer Stelle: 1 bei den Einern, 10 bei den Zehnern, 100 bei den Hundertern, 1000 bei den Tausendern und so weiter. Eine Ziffer ist so viel wert wie die Ziffer mal der Stellenwert ihrer Stelle. In 305 ist die 3 an der Hunderterstelle 3 · 100 = 300 wert, die 5 ist 5 · 1 = 5 wert."
+      - type: example
+        title: Die Zahl 305
+        blocks:
+          - type: text
+            text: Wenn du eine Zahl in ihre Stellen zerlegen willst, rechnest du so. 305 hat 3 Hunderter, 0 Zehner und 5 Einer. Du rechnest 3 · 100 + 0 · 10 + 5 · 1 = 305.
+      - type: generated
+        id: zahlenstrahl-gehen
+        given:
+          a: { int: [41, 69], step: 1 }
+          b: { int: [27, 38], step: 1 }
+        task:
+          text: "Kannst du das? Du startest bei der {{a}} auf dem Zahlenstrahl und gehst {{b}} Schritte nach rechts. Bei welcher Zahl landest du?"
+        answer: { value: "a + b", compare: number }
+        mistakes:
+          - { value: "b", message: "Das sind nur die Schritte. Du startest aber bei der {{a}}." }
+          - {
+              value: "a - b",
+              message: "Du bist nach links gegangen und hast {{a}} − {{b}} gerechnet. Nach rechts musst du addieren.",
+            }
+          - {
+              value: "a + b + 1",
+              message: "Du hast die {{a}} schon als ersten Schritt mitgezählt. Die Schritte beginnen erst nach der {{a}}.",
+            }
+        hint: "Zerlege {{b}} in Zehner und Einer. Gehe erst die Zehner nach rechts, dann die Einer."
+        steps:
+          - "Nach rechts werden die Zahlen größer, also rechnest du {{a}} + {{b}}."
+          - "{{a}} + {{b}} = {{answer}}."
+      - type: generated
+        id: stellenwert-schreiben
+        given:
+          t: { int: [1, 9], step: 1 }
+          z: { int: [1, 9], step: 1 }
+          e: { int: [1, 9], step: 1 }
+        task:
+          text: "Kannst du das? Welche Zahl hat {{t}} Tausender, 0 Hunderter, {{z}} Zehner und {{e}} Einer?"
+        answer: { value: "1000 * t + 10 * z + e", compare: number }
+        mistakes:
+          - {
+              value: "100 * t + 10 * z + e",
+              message: "Du hast die Null bei den Hundertern weggelassen. Dann rutschen alle Ziffern eine Stelle nach rechts und die Zahl wird viel kleiner.",
+            }
+          - {
+              value: "1000 * t + 100 * z + 10 * e",
+              message: "Du hast die Null an die falsche Stelle gesetzt. Die Hunderter stehen zwischen den Tausendern und den Zehnern.",
+            }
+        hint: "Schreibe die Ziffern von links nach rechts: Tausender, Hunderter, Zehner, Einer. Für die Hunderter schreibst du eine 0."
+        steps:
+          - "{{t}} Tausender sind {{t}} · 1000, 0 Hunderter sind 0, {{z}} Zehner sind {{z}} · 10, {{e}} Einer sind {{e}}."
+          - "Zusammen: {{answer}}."
+      - type: text
+        text: |
+          Hast du beide Aufgaben richtig, bist du bereit. Klappt eine Aufgabe nicht, lies den Abschnitt oben noch einmal. Mehr dazu steht beim Baustein [Natürliche Zahlen im Stellenwertsystem](https://lernapps.net/apps/map/mathematik/c/natuerliche-zahlen/) auf der Lernlandkarte von lernapps.net.
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          Die Lernlandkarte nennt als Ziel: Ich kann natürliche Zahlen im Stellenwertsystem lesen, schreiben und darstellen. Für dieses Kapitel genügt davon, dass du
+          - eine Zahl wie 3 oder 7 am Zahlenstrahl findest und von ihr aus nach rechts weitergehst,
+          - erklärst, was eine Ziffer an ihrer Stelle wert ist, und
+          - eine Zahl aus Hundertern, Zehnern und Einern aufschreibst.

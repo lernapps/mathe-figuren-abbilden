@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Punkte, Linien und Koordinaten
+summary: Du zeichnest Linien, misst Abstände und gibst Punkte im Koordinatensystem an.
+pages: [wiederholung, grundbegriffe, parallel-senkrecht, koordinaten]
+selfAssessment:
+  pages:
+    - exercises:
+        - /punkte-linien/grundbegriffe/#strecken-zaehlen
+        - /punkte-linien/grundbegriffe/#gerade-stimmt
+        - /punkte-linien/grundbegriffe/#strecken-zaehlen
+    - exercises:
+        - /punkte-linien/parallel-senkrecht/#abstand-messen
+        - /punkte-linien/parallel-senkrecht/#zeichen-bedeutung
+        - /punkte-linien/parallel-senkrecht/#abstand-messen
+    - exercises:
+        - /punkte-linien/koordinaten/#schiff-setzen
+        - /punkte-linien/koordinaten/#schiff-faehrt
+        - /punkte-linien/koordinaten/#schiff-setzen

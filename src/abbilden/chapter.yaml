@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Symmetrie, Spiegeln, Verschieben, Drehen
+summary: Du erkennst Symmetrien und bewegst Figuren auf dem Spielbrett.
+pages: [symmetrie, spiegeln, verschieben-drehen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /abbilden/symmetrie/#achsen-n-eck
+        - /abbilden/symmetrie/#punktsymmetrisch
+        - /abbilden/symmetrie/#drehwinkel-n-eck
+    - exercises:
+        - /abbilden/spiegeln/#spiegel-setzen
+        - /abbilden/spiegeln/#spiegel-x
+        - /abbilden/spiegeln/#spiegel-setzen
+    - exercises:
+        - /abbilden/verschieben-drehen/#verschieben-setzen
+        - /abbilden/verschieben-drehen/#verschieben-y
+        - /abbilden/verschieben-drehen/#drehen-setzen

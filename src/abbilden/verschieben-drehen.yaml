@@ -1,0 +1,173 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Verschieben und Drehen
+description: Figuren um einen Pfeil verschieben und um einen Drehpunkt drehen und die Bildfigur bestimmen.
+competencies: [bewegungen-figuren]
+blocks:
+  - type: section
+    id: einstieg
+    title: Der Schatz wandert
+    blocks:
+      - type: text
+        text: |
+          Nika und Jonas lesen den zehnten und letzten Hinweis ihrer Schatzkarte: Der Schatz wurde verschoben und gedreht. Du lernst hier, Punkte und Figuren zu verschieben und zu drehen und zu bestimmen, wo sie danach liegen.
+          Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ein Punkt um einen Pfeil bewegt: Der Pfeil sagt, wie weit der Punkt nach rechts und wie weit er nach oben wandert. Beim Drehen wandert ein Punkt auf einem Kreisbogen um einen festen Punkt, den Drehpunkt. Der Punkt nach der Bewegung heißt Bildpunkt und bekommt einen Strich: P wird zu P'.
+      - type: single-choice
+        id: verschieben-p
+        text: Der Punkt P(2 | 1) wird um den Pfeil 3 nach rechts und 2 nach oben verschoben. Welche Koordinaten hat P'?
+        options:
+          - text: P'(5 | 3)
+            correct: true
+            info: Richtig. 2 + 3 = 5 nach rechts, 1 + 2 = 3 nach oben.
+          - text: P'(3 | 5)
+            correct: false
+            info: Du hast x und y des Ergebnisses vertauscht. P'(5 | 3) hat x = 5 und y = 3.
+          - text: P'(5 | 1)
+            correct: false
+            info: Du hast nur nach rechts verschoben. Der Pfeil geht auch 2 nach oben.
+        explanation: Beim Verschieben addierst du die Pfeilzahlen zu den Koordinaten, die erste zur x-Koordinate, die zweite zur y-Koordinate.
+  - type: section
+    id: erklaerung
+    title: Verschieben und Drehen
+    blocks:
+      - type: figure
+        image: images/verschieben-beispiel.svg
+        alt: Ein Dreieck mit der Ecke A unten links und sein Bild A' drei Kästchen weiter rechts und zwei weiter oben. Ein Pfeil führt von A nach A'.
+        caption: Das Dreieck wird um den Pfeil 3 nach rechts und 2 nach oben verschoben.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: text
+        text: |
+          Wenn du eine Figur an einen anderen Platz bringen willst, ohne sie zu verändern, verschiebst oder drehst du sie.
+          Beim **Verschieben** wird jeder Punkt um denselben **Pfeil** bewegt. Die Bildfigur sieht genauso aus und steht nur an einer anderen Stelle.
+          Beim **Drehen** brauchst du einen **Drehpunkt** und einen Winkel. Jeder Punkt wandert auf einem Kreis um den Drehpunkt. Der Uhrzeigersinn ist die Richtung, in die sich die Zeiger einer Uhr drehen. Gedreht wird hier gegen den Uhrzeigersinn.
+      - type: figure
+        image: images/drehen-beispiel.svg
+        alt: Der Drehpunkt Z und der Punkt P rechts von Z. Ein Bogen führt gegen den Uhrzeigersinn zum Bildpunkt P' direkt über Z.
+        caption: P wird um Z um 90° gegen den Uhrzeigersinn gedreht.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Drehpunkt
+        explanation: Der Drehpunkt ist der Punkt, um den sich eine Figur dreht. Er bleibt an seinem Platz.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: Verschieben, Spiegeln und Drehen ändern die Form und die Größe der Figur nicht. Die Lage ändert sich. Beim Spiegeln steht die Bildfigur außerdem seitenverkehrt.
+  - type: section
+    id: beispiel
+    title: Ein Beispiel
+    blocks:
+      - type: example
+        title: P(5 | 2) um Z(3 | 2) drehen
+        blocks:
+          - type: text
+            text: P liegt 2 rechts von Z. Bei 90° gegen den Uhrzeigersinn liegt der Bildpunkt 2 über Z. Also P'(3 | 4).
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Mit diesen Aufgaben prüfst du, ob du Punkte verschieben und drehen kannst."
+      - type: vue-component
+        id: verschieben-setzen
+        component: Spielbrett
+        props:
+          mode: shift
+          legend: "Der Pfeil: {dx} nach rechts, {dy} nach oben."
+          task: "Verschiebe den Punkt P({px} | {py}) um den Pfeil {dx} nach rechts und {dy} nach oben. Setze dein Schiff auf den Bildpunkt."
+          hint: "Klicke auf das Brett, oder wähle es mit Tab aus und nutze die Pfeiltasten, oder tippe beide Zahlen ein."
+          board: Spielbrett mit einem gegebenen Punkt P.
+          xLabel: "x (nach rechts)"
+          yLabel: "y (nach oben)"
+          position: "Dein Schiff steht auf P'({a} | {b})."
+          none: "Du hast noch kein Schiff gesetzt."
+          mistakes:
+            - "Das ist der Punkt P selbst. Du musst ihn um den Pfeil verschieben."
+            - "Du hast die Pfeilzahlen vertauscht: erst {dx} nach rechts, dann {dy} nach oben."
+            - "Dein x stimmt, dein y nicht: Addiere {dy} zur y-Koordinate von P."
+            - "Dein y stimmt, dein x nicht: Addiere {dx} zur x-Koordinate von P."
+        examples:
+          accepted:
+            - { answer: { x: 6, y: 5 }, seed: 1 }
+          rejected:
+            - { answer: { x: 4, y: 4 }, seed: 1 }
+            - { answer: { x: 5, y: 6 }, seed: 1 }
+      - type: vue-component
+        id: drehen-setzen
+        component: Spielbrett
+        props:
+          mode: rotate
+          legend: "Die Drehung: eine Vierteldrehung (90°) gegen den Uhrzeigersinn um Z."
+          task: "Drehe den Punkt P({px} | {py}) um den Drehpunkt Z({cx} | {cy}) um 90° gegen den Uhrzeigersinn. Setze dein Schiff auf den Bildpunkt."
+          hint: "Klicke auf das Brett, oder wähle es mit Tab aus und nutze die Pfeiltasten, oder tippe beide Zahlen ein."
+          board: Spielbrett mit dem Drehpunkt Z und einem gegebenen Punkt P.
+          xLabel: "x (nach rechts)"
+          yLabel: "y (nach oben)"
+          position: "Dein Schiff steht auf P'({a} | {b})."
+          none: "Du hast noch kein Schiff gesetzt."
+          mistakes:
+            - "Du hast in die falsche Richtung gedreht, mit dem Uhrzeigersinn. Positiv ist die Drehung gegen den Uhrzeigersinn."
+            - "Du hast um 180° gedreht, das ist eine halbe Drehung. Gefragt ist eine Vierteldrehung, also 90°."
+            - "Dein x stimmt, dein y nicht: P und P' sind gleich weit von Z entfernt."
+            - "Dein y stimmt, dein x nicht: P und P' sind gleich weit von Z entfernt."
+        examples:
+          accepted:
+            - { answer: { x: 3, y: 4 }, seed: 1 }
+          rejected:
+            - { answer: { x: 3, y: 0 }, seed: 1 }
+            - { answer: { x: 1, y: 2 }, seed: 1 }
+      - type: generated
+        id: verschieben-y
+        given:
+          px: { int: [1, 5], step: 1 }
+          py: { int: [1, 3], step: 1 }
+          dx: { int: [1, 3], step: 1 }
+          dy: { int: [1, 3], step: 1 }
+        where: ["dx != dy"]
+        task:
+          text: "Der Punkt P({{px}} | {{py}}) wird um den Pfeil {{dx}} nach rechts und {{dy}} nach oben verschoben. Wie groß ist die y-Koordinate des Bildpunkts?"
+        answer: { value: "py + dy", compare: number }
+        mistakes:
+          - { value: "py", message: "Das ist die y-Koordinate von P. Der Pfeil geht auch {{dy}} nach oben." }
+          - {
+              value: "py + dx",
+              message: "Du hast die Pfeilzahlen vertauscht. Nach oben geht der Pfeil {{dy}}, nach rechts {{dx}}.",
+            }
+        hint: "Nach oben ändert sich die y-Koordinate. Wie weit geht der Pfeil nach oben?"
+        steps:
+          - "Der Pfeil geht {{dy}} nach oben, also ändert sich nur die y-Koordinate um {{dy}}."
+          - "{{py}} + {{dy}} = {{answer}}."
+      - type: matching
+        id: abbildung-angabe
+        text: Was gibst du an, um die Abbildung genau zu beschreiben?
+        pairs:
+          - { left: Spiegeln, right: die Achse }
+          - { left: Verschieben, right: den Pfeil }
+          - { left: Drehen, right: "den Drehpunkt und den Winkel" }
+        explanation: Zum Spiegeln brauchst du die Achse, zum Verschieben den Pfeil und zum Drehen den Drehpunkt und den Winkel.
+      - type: multiple-choice
+        id: was-bleibt
+        text: Was bleibt beim Verschieben, Spiegeln und Drehen gleich?
+        options:
+          - text: Die Form der Figur
+            correct: true
+            info: Richtig. Die Bildfigur sieht genauso aus.
+          - text: Die Größe der Figur
+            correct: true
+            info: Richtig. Alle Strecken und Winkel bleiben gleich groß.
+          - text: Die Lage der Figur
+            correct: false
+            info: Die Lage ändert sich, sonst wäre nichts bewegt worden.
+          - text: Die Seitenlängen
+            correct: true
+            info: Richtig. Die Strecken der Bildfigur sind genauso lang wie die der Figur.
+        explanation: Diese Abbildungen verändern die Lage. Form, Größe und Seitenlängen bleiben gleich.
+  - type: section
+    id: rueckblick
+    title: Rückblick
+    blocks:
+      - type: text
+        text: |
+          Nika und Jonas graben dort, wo der letzte Hinweis hinzeigt, und finden den Schatz.
+          Du kannst jetzt Punkte im Koordinatensystem angeben, Winkel messen, Figuren konstruieren, Symmetrien erkennen und Punkte spiegeln, verschieben und drehen.
