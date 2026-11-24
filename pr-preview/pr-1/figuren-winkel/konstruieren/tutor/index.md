@@ -52,6 +52,7 @@ Das baut auf Strecken und Figuren der Seiten davor auf.
 
 Bild: Eine Strecke AB. Um A und um B ist je ein Kreisbogen gezeichnet. Beide Bögen schneiden sich im Punkt C. Von C führen Strecken zu A und B und bilden ein Dreieck. Bildunterschrift: Zwei Kreisbögen treffen sich im Punkt C.
 
+Wenn du ein Dreieck genau nachbauen willst, musst du nicht schätzen: Mit dem Zirkel überträgst du Längen, wenn du die drei Seiten kennst.
 Die Seiten heißen nach der Ecke, die ihnen gegenübersteht: a ist die Strecke BC, b die Strecke AC und c die Strecke AB.
 Du kennst die drei Seiten a, b und c. Zeichne zuerst die Strecke c mit den Endpunkten A und B.
 Der **Radius** ist der Abstand vom Mittelpunkt zum Kreis, also die Öffnung des Zirkels. Stelle den Zirkel auf b ein und zeichne einen Kreisbogen um A. Stelle ihn auf a ein und zeichne einen Kreisbogen um B.

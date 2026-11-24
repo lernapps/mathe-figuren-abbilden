@@ -52,6 +52,8 @@ Interaktiv: Ein Gitter mit einem Viereck ABCD, dessen Ecken du ziehen kannst. Es
 
 ### Die besonderen Vierecke
 
+Wenn du ein Viereck genau benennen willst, vergleichst du seine Seiten und Winkel. Die Tabelle zeigt, woran du jedes besondere Viereck erkennst.
+
 Besondere Vierecke und ihre Eigenschaften:
 - Viereck | Eigenschaften
 - Parallelogramm | zwei Paare paralleler Seiten

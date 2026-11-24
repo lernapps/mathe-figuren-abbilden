@@ -52,6 +52,7 @@ Bild: Zwei waagerechte Geraden g und h auf einem Gitter. Auf g liegt der Punkt A
 
 ### Parallel, senkrecht, Abstand
 
+Wenn du Linien zeichnen oder einen Weg zwischen Gleisen beschreiben willst, musst du wissen, wie zwei Geraden zueinander liegen und wie weit sie auseinander sind.
 Zwei Geraden sind **parallel**, wenn sie überall gleich weit auseinander liegen. Sie treffen sich nie. Du schreibst g ∥ h.
 Zwei Geraden sind **senkrecht** zueinander, wenn sie einen rechten Winkel bilden, also eine Ecke wie bei einem Blatt Papier. Du schreibst g ⊥ h. Zum Zeichnen benutzt du das **Geodreieck**: ein Dreieck mit einer Skala an der langen Kante und einer Mittellinie, die senkrecht dazu steht.
 Der **Abstand** zweier paralleler Geraden ist die kürzeste Strecke zwischen ihnen. Sie steht senkrecht auf beiden. Schräg gemessen ist der Weg immer länger.
@@ -65,6 +66,8 @@ Gemessen wird immer senkrecht. Wer schräg misst, bekommt einen zu großen Absta
 ### Eine Parallele zeichnen
 
 **Beispiel: Parallele und Senkrechte durch den Punkt P**
+
+Wenn du durch einen Punkt P eine Linie zeichnen willst, die zu g parallel oder senkrecht ist, gehst du mit dem Geodreieck so vor.
 
 **Parallele zu g durch P:**
 1. Lege die lange Kante des Geodreiecks an g.

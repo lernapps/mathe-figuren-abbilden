@@ -52,6 +52,7 @@ Bild: Sechs Figuren mit den Buchstaben A bis F. A ist ein Quadrat, B ein Rechtec
 
 ### Ecken und Seiten
 
+Wenn du eine Figur so beschreiben willst, dass jemand sie zeichnen kann, brauchst du Wörter für ihre Teile.
 Eine Figur aus geraden Strecken heißt **Vieleck**. Die Strecken sind ihre **Seiten**, die Punkte, an denen sie sich treffen, ihre **Ecken**.
 Ein Dreieck hat 3 Ecken, ein Viereck 4 und ein Fünfeck 5.
 Ein **Kreis** hat keine Ecken. Alle Punkte des Kreises haben von seinem Mittelpunkt denselben Abstand.

@@ -52,6 +52,7 @@ Bild: Ein Rechteck mit zwei gestrichelten Faltlinien, ein Quadrat mit vier und e
 
 ### Drei Arten von Symmetrie
 
+Wenn du wissen willst, ob zwei Hälften einer Figur genau zusammenpassen, suchst du nach einer Symmetrie. Es gibt drei Arten.
 Eine Figur ist **achsensymmetrisch**, wenn sie eine **Symmetrieachse** hat. Eine **Diagonale** ist eine Linie zwischen zwei gegenüberliegenden Ecken. Faltest du an dieser Linie, liegen beide Hälften genau aufeinander.
 Eine Figur ist **punktsymmetrisch**, wenn du sie um einen Punkt halb herumdrehen kannst, also um 180°, und sie dann wieder genauso aussieht.
 Eine Figur ist **drehsymmetrisch**, wenn du sie um einen Punkt um weniger als eine ganze Drehung drehen kannst und sie wieder genauso aussieht. Die kleinste solche Drehung ist ihr Drehwinkel. Ein Dreieck mit drei gleich langen Seiten heißt gleichseitig. Ein Vieleck mit gleich langen Seiten und gleich großen Winkeln heißt regelmäßig. Bei einem regelmäßigen Vieleck mit n Ecken gibt es n Achsen, und die kleinste Drehung ist 360° : n groß. Ist eine Figur punktsymmetrisch, ist sie auch drehsymmetrisch, mit einer halben Drehung.

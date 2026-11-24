@@ -52,6 +52,7 @@ Bild: Eine Tür dreht sich um ihre Angel. Eine gestrichelte Linie zeigt die gesc
 
 ### Winkel und Grad
 
+Wenn du eine Richtung oder eine Drehung genau angeben willst, brauchst du ein Maß dafür: den Winkel.
 Ein **Winkel** entsteht, wenn sich ein Schenkel um einen Punkt dreht, den **Scheitel**.
 Du misst Winkel in **Grad** (°). Eine ganze Drehung sind 360°, eine halbe 180°, eine Vierteldrehung 90°.
 
@@ -73,7 +74,7 @@ Zum Messen legst du die Nullkante des Geodreiecks auf einen Schenkel. Der Scheit
 
 **Beispiel: Ein Winkel von 50°**
 
-Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. So zeichnest du ihn:
+Ein Winkel von 50° ist kleiner als 90°, also ist er spitz. Wenn du ihn zeichnen willst, gehst du so vor:
 1. Zeichne den ersten Schenkel und markiere den Scheitel.
 2. Lege die Nullkante des Geodreiecks auf den Schenkel, den Mittelpunkt auf den Scheitel.
 3. Setze bei 50 auf der Skala, die an diesem Schenkel bei 0 beginnt, einen Punkt.

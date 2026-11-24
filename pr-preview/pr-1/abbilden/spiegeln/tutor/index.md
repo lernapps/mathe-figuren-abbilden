@@ -52,6 +52,7 @@ Du brauchst Symmetrieachsen und das Koordinatensystem von den Seiten davor.
 
 Bild: Ein Dreieck ABC links der gestrichelten senkrechten Achse bei x gleich 4 und sein Spiegelbild A'B'C' rechts davon, gleich weit von der Achse entfernt. Bildunterschrift: Dreieck ABC und sein Spiegelbild an der Achse x = 4.
 
+Wenn du wissen willst, wo ein Punkt im Spiegel liegt, brauchst du eine Regel für seinen Bildpunkt.
 Beim **Spiegeln** an einer **Achse** liegt der **Bildpunkt** P' auf der anderen Seite der Achse. Die Achse x = 4 ist die senkrechte Gerade, die über der 4 der x-Achse steht. Die Strecke von P nach P' steht senkrecht auf der Achse, und die Achse halbiert sie.
 Jeder Punkt hat von der Achse denselben Abstand wie sein Bildpunkt. Ein Punkt auf der Achse bleibt, wo er ist.
 Bei der senkrechten Achse x = 4 gilt: Die y-Koordinate bleibt, für die x-Koordinate zählst du den Abstand zur Achse auf der anderen Seite ab.

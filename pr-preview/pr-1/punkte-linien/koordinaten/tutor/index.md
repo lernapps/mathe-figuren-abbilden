@@ -52,6 +52,7 @@ Bild: Ein Spielbrett mit Gitter und Achsen. Ein rotes Schiff A steht auf einer K
 
 ### So gibst du einen Punkt an
 
+Wenn du jemandem sagen willst, wo ein Punkt auf dem Gitter liegt, ohne ihn zu zeigen, brauchst du ein festes System aus zwei Zahlen.
 Das Gitter heißt **Koordinatensystem**. Es hat zwei Achsen: Die **x-Achse** geht nach rechts, die **y-Achse** geht nach oben.
 Dort, wo beide bei 0 beginnen, liegt der **Ursprung**.
 

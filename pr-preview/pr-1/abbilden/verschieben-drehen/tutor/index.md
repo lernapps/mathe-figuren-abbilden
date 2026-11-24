@@ -52,6 +52,7 @@ Du brauchst das Koordinatensystem von den Seiten davor. Beim Verschieben wird ei
 
 Bild: Ein Dreieck mit der Ecke A unten links und sein Bild A' drei Kästchen weiter rechts und zwei weiter oben. Ein Pfeil führt von A nach A'. Bildunterschrift: Das Dreieck wird um den Pfeil 3 nach rechts und 2 nach oben verschoben.
 
+Wenn du eine Figur an einen anderen Platz bringen willst, ohne sie zu verändern, verschiebst oder drehst du sie.
 Beim **Verschieben** wird jeder Punkt um denselben **Pfeil** bewegt. Die Bildfigur sieht genauso aus und steht nur an einer anderen Stelle.
 Beim **Drehen** brauchst du einen **Drehpunkt** und einen Winkel. Jeder Punkt wandert auf einem Kreis um den Drehpunkt. Der Uhrzeigersinn ist die Richtung, in die sich die Zeiger einer Uhr drehen. Gedreht wird hier gegen den Uhrzeigersinn.
 

@@ -54,6 +54,7 @@ Bild: Vier Zeichnungen untereinander. Ein Punkt A. Eine Strecke von B nach C mit
 
 ### Wie heißen die Linien?
 
+Wenn du einen Weg auf der Karte genau beschreiben willst, brauchst du Wörter für Punkte und Linien. Das sind die wichtigsten:
 Ein **Punkt** ist eine genaue Stelle. Du zeichnest ihn als kleinen Punkt und nennst ihn mit einem Großbuchstaben, zum Beispiel A.
 Eine **Strecke** hat zwei Endpunkte. Sie hat eine Länge, die du messen kannst. Du schreibst Strecke BC.
 Eine **Gerade** hat keine Enden. Du zeichnest sie mit Pfeilen und nennst sie mit einem kleinen Buchstaben, zum Beispiel g.
